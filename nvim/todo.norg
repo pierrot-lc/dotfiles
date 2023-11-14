@@ -1,0 +1,18 @@
+@document.meta
+title: todo
+description: Things i'd like to do for my neovim setup
+authors: pierrot-lc
+categories: todo
+created: 2023-11-08T09:45:07+0100
+updated: 2023-11-08T09:45:07+0100
+version: 1.1.1
+@end
+
+- Make this configuration into as a Nix flake installable configuration.
+- Use LPSs as formatters.
+- Make sure some of the keybindings are only shown on proper context.
+- Make a directory for each plugin, and put the lua configuration and `default.nix`
+  of the plugin inside.
+- Use a method to select the branch of the GitHub plugins to install.
+- Add a readme.
+- Better `ZenMode`. Deactivate column bar and some other things.

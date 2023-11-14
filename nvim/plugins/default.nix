@@ -1,0 +1,46 @@
+{
+  # Maybe auto-detect all nix files?
+  # Can use `builtins.readDir`, `lib.filterAttrs`, and `lib.mapAttrsToList`.
+  imports = [
+    ./alpha-nvim
+    ./autopairs
+    ./cmp
+    ./conform
+    ./copilot
+    ./dap
+    ./data-viewer
+    ./dial
+    ./dressing
+    ./gitsigns
+    ./icon-picker
+    ./leap
+    ./lsp
+    ./mini-comment
+    ./mini-indentscope
+    ./mini-splitjoin
+    ./neodev
+    ./neogit
+    ./neorg
+    ./nordic
+    ./nvim-dap-ui
+    ./nvim-linefly
+    ./nvim-lint
+    ./nvim-puppeteer
+    ./nvim-rooter
+    ./nvim-spider
+    ./nvim-surround
+    ./nvim-tree
+    ./nvim-ufo
+    ./ranger
+    ./telescope
+    ./todo-comments
+    ./toggleterm
+    ./treesitter
+    ./twilight
+    ./vim-characterize
+    ./vim-kitty
+    ./vim-lastplace
+    ./which-key
+    ./zen-mode
+  ];
+}
