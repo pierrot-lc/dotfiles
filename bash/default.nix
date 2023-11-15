@@ -4,20 +4,12 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    bashrcExtra = builtins.concatStringsSep "\n" [
-    ''
+    bashrcExtra = ''
       export PATH="$HOME/go/bin:$PATH"
       export PATH="$HOME/.local/bin:$PATH"
       export PATH="$HOME/.cargo/bin:$PATH"
-
-      # Test if the current terminal is `kitty`.
-      if [ "$TERM" = "xterm-kitty" ]; then
-          alias icat="kitty +kitten icat"
-          alias ssh="kitty +kitten ssh"
-      fi
-    ''
-    (builtins.readFile ./functions.sh)
-    ];
+    '';
+    initExtra = builtins.readFile ./init_extra.sh;
     shellAliases = {
       cat = "bat";
       chgrp = "chgrp --preserve-root";
