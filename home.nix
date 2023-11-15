@@ -5,6 +5,7 @@
   # manage.
   home.username = "pierrot-lc";
   home.homeDirectory = "/home/pierrot-lc";
+  nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -28,10 +29,9 @@
     };
   };
 
-
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
+    ./bash
+    ./kitty
     ./nvim
   ];
 
@@ -40,18 +40,11 @@
   # environment.
   home.packages = with pkgs; [
     # TUI
-    bat
-    bottom
-    eza
-    fd
     file
     gnutar
     inkscape
-    kitty
     neofetch
     ranger
-    ripgrep
-    starship
     unzip
     zip
 
@@ -128,9 +121,7 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/kitty".source = ./kitty;
-    ".bashrc.d".source = ./.bashrc.d;
-    ".config/starship.toml".text = "add_newline = false";
+    # ".bashrc.d".source = ./.bashrc.d;
   };
 
   # You can also manage environment variables but you will have to manually
@@ -144,7 +135,7 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    BROWSER = "firefox";
   };
 
   # Let Home Manager install and manage itself.
@@ -154,12 +145,34 @@
     enable = true;
     userEmail = "pstmrtem@outlook.com";
     userName = "Pierrot LC";
+    aliases = {
+      s = "status";
+      d = "diff";
+    };
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      add_newline = false;
+    };
+  };
+
+  programs.eza = {
+    enable = true;
+    enableAliases = true;
+    icons = true;
+    git = true;
+    extraOptions = [
+      "--group-directories-first"
+    ];
   };
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["quemu:///system"];
-      uris = ["quemu:///system"];
+      autoconnect = [ "quemu:///system" ];
+      uris = [ "quemu:///system" ];
     };
   };
 

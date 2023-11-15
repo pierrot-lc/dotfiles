@@ -31,6 +31,7 @@ in {
     marksman
     nodePackages_latest.bash-language-server
     python311Packages.python-lsp-server
+    rnix-lsp
     ruff-lsp
   ];
 }
