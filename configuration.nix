@@ -5,12 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      <home-manager/nixos>
-    ];
-
   # Overall Nix options.
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
@@ -33,7 +27,6 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -116,7 +109,6 @@
     packages = with pkgs; [
       firefox
       git
-      home-manager
       stdenv
       vim
     ];

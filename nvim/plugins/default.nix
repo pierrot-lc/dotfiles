@@ -22,7 +22,6 @@
     ./neogit
     ./neorg
     ./nordic
-    ./nvim-dap-ui
     ./nvim-linefly
     ./nvim-lint
     ./nvim-puppeteer

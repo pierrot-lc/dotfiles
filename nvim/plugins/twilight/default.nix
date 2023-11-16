@@ -1,11 +1,9 @@
 { config, pkgs, lib, ... }:
 
-let
-  fromgithub = import ../build-plugin.nix {inherit pkgs; inherit lib;};
-in {
-  programs.neovim.plugins = with pkgs.vimplugins; [
+{
+  programs.neovim.plugins = with pkgs.vimPlugins; [
     {
-      plugin = fromgithub "folke/twilight.nvim";
+      plugin = twilight-nvim;
       config = builtins.readFile ./config.lua;
       type = "lua";
     }

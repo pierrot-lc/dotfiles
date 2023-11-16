@@ -1,8 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let
-  fromGitHub = import ../build-plugin.nix {inherit pkgs; inherit lib;};
-in {
+{
   programs.neovim.plugins = with pkgs.vimPlugins; [
     {
       plugin = telescope-nvim;
@@ -13,7 +11,7 @@ in {
     # Dependencies.
     plenary-nvim
     telescope-fzf-native-nvim
-    (fromGitHub "cljoly/telescope-repo.nvim")
+    telescope-repo-nvim
   ];
 
   programs.neovim.extraPackages = with pkgs; [
