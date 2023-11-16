@@ -24,6 +24,7 @@
     ltex-ls
     lua-language-server
     marksman
+    nixd
     nodePackages_latest.bash-language-server
     python311Packages.python-lsp-server
     rnix-lsp
