@@ -22,6 +22,7 @@
       ff = "find . -name "; # Find a file from the current directory.
       find = "find";
       forecast = "curl wttr.in"; # Show meteo.
+      g = "git";
       grep = "rg";
       hsi = "history | grep -i"; # Search in history.
       htop = "btm";
