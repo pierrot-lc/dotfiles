@@ -72,6 +72,10 @@
       url = "github:ray-x/lsp_signature.nvim";
       flake = false;
     };
+    lualine-nvim = {
+      url = "github:nvim-lualine/lualine.nvim";
+      flake = false;
+    };
     neogit = {
       url = "github:NeogitOrg/neogit";
       flake = false;
@@ -98,10 +102,6 @@
     };
     nvim-dap-virtual-text = {
       url = "github:thehamsta/nvim-dap-virtual-text";
-      flake = false;
-    };
-    nvim-linefly = {
-      url = "github:bluz71/nvim-linefly";
       flake = false;
     };
     nvim-lint = {
@@ -238,6 +238,10 @@
             name = "lsp_signature-nvim";
             src = inputs.lsp_signature-nvim;
           };
+          lualine-nvim = prev.vimUtils.buildVimPlugin {
+            name = "lualine-nvim";
+            src = inputs.lualine-nvim;
+          };
           neogit = prev.vimUtils.buildVimPlugin {
             name = "neogit";
             src = inputs.neogit;
@@ -265,10 +269,6 @@
           nvim-dap-virtual-text = prev.vimUtils.buildVimPlugin {
             name = "nvim-dap-virtual-text";
             src = inputs.nvim-dap-virtual-text;
-          };
-          nvim-linefly = prev.vimUtils.buildVimPlugin {
-            name = "nvim-linefly";
-            src = inputs.nvim-linefly;
           };
           nvim-lint = prev.vimUtils.buildVimPlugin {
             name = "nvim-lint";

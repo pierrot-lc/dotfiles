@@ -15,6 +15,7 @@
     ./icon-picker
     ./leap
     ./lsp
+    ./lualine-nvim
     ./mini-comment
     ./mini-indentscope
     ./mini-splitjoin
@@ -22,7 +23,6 @@
     ./neogit
     ./neorg
     ./nordic
-    ./nvim-linefly
     ./nvim-lint
     ./nvim-puppeteer
     ./nvim-rooter

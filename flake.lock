@@ -390,6 +390,22 @@
         "type": "github"
       }
     },
+    "lualine-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697772980,
+        "narHash": "sha256-jV+6mV0dyuhiHGei1UqE2r2GoiKJLtdZI2AMNexbi7E=",
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "rev": "2248ef254d0a1488a72041cfb45ca9caada6d994",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "type": "github"
+      }
+    },
     "neogit": {
       "flake": false,
       "locked": {
@@ -485,21 +501,6 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1699781429,
-        "narHash": "sha256-UYefjidASiLORAjIvVsUHG6WBtRhM67kTjEY4XfZOFs=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "e44462d6021bfe23dfb24b775cc7c390844f773d",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "ref": "nixos-unstable",
-        "type": "indirect"
-      }
-    },
     "nordic-nvim": {
       "flake": false,
       "locked": {
@@ -577,22 +578,6 @@
       "original": {
         "owner": "thehamsta",
         "repo": "nvim-dap-virtual-text",
-        "type": "github"
-      }
-    },
-    "nvim-linefly": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696125586,
-        "narHash": "sha256-9oVyOHyFv+9Z0Y9ZgXQO80sxRB6+vKpLeVYFutl0iTs=",
-        "owner": "bluz71",
-        "repo": "nvim-linefly",
-        "rev": "e706e0266a2b9aedc4a9559f3fa1e1d472aad6ea",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bluz71",
-        "repo": "nvim-linefly",
         "type": "github"
       }
     },
@@ -830,15 +815,17 @@
         "icon-picker-nvim": "icon-picker-nvim",
         "leap-nvim": "leap-nvim",
         "lsp_signature-nvim": "lsp_signature-nvim",
+        "lualine-nvim": "lualine-nvim",
         "neogit": "neogit",
         "neorg": "neorg",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nordic-nvim": "nordic-nvim",
         "nvim-autopairs": "nvim-autopairs",
         "nvim-cmp": "nvim-cmp",
         "nvim-dap-ui": "nvim-dap-ui",
         "nvim-dap-virtual-text": "nvim-dap-virtual-text",
-        "nvim-linefly": "nvim-linefly",
         "nvim-lint": "nvim-lint",
         "nvim-puppeteer": "nvim-puppeteer",
         "nvim-rooter-lua": "nvim-rooter-lua",
@@ -855,12 +842,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-hwE5jSvPTprvDOTrC/45CX58zPD16saEXrO/zx5grvY=",
-        "path": "/nix/store/66n8hhzblpdicvz2rl64szm284rmvsrf-source/nvim",
+        "narHash": "sha256-TExywiP0K74wA7jGFPbLGVA13N5k1yDqzaTG4qrWBAc=",
+        "path": "/nix/store/n5xbh9pbgx9jmzpnkw71qdxhcyndcl3c-source/nvim",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/66n8hhzblpdicvz2rl64szm284rmvsrf-source/nvim",
+        "path": "/nix/store/n5xbh9pbgx9jmzpnkw71qdxhcyndcl3c-source/nvim",
         "type": "path"
       }
     },
