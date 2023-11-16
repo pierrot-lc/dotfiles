@@ -855,12 +855,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-pc9mvwAQVU1OqZX8Vs2ui99j2dc5X22Rj/oj3PbTKp8=",
-        "path": "/nix/store/ck09fy9k8dn96jh0yccjar7gaswhh5ni-source/nvim",
+        "narHash": "sha256-hwE5jSvPTprvDOTrC/45CX58zPD16saEXrO/zx5grvY=",
+        "path": "/nix/store/66n8hhzblpdicvz2rl64szm284rmvsrf-source/nvim",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/ck09fy9k8dn96jh0yccjar7gaswhh5ni-source/nvim",
+        "path": "/nix/store/66n8hhzblpdicvz2rl64szm284rmvsrf-source/nvim",
         "type": "path"
       }
     },
