@@ -104,6 +104,7 @@
     # Fonts.
     (nerdfonts.override { fonts = [ "FiraCode" "NerdFontsSymbolsOnly" ]; })
     cantarell-fonts
+    commit-mono
     dejavu_fonts
     emojione
     freefont_ttf
@@ -149,6 +150,10 @@
       s = "status";
       d = "diff";
     };
+    ignores = [
+      "**/*.pyc"
+      "**/__pycache__"
+    ];
   };
 
   programs.starship = {
