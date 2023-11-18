@@ -1,0 +1,37 @@
+@document.meta
+title: flatpak
+description: My list of flatpaks.
+authors: pierrot-lc
+categories: notes
+created: 2023-11-18T11:13:46+0100
+updated: 2023-11-18T11:13:46+0100
+version: 1.1.1
+@end
+
+Flatpaks can't be declaratively installed on Nix (yet!).
+Since I like my apps to be up-to-date, some of the GUI apps I used are not properly
+maintained in the Nix store (or even non-existant). So here is the list of the flapatks
+so that I can easily install them again.
+
+
+@code sh
+flatpak install -y app.drey.Damask
+flatpak install -y com.calibre_ebook.calibre
+flatpak install -y com.discordapp.Discord
+flatpak install -y com.github.johnfactotum.Foliate
+flatpak install -y com.github.tchx84.Flatseal
+flatpak install -y com.jgraph.drawio.desktop
+flatpak install -y com.rafaelmardojai.Blanket
+flatpak install -y com.sindresorhus.Caprine
+flatpak install -y com.system76.Popsicle
+flatpak install -y io.gitlab.news_flash.NewsFlash
+flatpak install -y org.inkscape.Inkscape
+flatpak install -y org.keepassxc.KeePassXC
+flatpak install -y org.qbittorrent.qBittorrent
+flatpak install -y org.zotero.Zotero
+@end
+
+
+There are some projects that tries to setup a declarative flatpak for nix:
+- {https://github.com/gmodena/nix-flatpak}
+- {https://github.com/GermanBread/declarative-flatpak}

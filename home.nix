@@ -42,8 +42,8 @@
     # TUI
     file
     gnutar
-    inkscape
     neofetch
+    pandoc
     ranger
     unzip
     zip
@@ -59,20 +59,9 @@
     texlive.combined.scheme-full
 
     # GUI.
-    blanket
-    calibre
-    caprine-bin
-    discord
-    drawio
     firefox
-    foliate
-    keepassxc
     mullvad-vpn
-    newsflash
-    pandoc
     popcorntime
-    popsicle
-    qbittorrent
     thunderbird
     vlc
 
