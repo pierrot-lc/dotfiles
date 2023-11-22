@@ -843,11 +843,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-TExywiP0K74wA7jGFPbLGVA13N5k1yDqzaTG4qrWBAc=",
-        "path": "/nix/store/4lb1qvyh2a5r3mqkc21kz75mskypbxkj-source/nvim",
+        "path": "/nix/store/gg2ajwh0b21854iwjd53dcwqrn7p1zpm-source/nvim",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/4lb1qvyh2a5r3mqkc21kz75mskypbxkj-source/nvim",
+        "path": "/nix/store/gg2ajwh0b21854iwjd53dcwqrn7p1zpm-source/nvim",
         "type": "path"
       }
     },

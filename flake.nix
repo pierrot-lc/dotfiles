@@ -46,6 +46,13 @@
             ./hardwares/x250-hardware-configuration.nix
           ];
         };
+        big-tower = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            ./hardwares/big-tower-hardware-configuration.nix
+          ];
+        };
       };
 
       homeConfigurations = {
