@@ -14,6 +14,10 @@
     withPython3 = true;
   };
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
   programs.neovim.extraLuaConfig = builtins.concatStringsSep "\n" [
     (builtins.readFile ./options.lua)
     (builtins.readFile ./commands.lua)
