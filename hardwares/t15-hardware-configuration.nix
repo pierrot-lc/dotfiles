@@ -23,7 +23,7 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-  
+
   # Tell Xorg to use the nvidia driver.
   services.xserver.videoDrivers = ["nvidia"];
 
