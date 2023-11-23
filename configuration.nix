@@ -56,6 +56,14 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # enable automatic login for the user.
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "pierrot-lc";
+
+  # workaround for gnome autologin: https://github.com/nixos/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+
   # Configure keymap in X11
   services.xserver = {
     layout = "fr";
@@ -102,10 +110,6 @@
     description = "Pierrot LC";
     extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
     packages = with pkgs; [
-      firefox
-      git
-      stdenv
-      vim
     ];
   };
 
@@ -125,6 +129,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    git
     vim
     virt-manager
   ];

@@ -53,6 +53,13 @@
             ./hardwares/big-tower-hardware-configuration.nix
           ];
         };
+        t15 = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            ./hardwares/t15-hardware-configuration.nix
+          ];
+        };
       };
 
       homeConfigurations = {
