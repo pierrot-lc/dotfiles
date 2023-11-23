@@ -40,6 +40,7 @@
   # environment.
   home.packages = with pkgs; [
     # TUI
+    comma
     file
     gnutar
     neofetch
