@@ -10,7 +10,6 @@
 
     nvim-lspconfig
     cmp-nvim-lsp
-    cmp-nvim-lsp-signature-help
     cmp-path
     cmp-calc
     cmp-rg

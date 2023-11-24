@@ -20,10 +20,6 @@
       url = "github:hrsh7th/cmp-nvim-lsp";
       flake = false;
     };
-    cmp-nvim-lsp-signature-help = {
-      url = "github:hrsh7th/cmp-nvim-lsp-signature-help";
-      flake = false;
-    };
     cmp-path = {
       url = "github:hrsh7th/cmp-path";
       flake = false;
@@ -185,10 +181,6 @@
           cmp-nvim-lsp = prev.vimUtils.buildVimPlugin {
             name = "cmp-nvim-lsp";
             src = inputs.cmp-nvim-lsp;
-          };
-          cmp-nvim-lsp-signature-help = prev.vimUtils.buildVimPlugin {
-            name = "cmp-nvim-lsp-signature-help";
-            src = inputs.cmp-nvim-lsp-signature-help;
           };
           cmp-path = prev.vimUtils.buildVimPlugin {
             name = "cmp-path";

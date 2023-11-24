@@ -49,7 +49,6 @@ local kind_icons = {
 }
 local menu_icons = {
 	nvim_lsp = "λ ",
-	nvim_lsp_signature_help = "󰷼 ",
 	calc = " ",
 	path = " ",
 	rg = " ",
@@ -61,7 +60,6 @@ cmp.setup({
 	sources = {
 		{ name = "path" },
 		{ name = "nvim_lsp" },
-		{ name = "nvim_lsp_signature_help" },
 		{ name = "calc" },
 		{ name = "rg" },
 		{ name = "gitmoji" },
