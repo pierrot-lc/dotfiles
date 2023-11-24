@@ -3,6 +3,7 @@
 -- ========================================================================== --
 vim.keymap.set("n", "<leader>w", "<cmd>write<cr>", { desc = "Save" })
 vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>", { desc = "Quit" })
+vim.keymap.set("n", "<leader>x", "<cmd>x<cr>", { desc = "Save and quit" })
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>", { desc = "Remove highlights" })
 vim.keymap.set({ "n", "x" }, "cp", '"+y', { desc = "Copy to system clipboard" })
 vim.keymap.set({ "n", "x" }, "cv", '"+p', { desc = "Paste from system clipboard" })
