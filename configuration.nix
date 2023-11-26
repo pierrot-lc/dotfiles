@@ -64,6 +64,26 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  # Exclude some gnome packages installed by default when using gnome.
+  environment.gnome.excludePackages = (
+  with pkgs; [
+      gnome-photos
+      gnome-tour
+    ]
+  ) ++ (
+  with pkgs.gnome; [
+      cheese
+      epiphany
+      geary
+      gnome-music
+      gnome-terminal
+      hitori
+      iagno
+      tali
+      totem
+    ]
+  );
+
   # Configure keymap in X11
   services.xserver = {
     layout = "fr";
@@ -130,6 +150,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    gnome.adwaita-icon-theme
     vim
     virt-manager
   ];
