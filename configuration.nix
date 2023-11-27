@@ -95,6 +95,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.cnijfilter2 ];
 
   # Periodically update the database for the `locate` command.
   services.locate.enable = true;

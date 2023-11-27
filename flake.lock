@@ -826,11 +826,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-RG3+7f8hMRX56rXtf3uR6xwWHooi9ewJQyz2xfdOLv4=",
-        "path": "/nix/store/z3hlf3yhgl4hjjps9s6329n4jrg22h5q-source/nvim",
+        "path": "/nix/store/b20vcb4qb2iag6nxww2fx5zda79kxw21-source/nvim",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/z3hlf3yhgl4hjjps9s6329n4jrg22h5q-source/nvim",
+        "path": "/nix/store/b20vcb4qb2iag6nxww2fx5zda79kxw21-source/nvim",
         "type": "path"
       }
     },
