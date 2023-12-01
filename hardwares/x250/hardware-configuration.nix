@@ -5,16 +5,6 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  # My specific config.
-  networking.hostName = "x250";
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-
-  # End of specific config.
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];

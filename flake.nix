@@ -43,21 +43,21 @@
           inherit system;
           modules = [
             ./configuration.nix
-            ./hardwares/x250-hardware-configuration.nix
+            ./hardwares/x250
           ];
         };
         big-tower = lib.nixosSystem {
           inherit system;
           modules = [
             ./configuration.nix
-            ./hardwares/big-tower-hardware-configuration.nix
+            ./hardwares/big-tower
           ];
         };
         t15 = lib.nixosSystem {
           inherit system;
           modules = [
             ./configuration.nix
-            ./hardwares/t15-hardware-configuration.nix
+            ./hardwares/t15
           ];
         };
       };
