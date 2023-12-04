@@ -31,6 +31,7 @@
     ./nvim-tree
     ./nvim-ufo
     ./ranger
+    ./symbols-outline-nvim
     ./telescope
     ./todo-comments
     ./toggleterm

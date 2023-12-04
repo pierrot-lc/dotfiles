@@ -124,6 +124,10 @@
       url = "github:kelly-lin/ranger.nvim";
       flake = false;
     };
+    symbols-outline-nvim = {
+      url = "github:simrat39/symbols-outline.nvim";
+      flake = false;
+    };
     telescope-repo-nvim = {
       url = "github:cljoly/telescope-repo.nvim";
       flake = false;
@@ -285,6 +289,10 @@
           ranger-nvim = prev.vimUtils.buildVimPlugin {
             name = "ranger-nvim";
             src = inputs.ranger-nvim;
+          };
+          symbols-outline-nvim = prev.vimUtils.buildVimPlugin {
+            name = "symbols-outline-nvim";
+            src = inputs.symbols-outline-nvim;
           };
           telescope-repo-nvim = prev.vimUtils.buildVimPlugin {
             name = "telescope-repo-nvim";
