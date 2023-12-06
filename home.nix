@@ -125,9 +125,13 @@
       s = "status";
       d = "diff";
     };
+    extraConfig = {
+      pull.rebase = true;
+    };
     ignores = [
       "**/*.pyc"
       "**/__pycache__"
+      ".venv"
     ];
   };
 
