@@ -93,6 +93,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  hardware.keyboard.zsa.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pierrot-lc = {
     isNormalUser = true;
@@ -121,6 +123,7 @@
     git
     vim
     virt-manager
+    wally-cli
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
