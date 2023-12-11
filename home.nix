@@ -57,7 +57,6 @@
     nodejs_20
     pdm
     python3Full
-    texlive.combined.scheme-full
 
     # GUI.
     firefox
