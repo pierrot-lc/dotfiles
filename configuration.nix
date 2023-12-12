@@ -61,18 +61,6 @@
   # Configure console keymap
   console.keyMap = "fr";
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.cnijfilter2 ];
-
-  # Periodically update the database for the `locate` command.
-  services.locate.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    openFirewall = true;
-  };
-
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -92,8 +80,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  hardware.keyboard.zsa.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pierrot-lc = {
@@ -123,7 +109,6 @@
     git
     vim
     virt-manager
-    wally-cli
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -139,9 +124,26 @@
   programs.dconf.enable = true;
 
   # List services that you want to enable:
-  services.flatpak.enable = true;
   services.dbus.enable = true;
+  services.flatpak.enable = true;
+  services.fwupd.enable = true;
   # services.mullvad-vpn.enable = true;
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+  services.printing.drivers = [ pkgs.cnijfilter2 ];
+
+  # Periodically update the database for the `locate` command.
+  services.locate.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    openFirewall = true;
+  };
+
+  # Enable special udev rules for zsa keyboards (flashing firmware).
+  hardware.keyboard.zsa.enable = true;
+
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

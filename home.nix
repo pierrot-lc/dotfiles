@@ -47,6 +47,7 @@
     pandoc
     ranger
     unzip
+    wally-cli
     zip
 
     # Development tools.
