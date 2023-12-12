@@ -30,8 +30,8 @@
     ./nvim-surround
     ./nvim-tree
     ./nvim-ufo
+    ./outline-nvim
     ./ranger
-    ./symbols-outline-nvim
     ./telescope
     ./todo-comments
     ./toggleterm

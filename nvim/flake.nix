@@ -120,6 +120,10 @@
       url = "github:kylechui/nvim-surround";
       flake = false;
     };
+    outline-nvim = {
+      url = "github:hedyhli/outline.nvim";
+      flake = false;
+    };
     ranger-nvim = {
       url = "github:kelly-lin/ranger.nvim";
       flake = false;
@@ -286,13 +290,13 @@
             name = "nvim-surround";
             src = inputs.nvim-surround;
           };
+          outline-nvim = prev.vimUtils.buildVimPlugin {
+            name = "outline-nvim";
+            src = inputs.outline-nvim;
+          };
           ranger-nvim = prev.vimUtils.buildVimPlugin {
             name = "ranger-nvim";
             src = inputs.ranger-nvim;
-          };
-          symbols-outline-nvim = prev.vimUtils.buildVimPlugin {
-            name = "symbols-outline-nvim";
-            src = inputs.symbols-outline-nvim;
           };
           telescope-repo-nvim = prev.vimUtils.buildVimPlugin {
             name = "telescope-repo-nvim";
