@@ -40,8 +40,12 @@
   # environment.
   home.packages = with pkgs; [
     # TUI
+    btop
     comma
+    duf
     file
+    gdu
+    glances
     gnutar
     neofetch
     pandoc
@@ -119,6 +123,7 @@
 
   programs.git = {
     enable = true;
+    delta.enable = true;
     userEmail = "pstmrtem@outlook.com";
     userName = "Pierrot LC";
     aliases = {
