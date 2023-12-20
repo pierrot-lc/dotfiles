@@ -134,10 +134,15 @@
   services.printing.drivers = [ pkgs.cnijfilter2 ];
 
   # Periodically update the database for the `locate` command.
-  services.locate.enable = true;
+  services.locate = {
+    enable = true;
+    package = pkgs.mlocate;
+    interval = "hourly";
+    localuser = null;
+  };
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 
