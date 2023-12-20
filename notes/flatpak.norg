@@ -27,7 +27,11 @@ flatpak install -y com.system76.Popsicle
 flatpak install -y io.gitlab.news_flash.NewsFlash
 flatpak install -y org.inkscape.Inkscape
 flatpak install -y org.keepassxc.KeePassXC
+flatpak install -y org.libreoffice.LibreOffice
+flatpak install -y org.mozilla.Thunderbird
+flatpak install -y org.mozilla.firefox
 flatpak install -y org.qbittorrent.qBittorrent
+flatpak install -y org.videolan.VLC
 flatpak install -y org.zotero.Zotero
 @end
 

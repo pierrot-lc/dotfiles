@@ -8,4 +8,8 @@
       type = "lua";
     }
   ];
+
+  programs.neovim.extraPackages = with pkgs; [
+    nodePackages_latest.nodejs
+  ];
 }

@@ -38,12 +38,64 @@
     };
   };
 
+  programs.git = {
+    enable = true;
+    delta.enable = true;
+    userEmail = "pstmrtem@outlook.com";
+    userName = "Pierrot LC";
+    aliases = {
+      s = "status";
+      d = "diff";
+    };
+    extraConfig = {
+      pull.rebase = true;
+    };
+    ignores = [
+      "**/*.pyc"
+      "**/__pycache__"
+      ".venv"
+    ];
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      add_newline = false;
+    };
+  };
+
+  programs.eza = {
+    enable = true;
+    enableAliases = true;
+    icons = true;
+    git = true;
+    extraOptions = [
+      "--group-directories-first"
+    ];
+  };
+
   home.packages = with pkgs; [
     bat
     bottom
+    btop
+    comma
     curl
     du-dust
+    duf
     fd
+    file
+    gdu
+    glances
+    gnumake
+    gnutar
+    just
+    neofetch
+    pandoc
+    python3Full
+    ranger
     ripgrep
+    unzip
+    zip
   ];
 }

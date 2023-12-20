@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vimPlugins = {
-      url = "./nvim";
+      url = "./home/nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -42,25 +42,25 @@
         x250 = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
-            ./gnome.nix
-            ./hardwares/x250
+            ./configuration
+            ./configuration/gnome.nix
+            ./configuration/hardwares/x250
           ];
         };
         big-tower = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
-            ./gnome.nix
-            ./hardwares/big-tower
+            ./configuration
+            ./configuration/gnome.nix
+            ./configuration/hardwares/big-tower
           ];
         };
         t15 = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
-            ./gnome.nix
-            ./hardwares/t15
+            ./configuration
+            ./configuration/gnome.nix
+            ./configuration/hardwares/t15
           ];
         };
       };
@@ -68,10 +68,32 @@
       homeConfigurations = {
         pierrot-lc = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          # extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = {
+            username = "pierrot-lc";
+          };
 
           modules = [
-            ./home.nix
+            ./home
+            ./home/bash
+            ./home/fonts.nix
+            ./home/gui.nix
+            ./home/kitty
+            ./home/nvim
+          ];
+        };
+
+        pierrep = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            username = "pierrep";
+          };
+
+          modules = [
+            ./home
+            ./home/bash
+            ./home/fonts.nix
+            ./home/kitty
+            ./home/nvim
           ];
         };
       };

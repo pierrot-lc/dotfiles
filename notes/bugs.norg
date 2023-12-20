@@ -1,0 +1,35 @@
+@document.meta
+title: bugs
+description: A list of some bugs or errors encountered.
+authors: pierrep
+categories: notes
+created: 2023-12-20T20:41:32+0100
+updated: 2023-12-20T20:41:32+0100
+version: 1.1.1
+@end
+
+
+* Patch OpenGL's kitty dependency
+OpenGL won't work if you use kitty on a non-NixOS machine.
+You'll probably get an error like this:
+
+@code sh
+[354 12:42:09.763681] [glfw error 65542]: EGL: Failed to get EGL display: Success
+[354 12:42:09.767866] Traceback (most recent call last):
+  File "/nix/store/m59n85wfm9dxmvhnfk7idf5nvi53nys3-kitty-0.31.0/bin/../lib/kitty/kitty/main.py", line 559, in main
+    _main()
+  File "/nix/store/m59n85wfm9dxmvhnfk7idf5nvi53nys3-kitty-0.31.0/bin/../lib/kitty/kitty/main.py", line 551, in _main
+    run_app(opts, cli_opts, bad_lines)
+  File "/nix/store/m59n85wfm9dxmvhnfk7idf5nvi53nys3-kitty-0.31.0/bin/../lib/kitty/kitty/main.py", line 293, in __call__
+    _run_app(opts, args, bad_lines)
+  File "/nix/store/m59n85wfm9dxmvhnfk7idf5nvi53nys3-kitty-0.31.0/bin/../lib/kitty/kitty/main.py", line 265, in _run_app
+    window_id = create_os_window(
+                ^^^^^^^^^^^^^^^^^
+ValueError: Failed to create GLFWwindow
+@end
+
+To solve this, you have to run kitty using the following command:
+
+@code sh
+nix run --impure github:guibou/nixGL -- kitty
+@end
