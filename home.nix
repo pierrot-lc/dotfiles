@@ -93,6 +93,7 @@
     source-code-pro
     source-sans
     source-sans-pro
+    symbola
     twemoji-color-font
     twitter-color-emoji
     unifont
