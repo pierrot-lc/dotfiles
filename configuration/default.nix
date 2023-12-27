@@ -103,6 +103,11 @@
   #   "Noto Color Emoji"
   # ];
 
+  environment.sessionVariables = {
+    # Enable Ozone Wayland support for Electron and Chromium based applications.
+    NIXOS_OZONE_WL = "1";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
