@@ -24,6 +24,7 @@ flatpak install -y com.jgraph.drawio.desktop
 flatpak install -y com.rafaelmardojai.Blanket
 flatpak install -y com.sindresorhus.Caprine
 flatpak install -y com.system76.Popsicle
+flatpak install -y io.github.alainm23.planify
 flatpak install -y io.gitlab.news_flash.NewsFlash
 flatpak install -y org.inkscape.Inkscape
 flatpak install -y org.keepassxc.KeePassXC
@@ -39,3 +40,6 @@ flatpak install -y org.zotero.Zotero
 There are some projects that tries to setup a declarative flatpak for nix:
 - {https://github.com/gmodena/nix-flatpak}
 - {https://github.com/GermanBread/declarative-flatpak}
+
+From my own tests I struggled to add them to my config file. For now it looks better to
+simply have them declared here and to copy/paste the list when I need to reinstall my system.
