@@ -42,14 +42,11 @@
     gnomeExtensions.caffeine
     gnomeExtensions.just-perfection
     gnomeExtensions.material-you-color-theming
-    gnomeExtensions.no-activities-button
     gnomeExtensions.places-status-indicator
     gnomeExtensions.rounded-window-corners
     gnomeExtensions.runcat
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.vitals
     gnomeExtensions.weather-oclock
-    gnomeExtensions.workspace-indicator
-
   ];
 }
