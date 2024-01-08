@@ -85,11 +85,13 @@
     du-dust
     duf
     fd
+    ffmpeg
     file
     gdu
     glances
     gnumake
     gnutar
+    imagemagick
     just
     neofetch
     pandoc
