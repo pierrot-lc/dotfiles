@@ -6,9 +6,4 @@
     popcorntime
     satty
   ];
-
-  home.sessionVariables = {
-    BROWSER = "firefox";
-  };
-
 }

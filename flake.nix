@@ -74,11 +74,7 @@
 
           modules = [
             ./home
-            ./home/bash
-            ./home/fonts.nix
             ./home/gui.nix
-            ./home/kitty
-            ./home/nvim
           ];
         };
 
@@ -90,10 +86,6 @@
 
           modules = [
             ./home
-            ./home/bash
-            ./home/fonts.nix
-            ./home/kitty
-            ./home/nvim
           ];
         };
       };
