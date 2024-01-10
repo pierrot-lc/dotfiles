@@ -99,6 +99,7 @@
     python3Full
     ranger
     ripgrep
+    sshfs
     unzip
     zip
   ];
