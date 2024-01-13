@@ -49,8 +49,8 @@
       d = "diff";
     };
     extraConfig = {
-      pull.rebase = true;
       core.editor = "nvim";
+      pull.rebase = true;
     };
     ignores = [
       "**/*.pyc"
