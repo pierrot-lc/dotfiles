@@ -116,6 +116,7 @@
     git
     vim
     virt-manager
+    xwaylandvideobridge
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
