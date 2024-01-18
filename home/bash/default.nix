@@ -11,6 +11,10 @@
     '';
     initExtra = builtins.readFile ./init_extra.sh;
     shellAliases = {
+      _home_clean = "nix-collect-garbage -d";
+      _home_update = "home-manager switch -v --flake .";
+      _system_clean = "sudo nix-collect-garbage -d";
+      _system_update = "sudo nixos-rebuild switch -v --flake .";
       bim = "vim";
       cat = "bat";
       chgrp = "chgrp --preserve-root";

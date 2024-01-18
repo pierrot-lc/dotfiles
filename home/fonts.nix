@@ -9,8 +9,11 @@
     emojione
     freefont_ttf
     gyre-fonts
+    jetbrains-mono
     liberation_ttf
+    material-symbols
     noto-fonts
+    noto-fonts-color-emoji
     source-code-pro
     source-sans
     source-sans-pro
@@ -22,5 +25,5 @@
 
   # Discover installed fonts by home-manager and enable them.
   # But it masks already installed fonts :(.
-  fonts.fontconfig.enable = false;
+  fonts.fontconfig.enable = true;
 }
