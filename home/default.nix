@@ -28,6 +28,12 @@
   };
 
   # Security declarations.
+  services.gpg-agent = {
+    enable = true;
+    enableBashIntegration = true;
+    enableSshSupport = true;
+    pinentryFlavor = "curses";
+  };
   programs.gpg = {
     enable = true;
   };
