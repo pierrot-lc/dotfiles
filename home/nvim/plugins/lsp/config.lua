@@ -54,7 +54,6 @@ lspconfig["lua_ls"].setup({
 })
 lspconfig["bashls"].setup({})
 lspconfig["marksman"].setup({})
-lspconfig["ltex"].setup({})
 lspconfig["nil_ls"].setup({})
 
 -- Toggle diagnostics.

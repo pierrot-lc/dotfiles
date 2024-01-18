@@ -21,7 +21,6 @@
 
   programs.neovim.extraPackages = with pkgs; [
     # Language servers.
-    ltex-ls
     lua-language-server
     marksman
     nil
