@@ -24,10 +24,10 @@
     ltex-ls
     lua-language-server
     marksman
+    nil
     nixd
     nodePackages_latest.bash-language-server
     python311Packages.python-lsp-server
-    rnix-lsp
     ruff-lsp
   ];
 }

@@ -55,7 +55,7 @@ lspconfig["lua_ls"].setup({
 lspconfig["bashls"].setup({})
 lspconfig["marksman"].setup({})
 lspconfig["ltex"].setup({})
-lspconfig["nixd"].setup({})
+lspconfig["nil_ls"].setup({})
 
 -- Toggle diagnostics.
 local show_diagnostics = true
