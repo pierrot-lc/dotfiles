@@ -43,9 +43,8 @@
     enable = true;
     package = pkgs.pass.withExtensions (exts: [exts.pass-otp exts.pass-import]);
 
-    # See "Environment variables" section of pass and extention man pages.
     settings = {
-      PASSWORD_STORE_DIR = "$XDG_DATA_HOME/password-store";
+      PASSWORD_STORE_DIR = "/home/${username}/.local/share/password-store";
     };
   };
 
