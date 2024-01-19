@@ -46,11 +46,13 @@
   programs.git = {
     enable = true;
     delta.enable = true;
-    userEmail = "pstmrtem@outlook.com";
+    userEmail = "pierrotlc@proton.me";
     userName = "Pierrot LC";
     aliases = {
-      s = "status";
+      a = "add";
+      c = "commit";
       d = "diff";
+      s = "status";
     };
     extraConfig = {
       core.editor = "nvim";
@@ -61,6 +63,10 @@
       "**/__pycache__"
       ".venv"
     ];
+    signing = {
+      key = "9FD5351D70EB6A4C";
+      signByDefault = true;
+    };
   };
 
   programs.starship = {
