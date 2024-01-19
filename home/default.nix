@@ -23,9 +23,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  xdg.enable = true;
+
   home.sessionVariables = {
     BROWSER = "firefox";
-    XDG_DATA_HOME = "$HOME/.local/share";
   };
 
   # Security declarations.
@@ -44,7 +45,7 @@
     package = pkgs.pass.withExtensions (exts: [exts.pass-otp exts.pass-import]);
 
     settings = {
-      PASSWORD_STORE_DIR = "/home/${username}/.local/share/password-store";
+      PASSWORD_STORE_DIR = "$XDG_DATA_HOME/password-store";
     };
   };
 
