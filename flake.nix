@@ -74,7 +74,6 @@
 
           modules = [
             ./home
-            ./home/gui.nix
           ];
         };
 

@@ -25,6 +25,7 @@
 
   home.sessionVariables = {
     BROWSER = "firefox";
+    XDG_DATA_HOME = "$HOME/.local/share";
   };
 
   # Security declarations.
@@ -59,6 +60,7 @@
   imports = [
     ./bash
     ./fonts.nix
+    ./gui.nix
     ./kitty
     ./nvim
   ];

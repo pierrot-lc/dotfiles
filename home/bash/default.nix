@@ -56,6 +56,7 @@
     };
     extraConfig = {
       core.editor = "nvim";
+      init.defaultBranch = "master";
       pull.rebase = true;
     };
     ignores = [
@@ -111,6 +112,7 @@
     ripgrep
     sshfs
     unzip
+    wl-clipboard
     zip
   ];
 }
