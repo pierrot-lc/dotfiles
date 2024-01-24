@@ -11,6 +11,7 @@
     # Extensions used above.
     nvim-treesitter-refactor
     nvim-treesitter-textobjects
+    nvim-treesitter-context
     hmts-nvim
   ];
 }
