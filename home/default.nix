@@ -59,7 +59,6 @@
 
   imports = [
     ./bash
-    ./fonts.nix
     ./gui.nix
     ./kitty
     ./nvim

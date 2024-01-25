@@ -43,7 +43,6 @@
           inherit system;
           modules = [
             ./configuration
-            ./configuration/gnome.nix
             ./configuration/hardwares/x250
           ];
         };
@@ -51,7 +50,6 @@
           inherit system;
           modules = [
             ./configuration
-            ./configuration/gnome.nix
             ./configuration/hardwares/big-tower
           ];
         };
@@ -59,7 +57,6 @@
           inherit system;
           modules = [
             ./configuration
-            ./configuration/gnome.nix
             ./configuration/hardwares/t15
           ];
         };
@@ -85,6 +82,7 @@
 
           modules = [
             ./home
+            ./home/fonts.nix
           ];
         };
       };

@@ -25,5 +25,5 @@
 
   # Discover installed fonts by home-manager and enable them.
   # But it masks already installed fonts :(.
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig.enable = false;
 }
