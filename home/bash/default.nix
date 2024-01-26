@@ -48,6 +48,7 @@
       a = "add";
       c = "commit";
       d = "diff";
+      r = "restore";
       s = "status";
     };
     extraConfig = {

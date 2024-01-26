@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 let
   private = import ./private.nix;
   OAuth2Settings = id: {
@@ -32,7 +32,6 @@ in
       };
 
       flavor = "outlook.office365.com";
-      passwordCommand = private.pass-outlook-1;
     };
 
     "${private.outlook-2}" = {
@@ -46,7 +45,6 @@ in
       };
 
       flavor = "outlook.office365.com";
-      passwordCommand = private.pass-outlook-2;
     };
 
     "${private.gmail}" = {
@@ -60,7 +58,6 @@ in
       };
 
       flavor = "gmail.com";
-      passwordCommand = private.pass-gmail;
     };
 
     "${private.polymtl}" = {
@@ -73,7 +70,6 @@ in
         profiles = [ "pierre" ];
       };
 
-      passwordCommand = private.pass-polymtl;
       smtp = {
         host = "smtp.polymtl.ca";
         port = 587;
@@ -100,7 +96,6 @@ in
         profiles = [ "pierre" ];
       };
 
-      passwordCommand = private.pass-proton;
       smtp = {
         host = "127.0.0.1";
         port = 1025;

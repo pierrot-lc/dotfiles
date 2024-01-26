@@ -16,12 +16,10 @@ so that I can easily install them again.
 
 @code sh
 flatpak install -y app.drey.Damask
-flatpak install -y com.calibre_ebook.calibre
 flatpak install -y com.discordapp.Discord
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.tchx84.Flatseal
 flatpak install -y com.jgraph.drawio.desktop
-flatpak install -y com.obsproject.Studio
 flatpak install -y com.rafaelmardojai.Blanket
 flatpak install -y com.sindresorhus.Caprine
 flatpak install -y com.system76.Popsicle
@@ -29,9 +27,7 @@ flatpak install -y com.ultimaker.cura
 flatpak install -y io.github.alainm23.planify
 flatpak install -y io.gitlab.news_flash.NewsFlash
 flatpak install -y org.inkscape.Inkscape
-flatpak install -y org.keepassxc.KeePassXC
 flatpak install -y org.libreoffice.LibreOffice
-flatpak install -y org.mozilla.Thunderbird
 flatpak install -y org.mozilla.firefox
 flatpak install -y org.openscad.OpenSCAD
 flatpak install -y org.qbittorrent.qBittorrent
