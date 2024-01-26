@@ -36,11 +36,6 @@
     enableSshSupport = true;
     pinentryFlavor = "curses";
     defaultCacheTtlSsh = 86400;  # 24 hours.
-    extraConfig = ''
-    personal-digest-preferences SHA512 SHA384 SHA256 SHA224
-    default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 BZIP2 ZLIB ZIP Uncompressed
-    cert-digest-algo SHA512
-    '';
   };
   programs.gpg = {
     enable = true;
