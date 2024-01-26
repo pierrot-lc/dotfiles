@@ -100,6 +100,7 @@
     ffmpeg
     file
     gdu
+    git-crypt
     glances
     gnumake
     gnutar

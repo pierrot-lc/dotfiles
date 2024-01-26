@@ -1,5 +1,8 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
+let
+  private = import ./private.nix;
+in
 {
   programs.mbsync.enable = true;
   programs.msmtp.enable = true;
@@ -9,32 +12,25 @@
       preNew = "mbsync --all";
     };
   };
+  programs.aerc.enable = true;
+  programs.aerc.extraConfig.general.unsafe-accounts-conf = true;
 
   accounts.email.accounts = {
     perso-outlook = {
-      address = "pstmrtem@outlook.com";
+      address = private.outlook_1;
       primary = true;
 
       mbsync = {
-        enable = false;
+        enable = true;
         create = "maildir";
       };
-      msmtp.enable = false;
-      notmuch.enable = false;
+      msmtp.enable = true;
+      notmuch.enable = true;
+      aerc.enable = true;
 
+      flavor = "outlook.office365.com";
+      passwordCommand = private.pass_outlook_1;
       realName = "Pierrot LC";
-      userName = "pstmrtem@outlook.com";
-
-      imap = {
-        host = "outlook.office365.com";
-        port = 993;
-        tls.enable = true;
-      };
-      smtp = {
-        host = "smtp.office365.com";
-        port = 587;
-        tls.enable = true;
-      };
     };
   };
 }
