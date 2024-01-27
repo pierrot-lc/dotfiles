@@ -58,11 +58,11 @@
   };
 
   imports = [
+    ./accounts
     ./bash
     ./gui.nix
     ./kitty
     ./nvim.nix
-    ./mails
   ];
 
   # This value determines the Home Manager release that your configuration is

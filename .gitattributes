@@ -1,1 +1,1 @@
-home/mails/private.nix filter=git-crypt diff=git-crypt
+home/accounts/private.nix filter=git-crypt diff=git-crypt
