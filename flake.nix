@@ -3,18 +3,18 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim-nightly-overlay = {
+    # Neovim dependencies.
+    neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    vimPlugins = {
-      url = "./home/nvim";
+    nvim-nix = {
+      url = "github:pierrot-lc/nvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -30,10 +30,8 @@
           allowUnfree = true;
         };
         overlays = [
-          # Provides neovim nightly.
-          inputs.neovim-nightly-overlay.overlay
-          # Provides missing neovim plugins.
-          inputs.vimPlugins.packages.${system}.vimPlugins
+          inputs.nvim-nix.overlays.default
+          inputs.neovim-nightly.overlay
         ];
       };
     in

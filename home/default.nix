@@ -61,7 +61,7 @@
     ./bash
     ./gui.nix
     ./kitty
-    ./nvim
+    ./nvim.nix
     ./mails
   ];
 

@@ -11,7 +11,6 @@
     '';
     initExtra = builtins.readFile ./init_extra.sh;
     shellAliases = {
-      bim = "vim";
       cat = "bat";
       chgrp = "chgrp --preserve-root";
       chmod = "chmod --preserve-root";
