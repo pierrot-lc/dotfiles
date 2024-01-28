@@ -114,6 +114,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    gparted
     vim
     virt-manager
     xwaylandvideobridge
