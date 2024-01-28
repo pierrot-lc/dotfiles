@@ -69,6 +69,7 @@
 
           modules = [
             ./home
+            ./home/accounts
           ];
         };
 

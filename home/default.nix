@@ -58,7 +58,6 @@
   };
 
   imports = [
-    ./accounts
     ./bash
     ./gui.nix
     ./kitty
