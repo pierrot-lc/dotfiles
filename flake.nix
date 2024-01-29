@@ -9,12 +9,9 @@
     };
 
     # Neovim dependencies.
+    nvim-nix.url = "github:pierrot-lc/nvim-nix";
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvim-nix = {
-      url = "github:pierrot-lc/nvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
