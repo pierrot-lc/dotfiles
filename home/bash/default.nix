@@ -15,8 +15,9 @@
       chgrp = "chgrp --preserve-root";
       chmod = "chmod --preserve-root";
       chown = "chown --preserve-root";
+      count = "ls -l | wc -l";
       df = "df -h";
-      du = "dust";
+      ducks = "du -h --max-depth=1 | sort -hr | head";
       dust = "dust --reverse";
       env = "env | sort";
       ff = "find . -name "; # Find a file from the current directory.
@@ -47,6 +48,8 @@
       a = "add";
       c = "commit";
       d = "diff";
+      p = "pull";
+      P = "push";
       r = "restore";
       s = "status";
     };
@@ -102,6 +105,7 @@
     gnutar
     imagemagick
     just
+    jq
     neofetch
     pandoc
     python3Full

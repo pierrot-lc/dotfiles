@@ -61,6 +61,7 @@
     ./bash
     ./gui.nix
     ./kitty
+    ./newsboat.nix
     ./nvim.nix
   ];
 
