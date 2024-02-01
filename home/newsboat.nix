@@ -1,7 +1,7 @@
 {
   programs.newsboat = {
     enable = true;
-    maxItems = 20;
+    maxItems = 40;
     urls = [
       {
         tags = [ "linux" ];
@@ -43,6 +43,12 @@
       highlight article "\\((link|image|video)\\)" color8 default
       highlight article "https?://[^ ]+" color4 default
       highlight article "\[[0-9]+\]" color6 default bold
+
+      bind-key j down
+      bind-key k up
+      bind-key l next-feed
+      bind-key h prev-feed
+      bind-key x goto-url
     '';
   };
 }

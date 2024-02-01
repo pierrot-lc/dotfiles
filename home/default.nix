@@ -1,4 +1,4 @@
-{ config, pkgs, username, ... }:
+{ pkgs, username, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -24,10 +24,6 @@
   programs.home-manager.enable = true;
 
   xdg.enable = true;
-
-  home.sessionVariables = {
-    BROWSER = "firefox";
-  };
 
   # Security declarations.
   services.gpg-agent = {
@@ -59,10 +55,10 @@
 
   imports = [
     ./bash
-    ./gui.nix
     ./kitty
     ./newsboat.nix
     ./nvim.nix
+    ./programs.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

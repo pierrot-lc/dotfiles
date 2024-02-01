@@ -1,5 +1,3 @@
-{ config, pkgs, lib, ... }:
-
 {
   programs.bash = {
     enable = true;
@@ -38,82 +36,4 @@
       wn = "watch -n 0.5 nvidia-smi"; # Monitor nvidia GPUs.
     };
   };
-
-  programs.git = {
-    enable = true;
-    delta.enable = true;
-    userEmail = "pierrotlc@proton.me";
-    userName = "Pierrot LC";
-    aliases = {
-      a = "add";
-      c = "commit";
-      d = "diff";
-      p = "pull";
-      P = "push";
-      r = "restore";
-      s = "status";
-    };
-    extraConfig = {
-      core.editor = "nvim";
-      init.defaultBranch = "master";
-      pull.rebase = true;
-    };
-    ignores = [
-      "**/*.pyc"
-      "**/__pycache__"
-      ".venv"
-    ];
-    signing = {
-      key = "9FD5351D70EB6A4C";
-      signByDefault = true;
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    settings = {
-      add_newline = false;
-    };
-  };
-
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
-    icons = true;
-    git = true;
-    extraOptions = [
-      "--group-directories-first"
-    ];
-  };
-
-  home.packages = with pkgs; [
-    bat
-    bottom
-    btop
-    comma
-    curl
-    du-dust
-    duf
-    fd
-    ffmpeg
-    file
-    gdu
-    git-crypt
-    glances
-    gnumake
-    gnutar
-    imagemagick
-    just
-    jq
-    neofetch
-    pandoc
-    python3Full
-    ranger
-    ripgrep
-    sshfs
-    unzip
-    wl-clipboard
-    zip
-  ];
 }
