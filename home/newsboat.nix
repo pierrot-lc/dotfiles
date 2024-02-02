@@ -23,6 +23,11 @@
         url = "http://feeds.arstechnica.com/arstechnica/index";
         title = "Ars Technica";
       }
+      {
+        tags = [ "AI" ];
+        url = "https://huggingface.co/blog/feed.xml";
+        title = "HuggingFace Blog";
+      }
     ];
     extraConfig = ''
       color listnormal         color15 default
