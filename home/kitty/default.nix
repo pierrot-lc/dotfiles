@@ -7,7 +7,7 @@
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
     ];
-    theme = "Ayu Mirage";
+    theme = "kanagawabones";
     shellIntegration.enableBashIntegration = true;
   };
 
