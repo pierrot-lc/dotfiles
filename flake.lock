@@ -413,11 +413,11 @@
         "vim-kitty": "vim-kitty"
       },
       "locked": {
-        "lastModified": 1706959049,
-        "narHash": "sha256-O6YfNTWlSYm8W8jjbAmS5P/PnG7Wg5QjUef2aTya/Go=",
+        "lastModified": 1706965380,
+        "narHash": "sha256-zsM8gRmardLkEpIE04JurGlR4R43iwrg7UickiqRkr0=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "790967b2d4905b785d929e15e4ff83daec492a69",
+        "rev": "45e8593c60c3a83d9fdfde35015263513b8f8ee6",
         "type": "github"
       },
       "original": {
