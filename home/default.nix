@@ -31,7 +31,10 @@
     enableBashIntegration = true;
     enableSshSupport = true;
     pinentryFlavor = "curses";
+    defaultCacheTtl = 86400;  # 24 hours.
     defaultCacheTtlSsh = 86400;  # 24 hours.
+    maxCacheTtl = 86400;
+    maxCacheTtlSsh = 86400;
   };
   programs.gpg = {
     enable = true;
