@@ -21,6 +21,7 @@ in
         "mailnews.default_sort_order" = 2;  # In descending order.
         "mailnews.default_news_sort_type" = 18;  # Sort by date.
         "mailnews.default_news_sort_order" = 2;  # In descending order.
+        "mailnews.reply_on_top" = 1;
       };
     };
   };
