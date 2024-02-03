@@ -58,6 +58,7 @@
 
   imports = [
     ./bash
+    ./git.nix
     ./kitty
     ./newsboat.nix
     ./nvim.nix
