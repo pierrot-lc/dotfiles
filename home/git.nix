@@ -31,12 +31,5 @@
 
   programs.lazygit = {
     enable = true;
-
-    settings = {
-      files = {
-        commitChanges = "";
-        commitChangesWithEditor = "c";
-      };
-    };
   };
 }
