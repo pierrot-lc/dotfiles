@@ -63,6 +63,7 @@
     ripgrep
     satty
     sshfs
+    tree
     unzip
     wl-clipboard
     zip
