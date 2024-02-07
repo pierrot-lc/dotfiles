@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  programs.autojump = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   programs.eza = {
     enable = true;
     enableAliases = true;
@@ -17,6 +22,11 @@
 
   home.sessionVariables = {
     BROWSER = "firefox";
+  };
+
+  programs.thefuck = {
+    enable = true;
+    enableBashIntegration = true;
   };
 
   programs.obs-studio = {
@@ -63,6 +73,7 @@
     ripgrep
     satty
     sshfs
+    tldr
     tree
     unzip
     wl-clipboard
