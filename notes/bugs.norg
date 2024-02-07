@@ -10,8 +10,8 @@ version: 1.1.1
 
 
 * Patch OpenGL's kitty dependency
-OpenGL won't work if you use kitty on a non-NixOS machine.
-You'll probably get an error like this:
+OpenGL won't work if you use kitty on a non-NixOS machine. You'll probably
+get an error like this:
 
 @code sh
 [354 12:42:09.763681] [glfw error 65542]: EGL: Failed to get EGL display: Success
