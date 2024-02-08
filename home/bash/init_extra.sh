@@ -28,6 +28,7 @@ function pva() {
 
 	if [ -f "$root/.venv/bin/activate" ]; then
 		. "$root/.venv/bin/activate"
+        return 0
 	else
 		if [[ "$root" == '/' ]]; then
 			# We've hit root, we can't search further.
@@ -35,6 +36,7 @@ function pva() {
 			return 1
 		else
 			pva "$(dirname "${root}")"
+            return $?
 		fi
 	fi
 }
@@ -89,6 +91,7 @@ function pvc() {
 	. "$env_root/bin/activate"
 
 	echo "Done!"
+    return 0
 }
 
 # Test if the current terminal is `kitty`.
