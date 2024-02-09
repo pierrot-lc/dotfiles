@@ -17,6 +17,7 @@ the flapatks so that I can easily install them again.
 @code sh
 flatpak install -y app.drey.Damask
 flatpak install -y com.discordapp.Discord
+flatpak install -y com.github.ahrm.sioyek
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.tchx84.Flatseal
 flatpak install -y com.jgraph.drawio.desktop
