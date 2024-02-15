@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -14,24 +12,26 @@
   systemd.services."autovt@tty1".enable = false;
 
   # Exclude some gnome packages installed by default when using gnome.
-  environment.gnome.excludePackages = (
-  with pkgs; [
-      gnome-photos
-      gnome-tour
-    ]
-  ) ++ (
-  with pkgs.gnome; [
-      cheese
-      epiphany
-      geary
-      gnome-music
-      gnome-terminal
-      hitori
-      iagno
-      tali
-      totem
-    ]
-  );
+  environment.gnome.excludePackages =
+    (
+      with pkgs; [
+        gnome-photos
+        gnome-tour
+      ]
+    )
+    ++ (
+      with pkgs.gnome; [
+        cheese
+        epiphany
+        geary
+        gnome-music
+        gnome-terminal
+        hitori
+        iagno
+        tali
+        totem
+      ]
+    );
 
   environment.systemPackages = with pkgs; [
     gnome.adwaita-icon-theme

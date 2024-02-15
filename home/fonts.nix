@@ -1,8 +1,6 @@
-{ config, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "NerdFontsSymbolsOnly" ]; })
+    (nerdfonts.override {fonts = ["FiraCode" "NerdFontsSymbolsOnly"];})
     cantarell-fonts
     commit-mono
     dejavu_fonts

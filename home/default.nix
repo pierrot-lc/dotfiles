@@ -1,6 +1,8 @@
-{ pkgs, username, ... }:
-
 {
+  pkgs,
+  username,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = username;
@@ -31,8 +33,8 @@
     enableBashIntegration = true;
     enableSshSupport = true;
     pinentryFlavor = "curses";
-    defaultCacheTtl = 86400;  # 24 hours.
-    defaultCacheTtlSsh = 86400;  # 24 hours.
+    defaultCacheTtl = 86400; # 24 hours.
+    defaultCacheTtlSsh = 86400; # 24 hours.
     maxCacheTtl = 86400;
     maxCacheTtlSsh = 86400;
   };
@@ -51,8 +53,8 @@
   # For virtualisation using virt-manager and quemu.
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "quemu:///system" ];
-      uris = [ "quemu:///system" ];
+      autoconnect = ["quemu:///system"];
+      uris = ["quemu:///system"];
     };
   };
 

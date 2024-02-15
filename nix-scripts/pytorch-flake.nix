@@ -19,8 +19,10 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
-  let
+  outputs = {
+    self,
+    nixpkgs,
+  }: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -49,31 +51,32 @@
       # ];
     };
 
-    python-packages = ps: with ps; [
-      pip
-      setuptools
-      virtualenv
+    python-packages = ps:
+      with ps; [
+        pip
+        setuptools
+        virtualenv
 
-      beartype
-      einops
-      gymnasium
-      hydra-core
-      jaxtyping
-      numpy
-      pytest
-      torch
-      torchinfo
-      torchrl  # Does not exists on 23.11.
-      tqdm
-      wandb
-    ];
+        beartype
+        einops
+        gymnasium
+        hydra-core
+        jaxtyping
+        numpy
+        pytest
+        torch
+        torchinfo
+        torchrl # Does not exists on 23.11.
+        tqdm
+        wandb
+      ];
 
     fhs = pkgs.buildFHSUserEnv {
       name = "pytorch";
       targetPkgs = pkgs: (with pkgs; [
-          (python311.withPackages python-packages)
-          cudaPackages.cudatoolkit
-          cudaPackages.cudnn
+        (python311.withPackages python-packages)
+        cudaPackages.cudatoolkit
+        cudaPackages.cudnn
       ]);
     };
   in {

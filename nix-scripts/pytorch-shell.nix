@@ -1,30 +1,31 @@
 {
-  pkgs ? import <nixpkgs> {
-    config = {
-      allowUnfree = true;
-      cudaSupport = true;
-    };
-  }
-}:
-let
-  python-packages = ps: with ps; [
-    pip
-    setuptools
-    virtualenv
+  pkgs ?
+    import <nixpkgs> {
+      config = {
+        allowUnfree = true;
+        cudaSupport = true;
+      };
+    },
+}: let
+  python-packages = ps:
+    with ps; [
+      pip
+      setuptools
+      virtualenv
 
-    beartype
-    einops
-    gymnasium
-    hydra-core
-    jaxtyping
-    numpy
-    pytest
-    torch
-    torchinfo
-    torchrl  # Does not exists on 23.11.
-    tqdm
-    wandb
-  ];
+      beartype
+      einops
+      gymnasium
+      hydra-core
+      jaxtyping
+      numpy
+      pytest
+      torch
+      torchinfo
+      torchrl # Does not exists on 23.11.
+      tqdm
+      wandb
+    ];
 
   fhs = pkgs.buildFHSUserEnv {
     name = "pytorch";

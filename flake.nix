@@ -16,71 +16,74 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-      lib = nixpkgs.lib;
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: let
+    system = "x86_64-linux";
+    lib = nixpkgs.lib;
 
-      pkgs = import nixpkgs {
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+      overlays = [
+        inputs.nvim-nix.overlays.default
+        inputs.neovim-nightly.overlay
+      ];
+    };
+  in {
+    nixosConfigurations = {
+      x250 = lib.nixosSystem {
         inherit system;
-        config = {
-          allowUnfree = true;
-        };
-        overlays = [
-          inputs.nvim-nix.overlays.default
-          inputs.neovim-nightly.overlay
+        modules = [
+          ./configuration
+          ./configuration/hardwares/x250
         ];
       };
-    in
-    {
-      nixosConfigurations = {
-        x250 = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration
-            ./configuration/hardwares/x250
-          ];
-        };
-        big-tower = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration
-            ./configuration/hardwares/big-tower
-          ];
-        };
-        t15 = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration
-            ./configuration/hardwares/t15
-          ];
-        };
+      big-tower = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration
+          ./configuration/hardwares/big-tower
+        ];
       };
-
-      homeConfigurations = {
-        pierrot-lc = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = {
-            username = "pierrot-lc";
-          };
-
-          modules = [
-            ./home
-            ./home/accounts
-          ];
-        };
-
-        pierrep = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = {
-            username = "pierrep";
-          };
-
-          modules = [
-            ./home
-            ./home/fonts.nix
-          ];
-        };
+      t15 = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration
+          ./configuration/hardwares/t15
+        ];
       };
     };
+
+    homeConfigurations = {
+      pierrot-lc = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          username = "pierrot-lc";
+        };
+
+        modules = [
+          ./home
+          ./home/accounts
+        ];
+      };
+
+      pierrep = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          username = "pierrep";
+        };
+
+        modules = [
+          ./home
+          ./home/fonts.nix
+        ];
+      };
+    };
+  };
 }
