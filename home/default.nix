@@ -24,6 +24,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  # Show news after update.
+  news.display = "show";
 
   xdg.enable = true;
 
