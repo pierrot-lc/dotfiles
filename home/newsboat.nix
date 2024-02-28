@@ -20,6 +20,11 @@
       }
       {
         tags = [ "tech" ];
+        url = "https://techcrunch.com/feed/";
+        title = "Tech Crunch";
+      }
+      {
+        tags = [ "tech" ];
         url = "http://feeds.arstechnica.com/arstechnica/index";
         title = "Ars Technica";
       }
