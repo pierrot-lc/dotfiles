@@ -1,5 +1,9 @@
 # This is some specific configuration for the given machine.
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -23,6 +27,9 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+
+    # Enable VDPAU and VA-API support.
+    extraPackages = with pkgs; [vaapiVdpau];
   };
 
   # Tell Xorg to use the nvidia driver.
