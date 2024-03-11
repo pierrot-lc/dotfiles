@@ -19,6 +19,10 @@
   #   useOSProber = true;
   # };
 
+  environment.systemPackages = with pkgs; [
+    nvitop
+  ];
+
   # Allow unfree packages (NVIDIA).
   nixpkgs.config.allowUnfree = true;
 
