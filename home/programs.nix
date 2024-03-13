@@ -8,7 +8,7 @@
 
   programs.eza = {
     enable = true;
-    enableAliases = true;
+    enableBashIntegration = true;
     icons = true;
     git = true;
     extraOptions = [
