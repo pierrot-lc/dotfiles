@@ -15,7 +15,7 @@
     };
     extraConfig = {
       core.editor = "nvim";
-      init.defaultBranch = "master";
+      init.defaultBranch = "main";
       pull.rebase = true;
     };
     ignores = [
