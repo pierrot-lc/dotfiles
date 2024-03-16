@@ -34,7 +34,7 @@
     enable = true;
     enableBashIntegration = true;
     enableSshSupport = true;
-    pinentryFlavor = "curses";
+    pinentryPackage = pkgs.pinentry-curses;
     defaultCacheTtl = 86400; # 24 hours.
     defaultCacheTtlSsh = 86400; # 24 hours.
     maxCacheTtl = 86400;
