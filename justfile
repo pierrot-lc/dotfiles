@@ -1,9 +1,14 @@
-home_update:
+home-update:
     home-manager switch -v --flake .
-system_update:
+system-update:
     sudo nixos-rebuild switch -v --flake .
 
-clean_home:
+clean-home:
     nix-collect-garbage -d
-clean_system:
+clean-system:
     sudo nix-collect-garbage -d
+
+pin-flake:
+    git add flake.lock
+    git commit -m "📌 pin: flake.lock"
+    git push
