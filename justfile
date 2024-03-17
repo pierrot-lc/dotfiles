@@ -8,7 +8,7 @@ clean-home:
 clean-system:
     sudo nix-collect-garbage -d
 
-pin-flake:
+pin-lockfile:
     git add flake.lock
     git commit -m "📌 pin: flake.lock"
     git push
