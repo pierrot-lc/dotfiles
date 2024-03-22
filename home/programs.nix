@@ -52,6 +52,7 @@
     curl
     du-dust
     duf
+    epiphany
     fd
     ffmpeg
     file
