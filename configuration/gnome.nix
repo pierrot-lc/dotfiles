@@ -22,7 +22,6 @@
     ++ (
       with pkgs.gnome; [
         cheese
-        epiphany
         geary
         gnome-music
         gnome-terminal
