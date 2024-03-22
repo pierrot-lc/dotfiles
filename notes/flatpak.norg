@@ -29,6 +29,7 @@ flatpak install -y io.github.nokse22.asciidraw
 flatpak install -y io.gitlab.news_flash.NewsFlash
 flatpak install -y org.inkscape.Inkscape
 flatpak install -y org.libreoffice.LibreOffice
+flatpak install -y org.nickvision.money
 flatpak install -y org.openscad.OpenSCAD
 flatpak install -y org.qbittorrent.qBittorrent
 flatpak install -y org.videolan.VLC
