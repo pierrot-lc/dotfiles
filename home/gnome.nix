@@ -25,7 +25,7 @@
       search = ["<Super>l"];
       www = ["<Super>b"];
       custom-keybindings = [
-        "org/gnome/setting-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/setting-daemon/plugins/media-keys/custom-keybindings/custom0/"
       ];
     };
     "org/gnome/setting-daemon/plugins/media-keys/custom-keybindings/custom0" = {
