@@ -64,6 +64,7 @@
     ./bash
     ./firefox.nix
     ./git.nix
+    ./gnome.nix
     ./kitty
     ./newsboat.nix
     ./nvim.nix

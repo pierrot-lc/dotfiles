@@ -34,19 +34,7 @@
     );
 
   environment.systemPackages = with pkgs; [
-    gnome.adwaita-icon-theme
-
-    # Gnome extensions.
     gnome-extension-manager
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.caffeine
-    gnomeExtensions.just-perfection
-    gnomeExtensions.material-you-color-theming
-    gnomeExtensions.places-status-indicator
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.runcat
-    gnomeExtensions.tray-icons-reloaded
-    gnomeExtensions.vitals
-    gnomeExtensions.weather-oclock
+    gnome.adwaita-icon-theme
   ];
 }
