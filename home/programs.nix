@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.autojump = {
     enable = true;
     enableBashIntegration = true;
@@ -14,14 +12,6 @@
     extraOptions = [
       "--group-directories-first"
     ];
-  };
-
-  programs.firefox = {
-    enable = true;
-  };
-
-  home.sessionVariables = {
-    BROWSER = "firefox";
   };
 
   programs.thefuck = {

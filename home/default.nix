@@ -62,6 +62,7 @@
 
   imports = [
     ./bash
+    ./firefox.nix
     ./git.nix
     ./kitty
     ./newsboat.nix
