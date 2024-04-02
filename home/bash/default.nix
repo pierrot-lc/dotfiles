@@ -36,4 +36,13 @@
       wn = "watch -n 0.5 nvidia-smi"; # Monitor nvidia GPUs.
     };
   };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      add_newline = false;
+      time.disabled = false;
+    };
+  };
 }
