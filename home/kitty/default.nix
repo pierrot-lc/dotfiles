@@ -5,7 +5,7 @@
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
     ];
-    theme = "kanagawabones";
+    theme = "Everforest Dark Hard";
     shellIntegration.enableBashIntegration = true;
   };
 
