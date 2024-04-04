@@ -1,7 +1,8 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    nvim-pkg
-  ];
+{theme, ...}: {
+  nvim-nix = {
+    enable = true;
+    inherit theme;
+  };
 
   home.sessionVariables = {
     EDITOR = "nvim";

@@ -40,8 +40,8 @@
         allowUnfree = true;
       };
       overlays = [
-        inputs.nvim-nix.overlays.default
-        inputs.neovim-nightly.overlay
+        # inputs.nvim-nix.overlays.default
+        # inputs.neovim-nightly.overlay
       ];
     };
   in {
@@ -74,11 +74,13 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
+          theme = "everforest";
         };
 
         modules = [
           ./home
           ./home/accounts
+          inputs.nvim-nix.nixosModules.default
         ];
       };
 
@@ -86,11 +88,13 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrep";
+          theme = "catppuccin";
         };
 
         modules = [
           ./home
           ./home/fonts.nix
+          inputs.nvim-nix.nixosModules.default
         ];
       };
     };

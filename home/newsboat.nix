@@ -4,53 +4,53 @@
     maxItems = 40;
     urls = [
       {
-        tags = [ "linux" ];
+        tags = ["linux"];
         url = "https://news.itsfoss.com/latest/rss/";
         title = "It's FOSS News";
       }
       {
-        tags = [ "linux" ];
+        tags = ["linux"];
         url = "https://www.phoronix.com/rss.php";
         title = "Phoronix";
       }
       {
-        tags = [ "tech" ];
+        tags = ["tech"];
         url = "https://www.theverge.com/rss/index.xml";
         title = "The Verge";
       }
       {
-        tags = [ "tech" ];
+        tags = ["tech"];
         url = "https://techcrunch.com/feed/";
         title = "Tech Crunch";
       }
       {
-        tags = [ "tech" ];
+        tags = ["tech"];
         url = "http://feeds.arstechnica.com/arstechnica/index";
         title = "Ars Technica";
       }
       {
-        tags = [ "AI" ];
+        tags = ["AI"];
         url = "https://huggingface.co/blog/feed.xml";
         title = "HuggingFace Blog";
       }
       # Thanks to https://github.com/ml-feeds for providing these unofficial feeds.
       {
-        tags = [ "AI" ];
+        tags = ["AI"];
         url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/trending";
         title = "Paper With Code - Trending";
       }
       {
-        tags = [ "AI" ];
+        tags = ["AI"];
         url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest";
         title = "Paper With Code - Latest";
       }
       {
-        tags = [ "AI" ];
+        tags = ["AI"];
         url = "https://us-east1-ml-feeds.cloudfunctions.net/arxiv-daily-ml";
         title = "Arxiv Daily ML";
       }
       {
-        tags = [ "AI" ];
+        tags = ["AI"];
         url = "https://us-east1-ml-feeds.cloudfunctions.net/kdnuggets";
         title = "KDnuggets";
       }
