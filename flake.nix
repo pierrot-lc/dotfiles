@@ -40,7 +40,6 @@
         allowUnfree = true;
       };
       overlays = [
-        inputs.nvim-nix.overlays.default
         inputs.neovim-nightly.overlay
       ];
     };
