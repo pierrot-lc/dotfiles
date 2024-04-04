@@ -40,8 +40,8 @@
         allowUnfree = true;
       };
       overlays = [
-        # inputs.nvim-nix.overlays.default
-        # inputs.neovim-nightly.overlay
+        inputs.nvim-nix.overlays.default
+        inputs.neovim-nightly.overlay
       ];
     };
   in {
