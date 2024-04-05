@@ -63,6 +63,7 @@
   imports = [
     ./bash
     ./firefox.nix
+    ./fonts.nix
     ./git.nix
     ./gnome.nix
     ./kitty
