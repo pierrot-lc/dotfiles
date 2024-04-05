@@ -5,8 +5,9 @@
 }: let
   # Those are the themes that are builtin in kitty. There's no need to source them.
   builtinThemes = {
-    "everforest" = "Everforest Dark Hard";
     "catppuccin" = "Catppuccin-Frappe";
+    "everforest" = "Everforest Dark Hard";
+    "gruvbox" = "Gruvbox Material Dark Soft";
   };
   themeName =
     if builtins.hasAttr theme builtinThemes
