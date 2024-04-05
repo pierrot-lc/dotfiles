@@ -502,11 +502,11 @@
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1712265755,
-        "narHash": "sha256-XEe4O7j/8ghWQeUDR/WPZhdwM8yBnjbh8Ta5FygmyeA=",
+        "lastModified": 1712308514,
+        "narHash": "sha256-hCA73EfY06RmvFRiN5/f8waU5t5iZnGdjYm6U82mX70=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "46fe5536a9ded07ed8d9c5904b8402fe305c3951",
+        "rev": "9e30aaf35a207fe8b1e1b18eb52268d4f1a1b989",
         "type": "github"
       },
       "original": {
