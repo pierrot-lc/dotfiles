@@ -38,6 +38,7 @@
       toggle-quick-settings = ["disabled"];
     };
     "org/gnome/desktop/wm/keybindings" = {
+      minimize = ["disabled"];
       move-to-monitor-left = ["<Shift><Super>h"];
       move-to-monitor-right = ["<Shift><Super>l"];
       move-to-workspace-1 = ["<Shift><Super>y"];
