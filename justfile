@@ -8,6 +8,10 @@ clean-home:
 clean-system:
     sudo nix-collect-garbage -d
 
+channel-update:
+    sudo nix-channel --update
+    nix-channel --update
+
 pin-lockfile:
     git add flake.lock
     git commit -m "📌 pin: flake.lock"
