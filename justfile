@@ -7,6 +7,7 @@ clean-home:
     nix-collect-garbage -d
 clean-system:
     sudo nix-collect-garbage -d
+clean-all: clean-system clean-home
 
 channel-update:
     sudo nix-channel --update
