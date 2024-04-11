@@ -8,6 +8,13 @@
       export PATH="$HOME/.cargo/bin:$PATH"
     '';
     initExtra = builtins.readFile ./init_extra.sh;
+    historyIgnore = [
+      "cd*"
+      "exit*"
+      "ls*"
+      "pwd"
+      "vim*"
+    ];
     shellAliases = {
       cat = "bat";
       chgrp = "chgrp --preserve-root";
