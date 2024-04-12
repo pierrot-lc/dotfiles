@@ -37,6 +37,7 @@
     fd
     ffmpeg
     file
+    fzf
     gdu
     git-crypt
     glances
