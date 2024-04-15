@@ -4,8 +4,8 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "pierrot-lc";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "pierrot-lc";
 
   # workaround for gnome autologin: https://github.com/nixos/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
