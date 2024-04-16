@@ -1,4 +1,8 @@
-{pkgs, theme, ...}: {
+{
+  pkgs,
+  theme,
+  ...
+}: {
   nvim-nix = {
     enable = true;
     inherit theme;
