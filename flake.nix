@@ -73,7 +73,7 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
-          theme = "gruvbox";
+          theme = "catppuccin";
         };
 
         modules = [
