@@ -1,13 +1,15 @@
 home-update:
-    home-manager switch -v --flake .
+    # home-manager switch -v --flake .
+    nh home switch .
 system-update:
-    sudo nixos-rebuild switch -v --flake .
+    # sudo nixos-rebuild switch -v --flake .
+    nh os switch .
 
 clean-home:
-    nix-collect-garbage -d
-clean-system:
-    sudo nix-collect-garbage -d
-clean-all: clean-system clean-home
+    # nix-collect-garbage -d
+    nh clean user
+clean-all:
+    nh clean all
 
 channel-update:
     sudo nix-channel --update
