@@ -1,5 +1,9 @@
 {lib, ...}: {
   options = {
-    shellAliases = lib.mkDefault {};
+    shellAliases = lib.mkOption {
+      type = lib.types.attrsOf lib.types.string;
+      default = {};
+      description = "Shell aliases to be added to the user profile.";
+    };
   };
 }

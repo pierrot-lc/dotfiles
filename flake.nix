@@ -79,6 +79,7 @@
         modules = [
           ./home
           ./home/accounts
+          ./modules
           inputs.nvim-nix.nixosModules.default
         ];
       };
@@ -92,7 +93,7 @@
 
         modules = [
           ./home
-          ./home/fonts.nix
+          ./modules
           inputs.nvim-nix.nixosModules.default
         ];
       };

@@ -4,11 +4,6 @@
     enableBashIntegration = true;
   };
 
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
@@ -19,7 +14,7 @@
     ];
   };
 
-  programs.thefuck = {
+  programs.fzf = {
     enable = true;
     enableBashIntegration = true;
   };
@@ -29,6 +24,20 @@
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
     ];
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      add_newline = false;
+      time.disabled = false;
+    };
+  };
+
+  programs.thefuck = {
+    enable = true;
+    enableBashIntegration = true;
   };
 
   home.packages = with pkgs; [

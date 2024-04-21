@@ -28,7 +28,7 @@
     EDITOR = "nvim";
   };
 
-  programs.bash.shellAliases = {
+  shellAliases = {
     bim = "nvim";
     cim = "nvim";
     vi = "nvim";
