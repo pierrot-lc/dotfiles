@@ -4,6 +4,11 @@
     enableBashIntegration = true;
   };
 
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
@@ -37,7 +42,6 @@
     fd
     ffmpeg
     file
-    fzf
     gdu
     git-crypt
     glances
