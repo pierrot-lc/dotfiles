@@ -5,6 +5,7 @@
 }: {
   nvim-nix = {
     enable = true;
+    transparentBackground = true;
     inherit theme;
   };
 
