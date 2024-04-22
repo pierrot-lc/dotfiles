@@ -41,7 +41,6 @@
   };
 
   home.packages = with pkgs; [
-    bat
     bottom
     btop
     comma

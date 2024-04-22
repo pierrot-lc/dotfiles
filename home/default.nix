@@ -48,6 +48,7 @@
 
   imports = [
     ./bash
+    ./bat.nix
     ./buku.nix
     ./firefox.nix
     ./fonts.nix
