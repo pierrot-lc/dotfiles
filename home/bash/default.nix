@@ -1,6 +1,5 @@
 {config, ...}: {
   shellAliases = {
-    cat = "bat";
     chgrp = "chgrp --preserve-root";
     chmod = "chmod --preserve-root";
     chown = "chown --preserve-root";
