@@ -19,10 +19,6 @@
 
     # Neovim dependencies.
     nvim-nix.url = "github:pierrot-lc/nvim-nix";
-    neovim-nightly = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ {
@@ -39,9 +35,6 @@
       config = {
         allowUnfree = true;
       };
-      overlays = [
-        inputs.neovim-nightly.overlay
-      ];
     };
   in {
     nixosConfigurations = {
@@ -80,7 +73,7 @@
           ./home
           ./home/accounts
           ./modules
-          inputs.nvim-nix.nixosModules.default
+          inputs.nvim-nix.nixosModules.${system}.default
         ];
       };
 
@@ -88,13 +81,13 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrep";
-          theme = "kanagawa";
+          theme = "gruvbox";
         };
 
         modules = [
           ./home
           ./modules
-          inputs.nvim-nix.nixosModules.default
+          inputs.nvim-nix.nixosModules.${system}.default
         ];
       };
     };
