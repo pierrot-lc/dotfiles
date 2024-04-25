@@ -51,9 +51,8 @@ in {
     };
   };
 
-  home.sessionVariables = {
-    MANPAGER = "sh -c 'col -bx | bat -l man -p'";
-  };
+  # Apply the theme for delta as well.
+  programs.git.delta.options.syntax-theme = themeParser.${theme};
 
   shellAliases = {
     cat = "bat";
