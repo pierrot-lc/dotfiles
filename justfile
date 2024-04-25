@@ -17,5 +17,9 @@ channel-update:
 
 pin-lockfile:
     git add flake.lock
-    git commit -m "📌 pin: flake.lock"
+    git commit -m "pin: flake.lock"
+    git push
+theme-switch:
+    git add flake.nix
+    git commit -m "theme: switch"
     git push
