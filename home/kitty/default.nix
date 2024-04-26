@@ -8,6 +8,7 @@
     "catppuccin" = "Catppuccin-Frappe";
     "everforest" = "Everforest Dark Hard";
     "gruvbox" = "Gruvbox Material Dark Soft";
+    "rose-pine" = "Rosé Pine Moon";
   };
   themeName =
     if builtins.hasAttr theme builtinThemes
