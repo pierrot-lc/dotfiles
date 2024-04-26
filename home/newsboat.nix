@@ -33,6 +33,11 @@
         url = "https://huggingface.co/blog/feed.xml";
         title = "HuggingFace Blog";
       }
+      {
+        tags = ["AI"];
+        url = "https://buttondown.email/ainews/rss";
+        title = "AI News";
+      }
       # Thanks to https://github.com/ml-feeds for providing these unofficial feeds.
       {
         tags = ["AI"];
