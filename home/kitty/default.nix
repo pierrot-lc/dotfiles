@@ -9,6 +9,7 @@
     "everforest" = "Everforest Dark Hard";
     "gruvbox" = "Gruvbox Material Dark Soft";
     "rose-pine" = "Rosé Pine Moon";
+    "rose-pine-dawn" = "Rosé Pine Dawn";
   };
   themeName =
     if builtins.hasAttr theme builtinThemes

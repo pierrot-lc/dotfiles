@@ -39,6 +39,15 @@
     };
     file = "dist/themes/rose-pine-moon.tmTheme";
   };
+  rose-pine-dawn = {
+    src = pkgs.fetchFromGitHub {
+      owner = "rose-pine";
+      repo = "tm-theme";
+      rev = "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec";
+      hash = "sha256-jji8WOKDkzAq8K+uSZAziMULI8Kh7e96cBRimGvIYKY=";
+    };
+    file = "dist/themes/rose-pine-dawn.tmTheme";
+  };
 
   themeParser = {
     "catppuccin" = "catppuccin-frappe";
@@ -46,6 +55,7 @@
     "gruvbox" = "gruvbox-dark";
     "kanagawa" = "kanagawa";
     "rose-pine" = "rose-pine";
+    "rose-pine-dawn" = "rose-pine-dawn";
   };
 in {
   programs.bat = {
@@ -59,6 +69,7 @@ in {
       inherit everforest-dark;
       inherit kanagawa;
       inherit rose-pine;
+      inherit rose-pine-dawn;
     };
   };
 

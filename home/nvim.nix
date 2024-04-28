@@ -5,7 +5,7 @@
 }: {
   nvim-nix = {
     enable = true;
-    transparentBackground = true;
+    transparentBackground = false;
     inherit theme;
   };
 
@@ -33,6 +33,7 @@
     cim = "nvim";
     vi = "nvim";
     vim = "nvim";
+    vmi = "nvim";
     vimdiff = "nvim -d";
   };
 }
