@@ -66,26 +66,12 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
-          theme = "rose-pine-dawn";
+          theme = "kanagawa";
         };
 
         modules = [
           ./home
           ./home/accounts
-          ./modules
-          inputs.nvim-nix.nixosModules.${system}.default
-        ];
-      };
-
-      pierrep = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          username = "pierrep";
-          theme = "rose-pine";
-        };
-
-        modules = [
-          ./home
           ./modules
           inputs.nvim-nix.nixosModules.${system}.default
         ];
