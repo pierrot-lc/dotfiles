@@ -67,10 +67,10 @@ in
       flavor = "gmail.com";
     };
 
-    "${private.polymtl}" = {
-      address = private.polymtl;
+    "${private.polymtl.mail}" = {
+      address = private.polymtl.mail;
       realName = "Pierre Pereira";
-      userName = private.user-polymtl;
+      userName = private.polymtl.username;
 
       thunderbird = {
         enable = true;
@@ -117,6 +117,35 @@ in
         port = 1143;
         tls = {
           enable = false;
+          useStartTls = false;
+        };
+      };
+    };
+
+    "${private.inria.mail}" = {
+      address = private.inria.mail;
+      realName = "Pierre Pereira";
+      userName = private.inria.username;
+
+      thunderbird = {
+        enable = true;
+        profiles = [ "pierre" ];
+      };
+
+      smtp = {
+        host = "smtp.inria.fr";
+        port = 587;
+        tls = {
+          enable = true;
+          useStartTls = true;
+        };
+      };
+
+      imap = {
+        host = "zimbra.inria.fr";
+        port = 993;
+        tls = {
+          enable = true;
           useStartTls = false;
         };
       };
