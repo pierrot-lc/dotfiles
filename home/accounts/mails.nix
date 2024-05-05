@@ -16,12 +16,13 @@ in
     enable = true;
     profiles.pierre = {
       isDefault = true;
-      settings = {
-        "mailnews.default_sort_type" = 18;  # Sort by date.
-        "mailnews.default_sort_order" = 2;  # In descending order.
-        "mailnews.default_news_sort_type" = 18;  # Sort by date.
+      settings = {  # See https://kb.mozillazine.org/Mail_and_news_settings.
+        # "mail.identity.default.reply_on_top" = true;
         "mailnews.default_news_sort_order" = 2;  # In descending order.
-        "mailnews.reply_on_top" = 1;
+        "mailnews.default_news_sort_type" = 18;  # Sort by date.
+        "mailnews.default_sort_order" = 2;  # In descending order.
+        "mailnews.default_sort_type" = 18;  # Sort by date.
+        "mailnews.reply_on_top" = true;  # Reply on top by default.
       };
     };
   };
