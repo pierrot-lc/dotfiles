@@ -8,9 +8,9 @@
 
   shellAliases = {
     b = "buku --suggest";
-    bfzf = "buku -p -f 4 | fzf";
-    burl = "buku -p -f 4 | fzf | cut --fields=2";
-    bpush = "cd ~/.local/share/buku/; git add --all; git commit --message='update db'; git push; cd -";
-    bpull = "cd ~/.local/share/buku/; git pull; cd -";
+    buku-fzf = "buku -p -f 4 | fzf";
+    buku-url = "buku -p -f 4 | fzf | cut --fields=2";
+    buku-push = "cd ~/.local/share/buku/; git add --all; git commit --message='update db'; git push; cd -";
+    buku-pull = "cd ~/.local/share/buku/; git pull; cd -";
   };
 }
