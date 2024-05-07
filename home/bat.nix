@@ -54,6 +54,7 @@
     "everforest" = "everforest-dark";
     "gruvbox" = "gruvbox-dark";
     "kanagawa" = "kanagawa";
+    "nord" = "Nord";
     "rose-pine" = "rose-pine";
     "rose-pine-dawn" = "rose-pine-dawn";
   };

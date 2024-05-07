@@ -4,9 +4,10 @@
     "catppuccin" = "Catppuccin-Frappe";
     "everforest" = "Everforest Dark Hard";
     "gruvbox" = "Gruvbox Material Dark Soft";
+    "kanagawa" = "Kanagawa_dragon";
+    "nord" = "Nord";
     "rose-pine" = "Rosé Pine Moon";
     "rose-pine-dawn" = "Rosé Pine Dawn";
-    "kanagawa" = "Kanagawa_dragon";
   };
 in {
   programs.kitty = {
