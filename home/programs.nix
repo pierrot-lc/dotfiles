@@ -42,6 +42,7 @@
     curl
     du-dust
     duf
+    fastfetch
     fd
     ffmpeg
     file
@@ -56,7 +57,6 @@
     just
     keymapp
     mullvad-vpn
-    neofetch
     pandoc
     popcorntime
     python3Full
