@@ -27,9 +27,12 @@ cd dotfiles/
 ```
 
 3. Setup the system configuration:
--- Create an entry in `./configuration/hardwares/[host-name]/default.nix`. You can directly copy the content from `/etc/nixos/configuration.nix` or take inspiration from other hardwares in this repo.
--- Copy the `/etc/nixos/hardware-configuration.nix` file to `./configuration/hardwares/[host-name]/`
--- Import this file from your `./configuration/hardwares/[host-name]/default.nix`
+
+ - Create an entry in `./configuration/hardwares/[host-name]/default.nix`. You
+   can directly copy the content from `/etc/nixos/configuration.nix` or take
+   inspiration from other hardwares in this repo.
+ - Copy the `/etc/nixos/hardware-configuration.nix` file to `./configuration/hardwares/[host-name]/`
+ - Import this file from your `./configuration/hardwares/[host-name]/default.nix`
 
 ```nix
   imports = [
@@ -37,7 +40,7 @@ cd dotfiles/
   ];
 ```
 
--- Add this new configuration in the `flake.nix`
+ - Add this new configuration in the `flake.nix`
 
 ```nix
     nixosConfigurations = {
@@ -66,8 +69,11 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 nix-channel --update
 sudo nix-channel --update
 ```
-7. Install [home-manager](https://nix-community.github.io/home-manager/index.xhtml)
-8. This repo uses [git-crypt](https://github.com/AGWA/git-crypt) to hide personal information. So to avoid problems, do not import `home/accounts` in your home configuration. Add your user to the list of flake configuration and then update your home-manager packages.
+7. Install [home-manager](https://nix-community.github.io/home-manager/index.xhtml).
+8. This repo uses [git-crypt](https://github.com/AGWA/git-crypt) to hide
+   personal information. So to avoid problems, do not import `home/accounts` in
+   your home configuration. Add your user to the list of flake configuration
+   and then update your home-manager packages.
 
 ```nix
     homeConfigurations = {
