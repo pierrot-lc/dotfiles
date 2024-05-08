@@ -4,6 +4,11 @@
     maxItems = 40;
     urls = [
       {
+        tags = ["general"];
+        url = "https://knowablemagazine.org/rss";
+        title = "Knowable Magazine";
+      }
+      {
         tags = ["linux"];
         url = "https://news.itsfoss.com/latest/rss/";
         title = "It's FOSS News";
