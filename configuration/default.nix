@@ -116,6 +116,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     cachix
+    firefox
     git
     gparted
     vim
