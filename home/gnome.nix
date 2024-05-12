@@ -1,12 +1,17 @@
-{pkgs, ...}: {
-  home.packages = with pkgs.gnomeExtensions; [
-    blur-my-shell
-    caffeine
-    just-perfection
-    runcat
-    vitals
-    weather-oclock
-  ];
+{pkgs, ...}: let
+  ge = pkgs.gnomeExtensions;
+in {
+  programs.gnome-shell = {
+    enable = true;
+    extensions = [
+      {package = ge.blur-my-shell;}
+      {package = ge.caffeine;}
+      {package = ge.just-perfection;}
+      {package = ge.runcat;}
+      {package = ge.vitals;}
+      {package = ge.weather-oclock;}
+    ];
+  };
 
   dconf.settings = {
     # Gnome inner workings.
