@@ -13,6 +13,8 @@ in {
     ];
   };
 
+  # Use `dconf dump / > dconf.toml` to see the list of modified parameters in
+  # your system.
   dconf.settings = {
     # Gnome inner workings.
     "org/gnome/shell/app-switcher" = {
@@ -56,6 +58,8 @@ in {
       switch-to-workspace-4 = ["<Super>o"];
       switch-to-workspace-left = ["<Super>h"];
       switch-to-workspace-right = ["<Super>l"];
+      switch-windows = ["<Alt>space"];
+      switch-windows-backward = ["<Shift><Alt>space"];
     };
 
     # Extensions.
