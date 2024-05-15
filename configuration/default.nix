@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Overall Nix options.
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    trusted-users = [ "root" "pierrot-lc" "@wheel" ];
+    experimental-features = ["nix-command" "flakes"];
+    trusted-users = ["root" "pierrot-lc" "@wheel"];
     trusted-substituters = [
       "https://cache.nixos.org/"
       "https://nix-community.cachix.org"
@@ -89,7 +90,7 @@
   users.users.pierrot-lc = {
     isNormalUser = true;
     description = "Pierrot LC";
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
+    extraGroups = ["wheel" "networkmanager" "libvirtd"];
     packages = with pkgs; [
     ];
   };
@@ -122,6 +123,7 @@
     vim
     virt-manager
     xwaylandvideobridge
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -144,7 +146,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.cnijfilter2 ];
+  services.printing.drivers = [pkgs.cnijfilter2];
 
   # Periodically update the database for the `locate` command.
   services.locate = {
@@ -170,7 +172,6 @@
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
   security.polkit.enable = true;
-
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
