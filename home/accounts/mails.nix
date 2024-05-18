@@ -70,7 +70,7 @@ in
 
     "${private.polymtl.mail}" = {
       address = private.polymtl.mail;
-      realName = "Pierre Pereira";
+      inherit realName;
       userName = private.polymtl.username;
 
       thunderbird = {
@@ -125,7 +125,7 @@ in
 
     "${private.inria.mail}" = {
       address = private.inria.mail;
-      realName = "Pierre Pereira";
+      inherit realName;
       userName = private.inria.username;
 
       thunderbird = {

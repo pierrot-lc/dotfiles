@@ -65,6 +65,7 @@
     satty
     sshfs
     tldr
+    tokei
     tree
     unzip
     wl-clipboard

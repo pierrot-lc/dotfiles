@@ -47,6 +47,7 @@
   };
 
   imports = [
+    ./accounts
     ./bash
     ./bat.nix
     ./buku.nix
