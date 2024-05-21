@@ -7,7 +7,7 @@
     ];
 
   targetPkgs = ps: (with ps; [
-    (pthon311.withPackages python-packages)
+    (python311.withPackages python-packages)
     pdm
     zlib # Numpy dep.
   ]);
