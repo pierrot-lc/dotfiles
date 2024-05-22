@@ -36,7 +36,6 @@
   };
 
   home.packages = with pkgs; [
-    (ollama.override {acceleration = "cuda";})
     bottom
     btop
     comma
