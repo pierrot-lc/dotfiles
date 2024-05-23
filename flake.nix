@@ -41,30 +41,28 @@
         allowUnfree = true;
       };
     };
-  in {
-    nixosConfigurations = {
-      x250 = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration
-          ./hosts/x250/configuration.nix
-        ];
-      };
-      big-tower = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration
-          ./hosts/big-tower/configuration.nix
-        ];
-      };
-      t15 = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration
-          ./hosts/t15/configuration.nix
-        ];
-      };
+
+    # Mappings for specific configurations for each hosts.
+    nixosConfigurationsParser = {
+      "big-tower" = ./hosts/big-tower/configuration.nix;
+      "t15" = ./hosts/t15/configuration.nix;
+      "x250" = ./hosts/x250/configuration.nix;
     };
+    homeConfigurationsParser = {
+      "big-tower" = ./hosts/big-tower/options.nix;
+      "t15" = ./hosts/t15/options.nix;
+      "x250" = ./hosts/x250/options.nix;
+    };
+  in {
+    nixosConfigurations = lib.attrsets.concatMapAttrs (host: configurationFile: {
+      ${host} = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration
+          configurationFile
+        ];
+      };
+    }) nixosConfigurationsParser;
 
     homeConfigurations = {
       "pierrot-lc@t15" = home-manager.lib.homeManagerConfiguration {
