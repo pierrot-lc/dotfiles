@@ -42,7 +42,7 @@
       };
     };
 
-    # Mappings for specific configurations for each hosts.
+    # Mappings of specific configurations for each hosts.
     nixosConfigurationsParser = {
       "big-tower" = ./hosts/big-tower/configuration.nix;
       "t15" = ./hosts/t15/configuration.nix;
@@ -64,8 +64,8 @@
       };
     }) nixosConfigurationsParser;
 
-    homeConfigurations = {
-      "pierrot-lc@t15" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations = lib.attrsets.concatMapAttrs (host: optionsFile: {
+      "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
@@ -74,38 +74,10 @@
         modules = [
           ./home
           ./modules
-          ./hosts/t15/options.nix
+          optionsFile
           inputs.nvim-nix.nixosModules.${system}.default
         ];
       };
-
-      "pierrot-lc@x250" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          username = "pierrot-lc";
-        };
-
-        modules = [
-          ./home
-          ./modules
-          ./hosts/x250/options.nix
-          inputs.nvim-nix.nixosModules.${system}.default
-        ];
-      };
-
-      "pierrot-lc@big-tower" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          username = "pierrot-lc";
-        };
-
-        modules = [
-          ./home
-          ./modules
-          ./hosts/big-tower/options.nix
-          inputs.nvim-nix.nixosModules.${system}.default
-        ];
-      };
-    };
+    }) homeConfigurationsParser;
   };
 }
