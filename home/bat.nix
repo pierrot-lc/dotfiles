@@ -1,6 +1,6 @@
 {
   pkgs,
-  theme,
+  config,
   ...
 }: let
   catppuccin-frappe = {
@@ -62,7 +62,7 @@ in {
   programs.bat = {
     enable = true;
     config = {
-      theme = themeParser.${theme};
+      theme = themeParser.${config.theme};
       italic-text = "always";
     };
     themes = {
@@ -75,7 +75,7 @@ in {
   };
 
   # Apply the theme for delta as well.
-  programs.git.delta.options.syntax-theme = themeParser.${theme};
+  programs.git.delta.options.syntax-theme = themeParser.${config.theme};
 
   shellAliases = {
     cat = "bat";

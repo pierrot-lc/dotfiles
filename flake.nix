@@ -47,36 +47,64 @@
         inherit system;
         modules = [
           ./configuration
-          ./configuration/hardwares/x250
+          ./hosts/x250/configuration.nix
         ];
       };
       big-tower = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration
-          ./configuration/hardwares/big-tower
+          ./hosts/big-tower/configuration.nix
         ];
       };
       t15 = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration
-          ./configuration/hardwares/t15
+          ./hosts/t15/configuration.nix
         ];
       };
     };
 
     homeConfigurations = {
-      pierrot-lc = home-manager.lib.homeManagerConfiguration {
+      "pierrot-lc@t15" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
-          theme = "catppuccin";
         };
 
         modules = [
           ./home
           ./modules
+          ./hosts/t15/options.nix
+          inputs.nvim-nix.nixosModules.${system}.default
+        ];
+      };
+
+      "pierrot-lc@x250" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          username = "pierrot-lc";
+        };
+
+        modules = [
+          ./home
+          ./modules
+          ./hosts/x250/options.nix
+          inputs.nvim-nix.nixosModules.${system}.default
+        ];
+      };
+
+      "pierrot-lc@big-tower" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {
+          username = "pierrot-lc";
+        };
+
+        modules = [
+          ./home
+          ./modules
+          ./hosts/big-tower/options.nix
           inputs.nvim-nix.nixosModules.${system}.default
         ];
       };

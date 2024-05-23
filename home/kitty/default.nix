@@ -1,4 +1,4 @@
-{theme, ...}: let
+{config, ...}: let
   # Those are the themes that are builtin in kitty. There's no need to source them.
   themeParser = {
     "catppuccin" = "Catppuccin-Frappe";
@@ -16,7 +16,7 @@ in {
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
     ];
-    theme = themeParser.${theme};
+    theme = themeParser.${config.theme};
     shellIntegration.enableBashIntegration = true;
   };
 
