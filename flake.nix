@@ -42,29 +42,38 @@
       };
     };
 
-    # Mappings of specific configurations for each hosts.
+    # Mappings of specific configurations for each hosts. It is used in
+    # `concatMapAttrs` which needs an attribute set to work so we add dumb
+    # values.
+    hosts = {
+      "big-tower" = null;
+      "t15" = null;
+      "x250" = null;
+    };
     nixosConfigurationsParser = {
       "big-tower" = ./hosts/big-tower/configuration.nix;
       "t15" = ./hosts/t15/configuration.nix;
       "x250" = ./hosts/x250/configuration.nix;
     };
-    homeConfigurationsParser = {
+    optionsParser = {
       "big-tower" = ./hosts/big-tower/options.nix;
       "t15" = ./hosts/t15/options.nix;
       "x250" = ./hosts/x250/options.nix;
     };
   in {
-    nixosConfigurations = lib.attrsets.concatMapAttrs (host: configurationFile: {
+    nixosConfigurations = lib.attrsets.concatMapAttrs (host: _: {
       ${host} = lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration
-          configurationFile
+          ./modules
+          optionsParser.${host}
+          nixosConfigurationsParser.${host}
         ];
       };
-    }) nixosConfigurationsParser;
+    }) hosts;
 
-    homeConfigurations = lib.attrsets.concatMapAttrs (host: optionsFile: {
+    homeConfigurations = lib.attrsets.concatMapAttrs (host: _: {
       "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
@@ -74,10 +83,10 @@
         modules = [
           ./home
           ./modules
-          optionsFile
+          optionsParser.${host}
           inputs.nvim-nix.nixosModules.${system}.default
         ];
       };
-    }) homeConfigurationsParser;
+    }) hosts;
   };
 }

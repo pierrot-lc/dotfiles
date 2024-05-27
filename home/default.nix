@@ -60,7 +60,6 @@
     ./newsboat.nix
     ./nix.nix
     ./nvim.nix
-    ./ollama.nix
     ./programs.nix
   ];
 

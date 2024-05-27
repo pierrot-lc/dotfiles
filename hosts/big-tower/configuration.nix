@@ -56,13 +56,10 @@
     powerManagement.finegrained = false;
 
     # Enable the nvidia settings menu.
-    nvidiaSettings = true;
+    nvidiaSettings = false;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-    # Enable the full composition pipeline to reduce screen tearing.
-    forceFullCompositionPipeline = true;
   };
-  nixpkgs.config.CudaSupport = true;
+  nixpkgs.config.cudaSupport = true;
 }
