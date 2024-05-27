@@ -18,8 +18,7 @@
     marksman
     nil
     nodePackages_latest.bash-language-server
-    pylyzer
-    # python311Packages.python-lsp-server
+    python311Packages.python-lsp-server
     ruff
     shfmt
     stylua

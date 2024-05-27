@@ -368,11 +368,11 @@
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1716811721,
-        "narHash": "sha256-hR8XptC/eElXRlXDtwdYp9istlOjQGfrJAHAaTTOhp8=",
+        "lastModified": 1716821753,
+        "narHash": "sha256-EjNwqUa1K4rxNe2csNgwdEXRb2vKgFr9ip9DsgovqM4=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "3d188f93f963c27703839ac26f250b96933c44a8",
+        "rev": "53cd44148adb4355d28ddf38d640fb1515663298",
         "type": "github"
       },
       "original": {
