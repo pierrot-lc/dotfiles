@@ -1,4 +1,4 @@
 {
-  gpu = "NVIDIA";
+  accounts.enable = true;
   ollama.enable = true;
 }

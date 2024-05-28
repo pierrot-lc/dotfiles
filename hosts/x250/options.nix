@@ -1,3 +1,3 @@
 {
-  gpu = null;
+  accounts.enable = true;
 }
