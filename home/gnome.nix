@@ -25,6 +25,9 @@ in {
     };
 
     # Keybindings.
+    "org/gnome/desktop/input-sources" = {
+      xkb-options = ["compose:rwin" "terminate:ctrl_alt_bksp"];
+    };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       calculator = ["<Super>c"];
       control-center = ["<Super>s"];
