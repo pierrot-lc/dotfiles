@@ -52,7 +52,6 @@
     ./bat.nix
     ./buku.nix
     ./firefox.nix
-    ./fonts.nix
     ./fzf.nix
     ./git.nix
     ./gnome.nix

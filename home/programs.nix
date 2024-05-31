@@ -27,6 +27,10 @@
     settings = {
       add_newline = false;
       time.disabled = false;
+      nix_shell = {
+        format = "via [$symbol(\($name\))]($style)";
+        symbol = " ";
+      };
     };
   };
 
