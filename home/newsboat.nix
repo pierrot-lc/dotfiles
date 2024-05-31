@@ -9,6 +9,11 @@
         title = "Knowable Magazine";
       }
       {
+        tags = ["general"];
+        url = "https://kagi.com/smallweb/appreciated";
+        title = "Kagi Small Web - Appreciated";
+      }
+      {
         tags = ["linux"];
         url = "https://news.itsfoss.com/latest/rss/";
         title = "It's FOSS News";
@@ -32,6 +37,11 @@
         tags = ["tech"];
         url = "http://feeds.arstechnica.com/arstechnica/index";
         title = "Ars Technica";
+      }
+      {
+        tags = ["tech"];
+        url = "https://kagi.com/api/v1/smallweb/feed/?gh";
+        title = "Kagi Small Web - Code";
       }
       {
         tags = ["AI"];
