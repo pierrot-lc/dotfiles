@@ -124,7 +124,7 @@
     gparted
     vim
     virt-manager
-    xwaylandvideobridge
+    # xwaylandvideobridge
     wget
   ];
 
