@@ -16,6 +16,25 @@ in {
       protonmail-bridge
     ];
 
+    # Declare the protonmail-bridge service.
+    # NOTE: Temporary disable the service using the following command:
+    # systemctl --user stop protonmail-bridge.service
+    systemd.user.services.protonmail-bridge = {
+      Unit = {
+        Description = "ProtonMail Bridge";
+        After = ["network.target"];
+      };
+
+      Service = {
+        Restart = "always";
+        ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --no-window --log-level info --noninteractive";
+      };
+
+      Install = {
+        WantedBy = ["default.target"];
+      };
+    };
+
     programs.thunderbird = {
       enable = true;
       profiles.pierre = {

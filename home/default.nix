@@ -16,19 +16,6 @@
   xdg.enable = true;
 
   # Security declarations.
-  services.gpg-agent = {
-    enable = true;
-    enableBashIntegration = true;
-    enableSshSupport = true;
-    pinentryPackage = pkgs.pinentry-curses;
-    defaultCacheTtl = 86400; # 24 hours.
-    defaultCacheTtlSsh = 86400; # 24 hours.
-    maxCacheTtl = 86400;
-    maxCacheTtlSsh = 86400;
-  };
-  programs.gpg = {
-    enable = true;
-  };
   programs.password-store = {
     enable = true;
     package = pkgs.pass.withExtensions (exts: [exts.pass-otp exts.pass-import]);
@@ -55,6 +42,7 @@
     ./fzf.nix
     ./git.nix
     ./gnome.nix
+    ./gpg.nix
     ./kitty
     ./newsboat.nix
     ./nix.nix

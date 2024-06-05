@@ -14,7 +14,7 @@
       "https://cache.nixos.org/"
       "https://nix-community.cachix.org"
       "https://cuda-maintainers.cachix.org"
-      "https://ploop.cachix.org"  # Jax related stuffs.
+      "https://ploop.cachix.org" # Jax related stuffs.
       "https://pierrot-lc.cachix.org"
     ];
     trusted-public-keys = [
@@ -28,15 +28,6 @@
 
   # Select kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -106,10 +97,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # fonts.fontconfig.defaultFonts.emoji = [
-  #   "Noto Color Emoji"
-  # ];
-
   environment.sessionVariables = {
     # Enable Ozone Wayland support for Electron and Chromium based applications.
     NIXOS_OZONE_WL = "1";
@@ -140,29 +127,6 @@
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  # List services that you want to enable:
-  services.dbus.enable = true;
-  services.flatpak.enable = true;
-  services.fwupd.enable = true;
-  # services.mullvad-vpn.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.printing.drivers = [pkgs.cnijfilter2];
-
-  # Periodically update the database for the `locate` command.
-  services.locate = {
-    enable = true;
-    package = pkgs.mlocate;
-    interval = "hourly";
-    localuser = null;
-  };
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
   # Enable special udev rules for zsa keyboards (flashing firmware).
   hardware.keyboard.zsa.enable = true;
 
@@ -175,14 +139,33 @@
   '';
   security.polkit.enable = true;
 
+  # Network configuration.
+  networking = {
+    # Enable networking.
+    networkmanager.enable = true;
+
+    # Configure network proxy if necessary
+    # proxy = {
+    #   default = "http://user:password@proxy:port/";
+    #   noProxy = "127.0.0.1,localhost,internal.domain";
+    # };
+
+    # firewall = {
+    #   enable = false; # Or disable the firewall altogether.
+    #   # Open ports in the firewall.
+    #   allowedTCPPorts = [ ... ];
+    #   allowedUDPPorts = [ ... ];
+    # };
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   imports = [
     ./fonts.nix
