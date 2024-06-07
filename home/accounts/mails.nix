@@ -14,26 +14,8 @@ in {
   config = lib.mkIf config.accounts.enable {
     home.packages = with pkgs; [
       protonmail-bridge
+      protonmail-bridge-gui
     ];
-
-    # Declare the protonmail-bridge service.
-    # NOTE: Temporary disable the service using the following command:
-    # systemctl --user stop protonmail-bridge.service
-    systemd.user.services.protonmail-bridge = {
-      Unit = {
-        Description = "ProtonMail Bridge";
-        After = ["network.target"];
-      };
-
-      Service = {
-        Restart = "always";
-        ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --no-window --log-level info --noninteractive";
-      };
-
-      Install = {
-        WantedBy = ["default.target"];
-      };
-    };
 
     programs.thunderbird = {
       enable = true;
