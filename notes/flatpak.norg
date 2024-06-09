@@ -16,6 +16,7 @@ that I can easily install them again.
 
 @code sh
 flatpak install -y app.drey.Damask
+flatpak install -y com.brave.Browser
 flatpak install -y com.github.hugolabe.Wike
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.maoschanz.drawing
@@ -40,8 +41,8 @@ flatpak install -y org.zotero.Zotero
 
 
 There are some projects that tries to setup a declarative flatpak for nix:
-- {https://github.com/gmodena/nix-flatpak}
-- {https://github.com/GermanBread/declarative-flatpak}
+- {https://github.com/gmodena/nix-flatpak}[nix-flatpak]
+- {https://github.com/GermanBread/declarative-flatpak}[declarative-flatpak]
 
 From my own tests I struggled to add them to my config file. For now it looks
 better to simply have them declared here and to copy/paste the list when I need
