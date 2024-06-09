@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }: {
@@ -18,13 +17,16 @@
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/c8597029-c8b5-486e-911b-c7f9d7972749";
+    device = "/dev/disk/by-uuid/fb122824-634b-419f-8e93-fe90287db7af";
     fsType = "ext4";
   };
 
+  boot.initrd.luks.devices."luks-3183ae79-b5f9-494d-95b9-b48c3714df3a".device = "/dev/disk/by-uuid/3183ae79-b5f9-494d-95b9-b48c3714df3a";
+
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/28A0-58E9";
+    device = "/dev/disk/by-uuid/8E85-194D";
     fsType = "vfat";
+    options = ["fmask=0022" "dmask=0022"];
   };
 
   swapDevices = [];
@@ -38,6 +40,5 @@
   # networking.interfaces.wlp9s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
