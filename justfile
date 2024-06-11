@@ -22,7 +22,7 @@ pin-lockfile:
     git add flake.lock
     git commit -m "pin: flake.lock"
     git push
-theme-switch:
-    git add flake.nix
-    git commit -m "theme: switch"
+options-switch:
+    git add hosts/**/options.nix
+    git commit -m "pin: options switch"
     git push
