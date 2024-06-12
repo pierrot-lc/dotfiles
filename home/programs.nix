@@ -63,6 +63,7 @@
     mullvad-vpn
     pandoc
     popcorntime
+    protonvpn-gui
     python3Full
     ranger
     ripgrep
