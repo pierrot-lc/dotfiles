@@ -17,7 +17,7 @@ that I can easily install them again.
 @code sh
 flatpak install -y app.drey.Damask
 flatpak install -y com.brave.Browser
-flatpak install -y com.github.flxzt.rnot
+flatpak install -y com.github.flxzt.rnote
 flatpak install -y com.github.hugolabe.Wike
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.maoschanz.drawing
