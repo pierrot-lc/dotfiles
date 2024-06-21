@@ -2,10 +2,10 @@
   programs.firefox = {
     enable = true;
     package = pkgs.floorp;
-    nativeMessagingHosts = [pkgs.firefoxpwa];
+    # nativeMessagingHosts = [pkgs.firefoxpwa];
   };
 
-  home.packages = [pkgs.firefoxpwa];
+  # home.packages = [pkgs.firefoxpwa];
 
   home.sessionVariables = {
     BROWSER = "firefox";

@@ -17,7 +17,7 @@
     just
     lua-language-server
     marksman
-    nil
+    nixd
     python311Packages.python-lsp-server
     ruff
     shfmt
