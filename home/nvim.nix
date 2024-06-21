@@ -13,11 +13,11 @@
   # should be installed per-project in its flake declaration.
   home.packages = with pkgs; [
     alejandra
+    bash-language-server
     just
     lua-language-server
     marksman
     nil
-    nodePackages_latest.bash-language-server
     python311Packages.python-lsp-server
     ruff
     shfmt
