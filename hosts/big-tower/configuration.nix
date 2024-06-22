@@ -26,19 +26,15 @@
   # Allow unfree packages (NVIDIA).
   nixpkgs.config.allowUnfree = true;
 
-  # See https://nixos.wiki/wiki/Nvidia.
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-
-    # Enable VDPAU and VA-API support.
-    extraPackages = with pkgs; [vaapiVdpau];
+    enable32Bit = true;
   };
 
   # Tell Xorg to use the nvidia driver.
   services.xserver.videoDrivers = ["nvidia"];
 
+  # See https://nixos.wiki/wiki/Nvidia.
   hardware.nvidia = {
     # Modesetting is needed for most wayland compositors.
     modesetting.enable = true;
