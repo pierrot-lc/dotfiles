@@ -72,6 +72,7 @@
     tldr
     tokei
     tree
+    typst
     unzip
     wl-clipboard
     zip
