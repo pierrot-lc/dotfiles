@@ -22,6 +22,7 @@
     ruff
     shfmt
     stylua
+    tinymist
   ];
 
   home.sessionVariables = {
