@@ -88,12 +88,6 @@
     ];
   };
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -111,7 +105,6 @@
     gparted
     vim
     virt-manager
-    # xwaylandvideobridge
     wget
   ];
 
@@ -179,6 +172,7 @@
 
   imports = [
     ./fonts.nix
+    ./games.nix
     ./gnome.nix
     ./services.nix
   ];
