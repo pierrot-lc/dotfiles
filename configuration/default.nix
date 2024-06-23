@@ -173,7 +173,7 @@
   imports = [
     ./arrs.nix
     ./fonts.nix
-    ./games.nix
+    ./gaming.nix
     ./gnome.nix
     ./services.nix
   ];
