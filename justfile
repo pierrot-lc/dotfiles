@@ -5,10 +5,8 @@ system-update:
     # sudo nixos-rebuild switch -v --flake .
     nh os switch .
 
-clean-home:
-    # nix-collect-garbage -d
-    nh clean user
 clean-all:
+    # nix-collect-garbage -d
     nh clean all
 
 channel-update:
