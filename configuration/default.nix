@@ -171,6 +171,7 @@
   # services.openssh.enable = true;
 
   imports = [
+    ./arrs.nix
     ./fonts.nix
     ./games.nix
     ./gnome.nix

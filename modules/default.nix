@@ -5,6 +5,7 @@
 
   options = {
     accounts.enable = lib.mkEnableOption "Import accounts";
+    arrs.enable = lib.mkEnableOption "Arrs services";
     games.enable = lib.mkEnableOption "Install game launchers and others";
     ollama.enable = lib.mkEnableOption "Enables Ollama";
     shellAliases = lib.mkOption {

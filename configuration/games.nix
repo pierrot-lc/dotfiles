@@ -23,6 +23,7 @@
 
     programs.gamemode.enable = true;
 
+    # See https://nixos.wiki/wiki/Appimage.
     programs.appimage = {
       enable = true;
       binfmt = true;
