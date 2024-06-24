@@ -1,7 +1,7 @@
 {
   accounts.enable = true;
   arrs.enable = true;
-  games.enable = true;
+  gaming.enable = true;
   ollama.enable = true;
-  theme = "nord";
+  theme.name = "kanagawa";
 }

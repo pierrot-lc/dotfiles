@@ -67,7 +67,6 @@
     python3Full
     ranger
     ripgrep
-    satty
     sshfs
     tldr
     tokei

@@ -6,7 +6,7 @@
   nvim-nix = {
     enable = true;
     transparentBackground = false;
-    inherit (config) theme;
+    theme = config.theme.name;
   };
 
   # Add some LSPs and formatters. Others (such as pylsp or ruff-lsp)

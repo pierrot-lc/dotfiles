@@ -62,7 +62,7 @@ in {
   programs.bat = {
     enable = true;
     config = {
-      theme = themeParser.${config.theme};
+      theme = themeParser.${config.theme.name};
       italic-text = "always";
     };
     themes = {
@@ -75,7 +75,7 @@ in {
   };
 
   # Apply the theme for delta as well.
-  programs.git.delta.options.syntax-theme = themeParser.${config.theme};
+  programs.git.delta.options.syntax-theme = themeParser.${config.theme.name};
 
   shellAliases = {
     cat = "bat";

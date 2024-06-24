@@ -10,7 +10,7 @@
   ];
 in {
   options = {
-    theme = lib.mkOption {
+    theme.name = lib.mkOption {
       type = lib.types.enum validThemes;
       default = "gruvbox";
       description = "The global theme to use.";

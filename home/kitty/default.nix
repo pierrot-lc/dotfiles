@@ -16,7 +16,7 @@ in {
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
     ];
-    theme = themeParser.${config.theme};
+    theme = themeParser.${config.theme.name};
     shellIntegration.enableBashIntegration = true;
   };
 

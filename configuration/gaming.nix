@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.games.enable {
+  config = lib.mkIf config.gaming.enable {
     nixpkgs.config.allowUnfree = true;
 
     # See https://nixos.wiki/wiki/Games.
