@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -18,6 +18,7 @@
       core.editor = "nvim";
       init.defaultBranch = "main";
       pull.rebase = true;
+      rerere.enabled = true;
     };
     ignores = [
       "**/*.pyc"
@@ -33,6 +34,10 @@
   programs.lazygit = {
     enable = true;
   };
+
+  home.packages = with pkgs; [
+    git-crypt
+  ];
 
   shellAliases = {
     g = "git";

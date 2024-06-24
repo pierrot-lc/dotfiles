@@ -51,7 +51,6 @@
     ffmpeg
     file
     gdu
-    git-crypt
     glances
     glow
     gnumake
