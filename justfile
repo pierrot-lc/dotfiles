@@ -16,11 +16,12 @@ channel-update:
 git-crypt:
     git-crypt unlock
 
-pin-lockfile:
+lockfile-pin:
     git add flake.lock
     git commit -m "pin: flake.lock"
     git push
-update-options:
+
+options-update:
     git add hosts/**/options.nix
     git commit -m "update: options"
     git push
