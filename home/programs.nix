@@ -14,6 +14,9 @@
     ];
   };
 
+  programs.fastfetch.enable = true;
+  shellAliases = {neofetch = "fastfetch";};
+
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
@@ -46,7 +49,6 @@
     curl
     du-dust
     duf
-    fastfetch
     fd
     ffmpeg
     file
