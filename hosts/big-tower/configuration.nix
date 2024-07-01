@@ -13,11 +13,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # boot.loader.grub = {
-  #   enable = true;
-  #   device = "nodev";
-  #   useOSProber = true;
-  # };
 
   environment.systemPackages = with pkgs; [
     nvitop
@@ -55,7 +50,7 @@
     nvidiaSettings = false;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
   nixpkgs.config.cudaSupport = true;
 }
