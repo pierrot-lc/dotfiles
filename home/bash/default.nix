@@ -17,8 +17,6 @@
     ip4 = "curl -s https://api.ipify.org";
     ip6 = "curl -s https://api6.ipify.org";
     kk = "ll";
-    nd = "nix develop";
-    ns = "nix-shell";
     rm = "rm --preserve-root";
     sl = "ls";
     su = "sudo -i";
@@ -36,11 +34,8 @@
     '';
     initExtra = builtins.readFile ./init_extra.sh;
     historyIgnore = [
-      "cd*"
       "exit*"
-      "ls*"
       "pwd"
-      "vim*"
     ];
     shellAliases = config.shellAliases;
   };

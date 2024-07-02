@@ -13,6 +13,11 @@
     };
   };
 
+  shellAliases = {
+    nd = "nix develop --verbose";
+    ns = "nix-shell --verbose";
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
