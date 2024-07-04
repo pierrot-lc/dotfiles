@@ -172,6 +172,7 @@
 
   imports = [
     ./arrs.nix
+    ./docker.nix
     ./fonts.nix
     ./gaming.nix
     ./gnome.nix
