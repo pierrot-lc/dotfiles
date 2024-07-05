@@ -64,16 +64,6 @@
         url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest";
         title = "Paper With Code - Latest";
       }
-      {
-        tags = ["AI"];
-        url = "https://us-east1-ml-feeds.cloudfunctions.net/arxiv-daily-ml";
-        title = "Arxiv Daily ML";
-      }
-      {
-        tags = ["AI"];
-        url = "https://us-east1-ml-feeds.cloudfunctions.net/kdnuggets";
-        title = "KDnuggets";
-      }
     ];
     extraConfig = ''
       # Taken from here: https://github.com/dracula/newsboat/blob/main/newsboat
