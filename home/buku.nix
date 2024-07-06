@@ -35,7 +35,7 @@
         }
 
         # Loop until the key is added.
-        while !is_key_added; do
+        while ! is_key_added; do
           echo "Waiting for SSH key to be added"
           sleep 30
         done
