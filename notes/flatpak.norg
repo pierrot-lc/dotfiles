@@ -34,6 +34,7 @@ flatpak install -y io.github.nokse22.inspector
 flatpak install -y io.gitlab.adhami3310.Converter
 flatpak install -y io.gitlab.news_flash.NewsFlash
 flatpak install -y org.inkscape.Inkscape
+flatpak install -y org.kde.okular
 flatpak install -y org.libreoffice.LibreOffice
 flatpak install -y org.nickvision.money
 flatpak install -y org.openscad.OpenSCAD
