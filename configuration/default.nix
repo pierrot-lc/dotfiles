@@ -103,6 +103,8 @@
     firefox
     git
     gparted
+    htop
+    nvtop
     vim
     virt-manager
     wget
