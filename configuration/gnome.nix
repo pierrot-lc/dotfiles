@@ -12,26 +12,17 @@
   systemd.services."autovt@tty1".enable = false;
 
   # Exclude some gnome packages installed by default when using gnome.
-  environment.gnome.excludePackages =
-    (
-      with pkgs; [
-        gnome-photos
-        gnome-tour
-      ]
-    )
-    ++ (
-      with pkgs.gnome; [
-        cheese
-        epiphany
-        geary
-        gnome-music
-        gnome-terminal
-        hitori
-        iagno
-        tali
-        totem
-      ]
-    );
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-photos
+    gnome-tour
+    gnome.cheese
+    gnome.epiphany
+    gnome.geary
+    gnome.gnome-music
+    gnome.gnome-terminal
+    gnome.totem
+  ];
 
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
