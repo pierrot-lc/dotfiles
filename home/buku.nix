@@ -14,6 +14,8 @@
     buku-pull = "cd $XDG_DATA_HOME/buku/; git pull; cd -";
   };
 
+  # `systemctl --user start buku-sync.service` to launch the service.
+  # `journalctl --user -u buku-sync.service` to look at the logs.
   systemd.user.services.buku-sync = {
     Unit = {
       Description = "Sync the database once the ssh key is unlocked";
@@ -46,7 +48,10 @@
         }
         git add --all
         git commit --message="update db"
-        git push
+        git push || {
+          echo "Push failed"
+          exit 1
+        }
 
         echo "Buku sync completed successfully"
       ''}";
