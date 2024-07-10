@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -23,12 +24,13 @@
   # Allow unfree packages (NVIDIA).
   nixpkgs.config.allowUnfree = true;
 
-  # Tell Xorg to use the nvidia driver.
+  # Tell Xorg and Wayland to use the nvidia driver.
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [vpl-gpu-rt];  # See https://nixos.wiki/wiki/Intel_Graphics.
   };
 
   # See https://nixos.wiki/wiki/Nvidia.
@@ -56,12 +58,29 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.latest;
 
-    # See
-    # https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29.
+    # See https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29.
     prime = {
-      sync.enable = true;
+      reverseSync.enable = true;
+      allowExternalGpu = false;
+
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
+    };
+  };
+
+  # Create a boot entry with offload enabled. This is a power efficient entry.
+  specialisation.on-the-go.configuration = {
+    system.nixos.tags = ["on-the-go"];
+    hardware.nvidia = {
+      powerManagement.enable = lib.mkForce true;
+      powerManagement.finegrained = lib.mkForce true;
+
+      prime = {
+        offload.enable = lib.mkForce true;
+        offload.enableOffloadCmd = lib.mkForce true;
+        sync.enable = lib.mkForce false;
+        reverseSync.enable = lib.mkForce false;
+      };
     };
   };
 
