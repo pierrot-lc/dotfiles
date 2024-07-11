@@ -18,6 +18,7 @@
       core.editor = "nvim";
       init.defaultBranch = "main";
       pull.rebase = true;
+      push.autoSetupRemote = true;
       rerere.enabled = true;
     };
     ignores = [

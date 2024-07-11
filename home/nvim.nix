@@ -32,6 +32,7 @@
   shellAliases = {
     bim = "nvim";
     cim = "nvim";
+    ivm = "nvim";
     vi = "nvim";
     vim = "nvim";
     vmi = "nvim";
