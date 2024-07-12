@@ -37,11 +37,6 @@
     };
   };
 
-  programs.thefuck = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   home.packages = with pkgs; [
     bottom
     btop
