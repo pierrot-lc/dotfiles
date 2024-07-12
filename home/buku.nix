@@ -21,7 +21,7 @@
       Description = "Sync the database once the ssh key is unlocked";
     };
     Install = {
-      WantedBy = ["target.default"];
+      WantedBy = ["default.target"];
     };
     Service = {
       ExecStart = "${pkgs.writeShellScript "buku-sync" ''
@@ -36,22 +36,24 @@
           ssh-add -l | grep -q "$(ssh-keygen -lf $SSH_KEY | awk '{print $2}')"
         }
 
-        # Loop until the key is added.
         while ! is_key_added; do
           echo "Waiting for SSH key to be added"
-          sleep 30
+          sleep 60
         done
 
         git pull || {
           echo "Pull failed"
           exit 1
         }
-        git add --all
-        git commit --message="update db"
-        git push || {
-          echo "Push failed"
-          exit 1
-        }
+
+        if [[ $(git status --short) ]]; then
+          git add --all
+          git commit --message="update db"
+          git push || {
+            echo "Push failed"
+            exit 1
+          }
+        fi
 
         echo "Buku sync completed successfully"
       ''}";
