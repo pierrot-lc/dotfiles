@@ -21,6 +21,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
 
     # Neovim dependencies.
     nvim-nix.url = "github:pierrot-lc/nvim-nix";
@@ -30,6 +31,7 @@
     self,
     nixpkgs,
     home-manager,
+    nur,
     ...
   }: let
     system = "x86_64-linux";
@@ -40,6 +42,9 @@
       config = {
         allowUnfree = true;
       };
+      overlays = [
+        nur.overlay
+      ];
     };
 
     # Mappings of specific configurations for each hosts. It is used in
