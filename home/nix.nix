@@ -14,8 +14,8 @@
   };
 
   shellAliases = {
-    nd = "nom develop";
-    ns = "nom-shell";
+    nd = "nix develop";
+    ns = "nix-shell";
   };
 
   nixpkgs.config.allowUnfree = true;
