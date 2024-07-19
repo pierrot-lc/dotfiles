@@ -21,17 +21,21 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = "github:nix-community/NUR";
 
-    # Neovim dependencies.
+    # My Neovim derivation.
     nvim-nix.url = "github:pierrot-lc/nvim-nix";
+
+    # My Librewolf derivation.
+    librewolf-nix = {
+      url = "github:pierrot-lc/librewolf-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
-    nur,
     ...
   }: let
     system = "x86_64-linux";
@@ -43,7 +47,7 @@
         allowUnfree = true;
       };
       overlays = [
-        nur.overlay
+        inputs.librewolf-nix.overlays.default
       ];
     };
 

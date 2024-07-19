@@ -144,6 +144,24 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "gen-luarc": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -274,6 +292,27 @@
         "type": "github"
       }
     },
+    "librewolf-nix": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721428438,
+        "narHash": "sha256-nApHuQGevhqozG+nAe7uKBEBcL9oLW2Rq3mX2gp1wQI=",
+        "owner": "pierrot-lc",
+        "repo": "librewolf-nix",
+        "rev": "c769d7cb84175a1475fd9573ac8ba30dbb337510",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pierrot-lc",
+        "repo": "librewolf-nix",
+        "type": "github"
+      }
+    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -375,26 +414,11 @@
         "type": "github"
       }
     },
-    "nur": {
-      "locked": {
-        "lastModified": 1721308608,
-        "narHash": "sha256-9+sG0T06cECg/WR19qX6k0t1BQz4qMmfB7k9N+1QGS8=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "6a52aa02e9c127a4bbdee2412123b6df5caa02de",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
-        "type": "github"
-      }
-    },
     "nvim-nix": {
       "inputs": {
         "cmp-vimtex": "cmp-vimtex",
         "everforest-nvim": "everforest-nvim",
-        "flake-utils": "flake-utils",
+        "flake-utils": "flake-utils_2",
         "gen-luarc": "gen-luarc",
         "gitmoji-nvim": "gitmoji-nvim",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
@@ -438,12 +462,27 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "librewolf-nix": "librewolf-nix",
         "nixpkgs": "nixpkgs",
-        "nur": "nur",
         "nvim-nix": "nvim-nix"
       }
     },
     "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
