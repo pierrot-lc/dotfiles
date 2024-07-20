@@ -1,4 +1,4 @@
-{pkgs ? import <nixpkgs> {}}: let
+{pkgs ? import <nixpkgs> {config.allowUnfree = true;}}: let
   python-packages = ps:
     with ps; [
       pip
@@ -6,15 +6,17 @@
       virtualenv
     ];
 
-  targetPkgs = ps: (with ps; [
-    (python311.withPackages python-packages)
-    pdm
-    zlib # Numpy dep.
-  ]);
-
-  fhs = pkgs.buildFHSUserEnv {
-    name = "python";
-    targetPkgs = targetPkgs;
-  };
+  libs = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+  ];
 in
-  fhs.env
+  pkgs.mkShell {
+    buildInputs = [
+      (pkgs.python311.withPackages python-packages)
+      pkgs.uv
+    ];
+
+    # Make the `libstdc++.so.6` and `zlib.so` available.
+    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath libs;
+  }
