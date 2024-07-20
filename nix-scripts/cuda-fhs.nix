@@ -43,14 +43,15 @@
 
         fhs = pkgs.buildFHSUserEnv {
           name = "cuda-dev";
-          targetPkgs = pkgs: (with pkgs; [
-            (python312.withPackages python-packages)
-            cudaPackages.cudatoolkit
-            cudaPackages.cudnn
-            just
-            pdm
-            zlib # Numpy dep.
-          ]);
+          targetPkgs = pkgs: [
+            (pkgs.python312.withPackages python-packages)
+            pkgs.cudaPackages.cudatoolkit
+            pkgs.cudaPackages.cudnn
+          ];
+          multiPkgs = pkgs: [pkgs.zlib];
+          profile = ''
+            export CUDA_PATH=${pkgs.cuda.cudatoolkit}
+          '';
         };
       in {
         devShells.default = fhs.env;
