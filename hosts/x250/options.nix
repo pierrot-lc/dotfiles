@@ -1,4 +1,4 @@
 {
   accounts.enable = true;
-  theme.name = "catppuccin";
+  theme.name = "gruvbox";
 }
