@@ -15,6 +15,7 @@
 
   shellAliases = {
     nd = "nix develop";
+    nfu = "nix flake update";
     ns = "nix-shell";
   };
 
