@@ -63,6 +63,9 @@
       switch-windows = ["<Alt>space"];
       switch-windows-backward = ["<Shift><Alt>space"];
     };
+    "org/gnome/mutter/keybindings" = {
+      switch-monitor = ["XF86Display"]; # Disable the "<Super>p" shortcut, but keep the original special key.
+    };
 
     # Extensions.
     "org/gnome/shell/extensions/caffeine" = {
