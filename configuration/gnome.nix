@@ -27,6 +27,7 @@
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
     gnome.adwaita-icon-theme
+    gnome.dconf-editor
     gnome.gnome-tweaks
   ];
 }
