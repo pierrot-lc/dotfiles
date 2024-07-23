@@ -3,5 +3,5 @@
   docker.enable = true;
   gaming.enable = true;
   ollama.enable = false;
-  theme.name = "catppuccin";
+  theme.name = "everforest";
 }
