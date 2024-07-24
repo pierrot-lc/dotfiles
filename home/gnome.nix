@@ -80,7 +80,7 @@
       hot-sensors = [
         "_gpu#1_utilization_"
         "_gpu#1_memory_used_"
-        "_ram_allocated_"
+        "_memory_allocated_"
         "_storage_used_"
       ];
     };
