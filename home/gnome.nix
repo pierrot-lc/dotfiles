@@ -77,7 +77,12 @@
       idle-threshold = 15;
     };
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = ["_storage_used_"];
+      hot-sensors = [
+        "_gpu#1_utilization_"
+        "_gpu#1_memory_used_"
+        "_ram_allocated_"
+        "_storage_used_"
+      ];
     };
   };
 }
