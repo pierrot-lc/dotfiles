@@ -14,5 +14,6 @@
       default = {};
       description = "Shell aliases to be added to the user profile.";
     };
+    virtual-machines.enable = lib.mkEnableOption "Enable virtualisation"; # NOTE: `virtualisation` is already taken.
   };
 }

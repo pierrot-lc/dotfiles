@@ -4,4 +4,5 @@
   gaming.enable = true;
   ollama.enable = true;
   theme.name = "rose-pine";
+  virtual-machines.enable = true;
 }
