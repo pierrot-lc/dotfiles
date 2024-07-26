@@ -1,0 +1,82 @@
+{
+    "catppuccin": {
+        "cargoLocks": null,
+        "date": "2024-07-20",
+        "extract": null,
+        "name": "catppuccin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "catppuccin",
+            "repo": "bat",
+            "rev": "82e7ca555f805b53d2b377390e4ab38c20282e83",
+            "sha256": "sha256-/Ob9iCVyjJDBCXlss9KwFQTuxybmSSzYRBZxOT10PZg=",
+            "type": "github"
+        },
+        "version": "82e7ca555f805b53d2b377390e4ab38c20282e83"
+    },
+    "everforest": {
+        "cargoLocks": null,
+        "date": "2023-02-03",
+        "extract": null,
+        "name": "everforest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mhanberg",
+            "repo": "everforest-textmate",
+            "rev": "aa1850676e2c2908e7c5cf5ea7863b130fd65016",
+            "sha256": "sha256-4GexSj/T+FKsa98kmKfninJMdFKHgQyZFQGVNBFYIuc=",
+            "type": "github"
+        },
+        "version": "aa1850676e2c2908e7c5cf5ea7863b130fd65016"
+    },
+    "kanagawa": {
+        "cargoLocks": null,
+        "date": "2024-07-03",
+        "extract": null,
+        "name": "kanagawa",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rebelot",
+            "repo": "kanagawa.nvim",
+            "rev": "e5f7b8a804360f0a48e40d0083a97193ee4fcc87",
+            "sha256": "sha256-FnwqqF/jtCgfmjIIR70xx8kL5oAqonrbDEGNw0sixoA=",
+            "type": "github"
+        },
+        "version": "e5f7b8a804360f0a48e40d0083a97193ee4fcc87"
+    },
+    "rose-pine": {
+        "cargoLocks": null,
+        "date": "2024-04-23",
+        "extract": null,
+        "name": "rose-pine",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rose-pine",
+            "repo": "tm-theme",
+            "rev": "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec",
+            "sha256": "sha256-jji8WOKDkzAq8K+uSZAziMULI8Kh7e96cBRimGvIYKY=",
+            "type": "github"
+        },
+        "version": "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec"
+    }
+}

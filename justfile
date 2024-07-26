@@ -4,6 +4,8 @@ home-update:
 system-update:
     # sudo nixos-rebuild switch -v --flake .
     nh os switch .
+nvfetcher-update:
+    cd home/bat/; nvfetcher; cd -
 
 clean-all:
     # nix-collect-garbage -d

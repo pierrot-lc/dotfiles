@@ -1,0 +1,15 @@
+[catppuccin]
+src.git = "https://github.com/catppuccin/bat.git"
+fetch.github = "catppuccin/bat"
+
+[everforest]
+src.git = "https://github.com/mhanberg/everforest-textmate.git"
+fetch.github = "mhanberg/everforest-textmate"
+
+[kanagawa]
+src.git = "https://github.com/rebelot/kanagawa.nvim.git"
+fetch.github = "rebelot/kanagawa.nvim"
+
+[rose-pine]
+src.git = "https://github.com/rose-pine/tm-theme.git"
+fetch.github = "rose-pine/tm-theme"

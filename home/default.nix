@@ -28,7 +28,7 @@
   imports = [
     ./accounts
     ./bash
-    ./bat.nix
+    ./bat
     ./buku.nix
     ./firefox.nix
     ./fzf.nix
