@@ -25,14 +25,6 @@
     };
   };
 
-  # For virtualisation using virt-manager and quemu.
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["quemu:///system"];
-      uris = ["quemu:///system"];
-    };
-  };
-
   imports = [
     ./accounts
     ./bash

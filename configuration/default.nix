@@ -121,8 +121,6 @@
   #   enableSSHSupport = true;
   # };
 
-  # Enable virtualisation support.
-  virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
   # Enable special udev rules for zsa keyboards (flashing firmware).
@@ -172,6 +170,7 @@
     ./gaming.nix
     ./gnome.nix
     ./services.nix
+    ./virtualisation.nix
   ];
 
   # This value determines the NixOS release from which the default
