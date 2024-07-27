@@ -1,7 +1,6 @@
 # This is some specific configuration for the given machine.
 {
   config,
-  pkgs,
   ...
 }: {
   imports = [
@@ -13,10 +12,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  environment.systemPackages = with pkgs; [
-    nvitop
-  ];
 
   # Allow unfree packages (NVIDIA).
   nixpkgs.config.allowUnfree = true;

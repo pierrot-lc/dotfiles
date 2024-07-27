@@ -14,10 +14,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  environment.systemPackages = with pkgs; [
-    nvitop
-  ];
-
   # D-Bus service to check the availability of dual-GPU.
   services.switcherooControl.enable = true;
 

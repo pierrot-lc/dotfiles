@@ -97,17 +97,20 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    cachix
-    firefox
-    git
-    gparted
-    htop
-    nvtop
-    vim
-    virt-manager
-    wget
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      cachix
+      firefox
+      git
+      gparted
+      htop
+      vim
+      virt-manager
+      wget
+    ]
+    ++ (lib.optionals config.hardware.hasGPU [
+      nvitop
+    ]);
 
   services.xserver.excludePackages = with pkgs; [
     xterm

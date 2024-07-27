@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   programs.gnome-shell = {
     enable = true;
     extensions = with pkgs.gnomeExtensions; [
@@ -77,12 +82,15 @@
       idle-threshold = 15;
     };
     "org/gnome/shell/extensions/vitals" = {
-      hot-sensors = [
-        "_gpu#1_utilization_"
-        "_gpu#1_memory_used_"
-        "_memory_allocated_"
-        "_storage_used_"
-      ];
+      hot-sensors =
+        (lib.optionals config.hardware.hasGPU [
+          "_gpu#1_utilization_"
+          "_gpu#1_memory_used_"
+        ])
+        ++ [
+          "_memory_allocated_"
+          "_storage_used_"
+        ];
     };
   };
 }
