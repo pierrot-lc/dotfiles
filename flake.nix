@@ -22,6 +22,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Weekly updated nix-index database.
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # My Neovim derivation.
     nvim-nix.url = "github:pierrot-lc/nvim-nix";
 
@@ -76,8 +82,8 @@
         modules = [
           ./configuration
           ./modules
-          optionsParser.${host}
           nixosConfigurationsParser.${host}
+          optionsParser.${host}
         ];
       };
     }) hosts;
@@ -92,8 +98,9 @@
         modules = [
           ./home
           ./modules
-          optionsParser.${host}
           inputs.nvim-nix.nixosModules.${system}.default
+          inputs.nix-index-database.hmModules.nix-index
+          optionsParser.${host}
         ];
       };
     }) hosts;

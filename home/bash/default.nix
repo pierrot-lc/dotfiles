@@ -13,7 +13,6 @@
     forecast = "curl wttr.in"; # Show meteo.
     grep = "rg";
     hsi = "history | grep -i"; # Search in history.
-    htop = "btm";
     ip4 = "curl -s https://api.ipify.org";
     ip6 = "curl -s https://api6.ipify.org";
     kk = "ll";

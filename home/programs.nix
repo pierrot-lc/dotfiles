@@ -4,6 +4,9 @@
     enableBashIntegration = true;
   };
 
+  programs.bottom.enable = true;
+  shellAliases.htop = "btm";
+
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
@@ -38,9 +41,6 @@
   };
 
   home.packages = with pkgs; [
-    bottom
-    btop
-    comma
     curl
     du-dust
     duf

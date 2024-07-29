@@ -27,6 +27,7 @@
     enable = true;
     enableBashIntegration = true;
   };
+  programs.nix-index-database.comma.enable = true;
 
   home.packages = with pkgs; [
     nh
