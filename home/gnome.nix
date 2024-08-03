@@ -11,9 +11,9 @@
       {package = caffeine;}
       {package = just-perfection;}
       {package = runcat;}
+      {package = tiling-shell;}
       {package = vitals;}
       {package = weather-oclock;}
-      # TODO: add tilingshell.
     ];
   };
 
