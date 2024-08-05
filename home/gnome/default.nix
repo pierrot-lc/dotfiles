@@ -3,7 +3,12 @@
   lib,
   config,
   ...
-}: {
+}: let
+  layouts-to-string = file: let
+    content = builtins.readFile file;
+  in
+    builtins.replaceStrings ["\n"] [""] content;
+in {
   programs.gnome-shell = {
     enable = true;
     extensions = with pkgs.gnomeExtensions; [
@@ -73,6 +78,9 @@
     };
 
     # Extensions.
+    "org/gnome/shell/extensions/tilingshell" = {
+      layouts-json = layouts-to-string ./layouts.json;
+    };
     "org/gnome/shell/extensions/caffeine" = {
       show-notifications = false;
       restore-state = true;

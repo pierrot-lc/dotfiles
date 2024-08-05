@@ -33,7 +33,7 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
-    ./gnome.nix
+    ./gnome
     ./gpg.nix
     ./kitty
     ./newsboat.nix

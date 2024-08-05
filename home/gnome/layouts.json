@@ -1,0 +1,24 @@
+[
+    {
+        "id":"Layout 1",
+        "tiles": [
+            {"x":0, "y":0, "width":0.5, "height":1, "groups":[1]},
+            {"x":0.5, "y":0, "width":0.5, "height":1, "groups":[1]}
+        ]
+    },
+    {
+        "id":"Layout 2",
+        "tiles":[
+            {"x":0,"y":0,"width":0.66,"height":1,"groups":[1]},
+            {"x":0.66,"y":0,"width":0.34,"height":1,"groups":[1]}
+        ]
+    },
+    {
+        "id":"Layout 3",
+        "tiles":[
+            {"x":0,"y":0,"width":0.66,"height":1,"groups":[1]},
+            {"x":0.66,"y":0,"width":0.34,"height":0.5,"groups":[1]},
+            {"x":0.66,"y":0.5,"width":0.34,"height":0.5,"groups":[1]}
+        ]
+    }
+]
