@@ -13,12 +13,12 @@
 
   # Exclude some gnome packages installed by default when using gnome.
   services.gnome.games.enable = false;
+  programs.geary.enable = false;
   environment.gnome.excludePackages = with pkgs; [
     gnome-photos
     gnome-tour
     gnome.cheese
     gnome.epiphany
-    gnome.geary
     gnome.gnome-music
     gnome.gnome-terminal
     gnome.totem
