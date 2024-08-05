@@ -53,6 +53,11 @@
         url = "https://buttondown.email/ainews/rss";
         title = "AI News";
       }
+      {
+        tags = ["AI"];
+        url = "https://machinelearning.apple.com/rss.xml";
+        title = "Apple Machine Learning";
+      }
       # Thanks to https://github.com/ml-feeds for providing these unofficial feeds.
       {
         tags = ["AI"];
