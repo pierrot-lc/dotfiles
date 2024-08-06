@@ -15,19 +15,19 @@
   services.gnome.games.enable = false;
   programs.geary.enable = false;
   environment.gnome.excludePackages = with pkgs; [
-    gnome-photos
-    gnome-tour
-    gnome.cheese
-    gnome.epiphany
+    cheese
+    epiphany
     gnome.gnome-music
-    gnome.gnome-terminal
-    gnome.totem
+    gnome-photos
+    gnome-terminal
+    gnome-tour
+    totem
   ];
 
   environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    dconf-editor
     gnome-extension-manager
-    gnome.adwaita-icon-theme
-    gnome.dconf-editor
-    gnome.gnome-tweaks
+    gnome-tweaks
   ];
 }
