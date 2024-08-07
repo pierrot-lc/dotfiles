@@ -57,6 +57,8 @@ in {
       toggle-quick-settings = ["disabled"];
     };
     "org/gnome/desktop/wm/keybindings" = {
+      maximize = ["<Super>k"];
+      unmaximize = ["<Super>j"];
       minimize = ["disabled"];
       move-to-monitor-left = ["<Shift><Super>h"];
       move-to-monitor-right = ["<Shift><Super>l"];
@@ -68,18 +70,24 @@ in {
       switch-to-workspace-2 = ["<Super>u"];
       switch-to-workspace-3 = ["<Super>i"];
       switch-to-workspace-4 = ["<Super>o"];
-      switch-to-workspace-left = ["<Super>h"];
-      switch-to-workspace-right = ["<Super>l"];
+      switch-to-workspace-left = ["disabled"];
+      switch-to-workspace-right = ["disabled"];
       switch-windows = ["<Alt>space"];
       switch-windows-backward = ["<Shift><Alt>space"];
     };
+    "org/gnome/mutter" = {
+      edge-tiling = false;
+    };
     "org/gnome/mutter/keybindings" = {
       switch-monitor = ["XF86Display"]; # Disable the "<Super>p" shortcut, but keep the original special key.
+      toggle-tiled-left = ["<Super>h"];
+      toggle-tiled-right = ["<Super>l"];
     };
 
     # Extensions.
     "org/gnome/shell/extensions/tilingshell" = {
       layouts-json = layouts-to-string ./layouts.json;
+      overridden-settings = "";
     };
     "org/gnome/shell/extensions/caffeine" = {
       show-notifications = false;
