@@ -72,8 +72,8 @@ in {
       switch-to-workspace-4 = ["<Super>o"];
       switch-to-workspace-left = ["disabled"];
       switch-to-workspace-right = ["disabled"];
-      switch-windows = ["<Alt>space"];
-      switch-windows-backward = ["<Shift><Alt>space"];
+      switch-windows = ["<Alt>Space" "<Alt>Tab"];
+      switch-windows-backward = ["<Shift><Alt>Space" "<Shift><Alt>Tab"];
     };
     "org/gnome/mutter" = {
       edge-tiling = false;
