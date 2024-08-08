@@ -52,7 +52,7 @@
     nvidiaSettings = false;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
 
     # See https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29.
     prime = {
@@ -64,21 +64,21 @@
     };
   };
 
-  # Create a boot entry with offload enabled. This is a power efficient entry.
-  specialisation.on-the-go.configuration = {
-    system.nixos.tags = ["on-the-go"];
-    hardware.nvidia = {
-      powerManagement.enable = lib.mkForce true;
-      powerManagement.finegrained = lib.mkForce true;
-
-      prime = {
-        offload.enable = lib.mkForce true;
-        offload.enableOffloadCmd = lib.mkForce true;
-        sync.enable = lib.mkForce false;
-        reverseSync.enable = lib.mkForce false;
-      };
-    };
-  };
+  # # Create a boot entry with offload enabled. This is a power efficient entry.
+  # specialisation.on-the-go.configuration = {
+  #   system.nixos.tags = ["on-the-go"];
+  #   hardware.nvidia = {
+  #     powerManagement.enable = lib.mkForce true;
+  #     powerManagement.finegrained = lib.mkForce true;
+  #
+  #     prime = {
+  #       offload.enable = lib.mkForce true;
+  #       offload.enableOffloadCmd = lib.mkForce true;
+  #       sync.enable = lib.mkForce false;
+  #       reverseSync.enable = lib.mkForce false;
+  #     };
+  #   };
+  # };
 
   nixpkgs.config.cudaSupport = true;
 }
