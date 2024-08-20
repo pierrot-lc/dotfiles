@@ -63,7 +63,6 @@
     python3Full
     ranger
     ripgrep
-    sshfs
     tldr
     tokei
     tree

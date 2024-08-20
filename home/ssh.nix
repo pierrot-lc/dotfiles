@@ -1,0 +1,18 @@
+{
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      Host nef-frontal
+          HostName nef-frontal.inria.fr
+          User pipereir
+          IdentityFile ~/.ssh/id_ed25519_nef
+
+      Host nef-devel
+          HostName nef-devel.inria.fr
+          User pipereir
+          IdentityFile ~/.ssh/id_ed25519_nef
+          proxyjump nef-frontal
+    """;
+    '';
+  };
+}
