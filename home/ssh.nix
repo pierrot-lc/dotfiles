@@ -12,6 +12,11 @@
           User pipereir
           IdentityFile ~/.ssh/id_ed25519_nef
           proxyjump nef-frontal
+
+      Host maserati
+          HostName maserati.inria.fr
+          User pipereir
+          IdentityFile ~/.ssh/id_rsa_maserati
     """;
     '';
   };
