@@ -17,7 +17,7 @@
   environment.gnome.excludePackages = with pkgs; [
     cheese
     epiphany
-    gnome.gnome-music
+    gnome-music
     gnome-photos
     gnome-terminal
     gnome-tour

@@ -28,7 +28,7 @@
 
     users.users.pierrot-lc = {
       extraGroups = ["libvirtd"];
-      packages = [pkgs.gnome.gnome-boxes];
+      packages = [pkgs.gnome-boxes];
     };
   };
 }
