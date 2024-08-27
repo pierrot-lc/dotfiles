@@ -18,7 +18,6 @@ that I can easily install them again.
 flatpak install -y app.drey.Damask
 flatpak install -y com.brave.Browser
 flatpak install -y com.github.flxzt.rnote
-flatpak install -y com.github.hugolabe.Wike
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.maoschanz.drawing
 flatpak install -y com.github.taiko2k.avvie
@@ -33,6 +32,7 @@ flatpak install -y io.github.nokse22.asciidraw
 flatpak install -y io.github.nokse22.inspector
 flatpak install -y io.gitlab.adhami3310.Converter
 flatpak install -y io.gitlab.news_flash.NewsFlash
+flatpak install -y net.nokyan.Resources
 flatpak install -y org.inkscape.Inkscape
 flatpak install -y org.kde.okular
 flatpak install -y org.libreoffice.LibreOffice
