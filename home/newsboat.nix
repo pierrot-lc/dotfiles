@@ -14,6 +14,11 @@
         title = "Kagi Small Web - Appreciated";
       }
       {
+        tags = ["general"];
+        url = "https://feed.tedium.co/";
+        title = "Tedium";
+      }
+      {
         tags = ["linux"];
         url = "https://news.itsfoss.com/latest/rss/";
         title = "It's FOSS News";
