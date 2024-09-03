@@ -9,11 +9,11 @@
     theme = config.theme.name;
   };
 
-  # Add some LSPs and formatters. Others (such as pylsp or ruff-lsp)
-  # should be installed per-project in its flake declaration.
+  # Add some LSPs and formatters.
   home.packages = with pkgs; [
     alejandra
     bash-language-server
+    inotify-tools # https://github.com/neovim/neovim/pull/29374.
     just
     lua-language-server
     marksman

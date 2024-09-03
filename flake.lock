@@ -366,11 +366,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1724151256,
-        "narHash": "sha256-Ffe2z8mfO2wddOtNoIooCbMVkTBU1TKd63ykFt1FEZ4=",
+        "lastModified": 1725353184,
+        "narHash": "sha256-ekTtBDSdedf7XwCCBXZUxNvgReRmwy52LytfJdhDNm4=",
         "owner": "pierrot-lc",
         "repo": "librewolf-nix",
-        "rev": "ce2742c5e3b137674161274d140fce8e0e85e88e",
+        "rev": "325f6a12f554eb8f84746e8e2e7f91fd7f8cdecb",
         "type": "github"
       },
       "original": {
