@@ -33,6 +33,7 @@
       bottles
       lutris
       mangohud
+      parsec-bin
       steam-run
     ];
   };
