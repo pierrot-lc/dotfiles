@@ -17,7 +17,6 @@ that I can easily install them again.
 @code sh
 flatpak install -y app.drey.Damask
 flatpak install -y com.brave.Browser
-flatpak install -y com.github.flxzt.rnote
 flatpak install -y com.github.johnfactotum.Foliate
 flatpak install -y com.github.maoschanz.drawing
 flatpak install -y com.github.taiko2k.avvie
@@ -28,7 +27,6 @@ flatpak install -y com.system76.Popsicle
 flatpak install -y com.ultimaker.cura
 flatpak install -y dev.bragefuglseth.Keypunch
 flatpak install -y io.github.alainm23.planify
-flatpak install -y io.github.nokse22.asciidraw
 flatpak install -y io.github.nokse22.inspector
 flatpak install -y io.gitlab.adhami3310.Converter
 flatpak install -y io.gitlab.news_flash.NewsFlash
@@ -36,7 +34,6 @@ flatpak install -y net.nokyan.Resources
 flatpak install -y org.inkscape.Inkscape
 flatpak install -y org.kde.okular
 flatpak install -y org.libreoffice.LibreOffice
-flatpak install -y org.nickvision.money
 flatpak install -y org.openscad.OpenSCAD
 flatpak install -y org.qbittorrent.qBittorrent
 flatpak install -y org.videolan.VLC
