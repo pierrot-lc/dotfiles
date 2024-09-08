@@ -1,4 +1,5 @@
 {
   accounts.enable = true;
-  theme.name = "gruvbox";
+  docker.enable = true;
+  theme.name = "kanagawa";
 }
