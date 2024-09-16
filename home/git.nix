@@ -10,7 +10,7 @@
       c = "commit";
       d = "diff";
       p = "pull";
-      P = "push";
+      pp = "push";
       r = "restore";
       s = "status";
     };
@@ -35,10 +35,6 @@
   programs.lazygit = {
     enable = true;
   };
-
-  home.packages = with pkgs; [
-    git-crypt
-  ];
 
   shellAliases = {
     g = "git";

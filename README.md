@@ -76,11 +76,11 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 nix-channel --update
 sudo nix-channel --update
 ```
-7. Install [home-manager](https://nix-community.github.io/home-manager/index.xhtml).
-8. This repo uses [git-crypt](https://github.com/AGWA/git-crypt) to hide
-   personal information. So to avoid using `home/accounts`, do not set the
-   option `accounts.enable` to `true`. This option can be updated later on once
-   `gpg` and `git-crypt` dependencies are available.
+7. Install [home-manager].
+8. This repo uses a private flake input to hide personal information. Unless
+   you're me and you have access to this repository, you should not use this
+   part of the config. So to avoid using `home/accounts`, set the option
+   `accounts.enable` to `false` and comment/remove the private flake input.
 
 ```sh
 home-manager switch --flake .#[your-username] -v
@@ -89,3 +89,5 @@ home-manager switch --flake .#[your-username] -v
 9. Install flatpaks from `./notes/flatpak.norg`
 
 And you're good to go!
+
+[home-manager]: https://nix-community.github.io/home-manager/index.xhtml
