@@ -2,9 +2,9 @@
   pkgs,
   lib,
   config,
+  private,
   ...
 }: let
-  private = import ./private.nix;
   OAuth2Settings = id: {
     "mail.smtpserver.smtp_${id}.authMethod" = 10;
     "mail.server.server_${id}.authMethod" = 10;
@@ -34,8 +34,8 @@ in {
     };
 
     accounts.email.accounts = {
-      "${private.outlook-1}" = {
-        address = private.outlook-1;
+      "${private.email-1.mail}" = {
+        address = private.email-1.mail;
         primary = true;
         inherit realName;
 
@@ -45,11 +45,11 @@ in {
           settings = OAuth2Settings;
         };
 
-        flavor = "outlook.office365.com";
+        flavor = private.email-1.flavor;
       };
 
-      "${private.outlook-2}" = {
-        address = private.outlook-2;
+      "${private.email-2.mail}" = {
+        address = private.email-2.mail;
         inherit realName;
 
         thunderbird = {
@@ -58,11 +58,11 @@ in {
           settings = OAuth2Settings;
         };
 
-        flavor = "outlook.office365.com";
+        flavor = private.email-2.flavor;
       };
 
-      "${private.gmail}" = {
-        address = private.gmail;
+      "${private.email-3.mail}" = {
+        address = private.email-3.mail;
         inherit realName;
 
         thunderbird = {
@@ -71,38 +71,26 @@ in {
           settings = OAuth2Settings;
         };
 
-        flavor = "gmail.com";
+        flavor = private.email-3.flavor;
       };
 
-      "${private.polymtl.mail}" = {
-        address = private.polymtl.mail;
+      "${private.email-4.mail}" = {
+        address = private.email-4.mail;
         inherit realName;
-        userName = private.polymtl.username;
+        userName = private.email-4.username;
 
         thunderbird = {
           enable = true;
           profiles = ["pierre"];
         };
 
-        smtp = {
-          host = "smtp.polymtl.ca";
-          port = 587;
-          tls = {
-            enable = true;
-            useStartTls = true;
-          };
-        };
-
-        imap = {
-          host = "imap.polymtl.ca";
-          port = 143;
-          tls.enable = false;
-        };
+        smtp = private.email-4.smtp;
+        imap = private.email-4.imap;
       };
 
-      "${private.proton}" = {
-        address = private.proton;
-        userName = private.proton;
+      "${private.email-5.mail}" = {
+        address = private.email-5.mail;
+        userName = private.email-5.username;
         inherit realName;
 
         thunderbird = {
@@ -110,52 +98,22 @@ in {
           profiles = ["pierre"];
         };
 
-        smtp = {
-          host = "127.0.0.1";
-          port = 1025;
-          tls = {
-            enable = true;
-            useStartTls = true;
-          };
-        };
-
-        imap = {
-          host = "127.0.0.1";
-          port = 1143;
-          tls = {
-            enable = false;
-            useStartTls = false;
-          };
-        };
+        smtp = private.email-5.smtp;
+        imap = private.email-5.imap;
       };
 
-      "${private.inria.mail}" = {
-        address = private.inria.mail;
+      "${private.email-6.mail}" = {
+        address = private.email-6.mail;
         inherit realName;
-        userName = private.inria.username;
+        userName = private.email-6.username;
 
         thunderbird = {
           enable = true;
           profiles = ["pierre"];
         };
 
-        smtp = {
-          host = "smtp.inria.fr";
-          port = 587;
-          tls = {
-            enable = true;
-            useStartTls = true;
-          };
-        };
-
-        imap = {
-          host = "zimbra.inria.fr";
-          port = 993;
-          tls = {
-            enable = true;
-            useStartTls = false;
-          };
-        };
+        smtp = private.email-6.smtp;
+        imap = private.email-6.imap;
       };
     };
   };

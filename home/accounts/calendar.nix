@@ -1,10 +1,9 @@
 {
-  config,
   lib,
+  config,
+  private,
   ...
-}: let
-  private = import ./private.nix;
-in {
+}: {
   config = lib.mkIf config.accounts.enable {
     programs.qcal = {
       enable = true;
@@ -13,7 +12,7 @@ in {
     accounts.calendar.accounts.proton-calendar = {
       primary = true;
       name = "proton-calendar";
-      remote.url = private.proton-calendar;
+      remote.url = private.email-5.calendar;
 
       qcal.enable = true;
     };

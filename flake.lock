@@ -345,11 +345,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725781935,
-        "narHash": "sha256-o6LRtdpgBTzev9n243Ktu3rn0/qsv0frFyJwU6vJsdE=",
+        "lastModified": 1726440980,
+        "narHash": "sha256-ChhIrjtdu5d83W+YDRH+Ec5g1MmM0xk6hJnkz15Ot7M=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ec4c6928bbacc89cf10e9c959a7a47cbaad95344",
+        "rev": "a9c9cc6e50f7cbd2d58ccb1cd46a1e06e9e445ff",
         "type": "github"
       },
       "original": {
@@ -444,11 +444,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725765290,
-        "narHash": "sha256-hwX53i24KyWzp2nWpQsn8lfGQNCP0JoW/bvQmcR1DPY=",
+        "lastModified": 1726449931,
+        "narHash": "sha256-1AX7MyYzP7sNgZiGF8jwehCCI75y2kBGwACeryJs+yE=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "642275444c5a9defce57219c944b3179bf2adaa9",
+        "rev": "c1b0fa0bec5478185eae2fd3f39b9e906fc83995",
         "type": "github"
       },
       "original": {
@@ -459,11 +459,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1725634671,
-        "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
+        "lastModified": 1726243404,
+        "narHash": "sha256-sjiGsMh+1cWXb53Tecsm4skyFNag33GPbVgCdfj3n9I=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "574d1eac1c200690e27b8eb4e24887f8df7ac27c",
+        "rev": "345c263f2f53a3710abe117f28a5cb86d0ba4059",
         "type": "github"
       },
       "original": {
@@ -577,13 +577,29 @@
         "type": "github"
       }
     },
+    "private": {
+      "locked": {
+        "lastModified": 1726498579,
+        "narHash": "sha256-Xb9Gl9BOtjr9MgYL60vyyiBDzeHa8bQzaEiRU8D4X4Y=",
+        "ref": "refs/heads/main",
+        "rev": "17dab3bb1010179fb5bbf543b7354c14955232a2",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/pierrot-lc/dotfiles-private"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/pierrot-lc/dotfiles-private"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "librewolf-nix": "librewolf-nix",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs",
-        "nvim-nix": "nvim-nix"
+        "nvim-nix": "nvim-nix",
+        "private": "private"
       }
     },
     "systems": {

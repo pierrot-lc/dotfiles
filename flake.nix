@@ -36,6 +36,9 @@
       url = "github:pierrot-lc/librewolf-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Some private informations.
+    private.url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private";
   };
 
   outputs = inputs @ {
@@ -93,6 +96,7 @@
         inherit pkgs;
         extraSpecialArgs = {
           username = "pierrot-lc";
+          private = inputs.private;
         };
 
         modules = [
