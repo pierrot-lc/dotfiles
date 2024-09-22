@@ -157,12 +157,6 @@
     # };
   };
 
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
