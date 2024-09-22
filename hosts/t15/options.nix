@@ -4,6 +4,6 @@
   gaming.enable = true;
   hardware.hasGPU = true;
   ollama.enable = true;
-  theme.name = "gruvbox";
+  theme.name = "everforest";
   virtual-machines.enable = true;
 }

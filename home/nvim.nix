@@ -6,8 +6,7 @@
   nvim-nix = {
     enable = true;
     transparentBackground = false;
-    # theme = config.theme.name;
-    theme = "melange";
+    theme = config.theme.name;
   };
 
   # Add some LSPs and formatters.
