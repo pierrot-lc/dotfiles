@@ -1,7 +1,7 @@
 {
   programs.ssh = {
     enable = true;
-    extraConfig = ''
+    extraConfig = /* sshconfig */ ''
       Host nef-frontal
           HostName nef-frontal.inria.fr
           User pipereir
