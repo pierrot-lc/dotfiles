@@ -17,7 +17,6 @@
           HostName maserati.inria.fr
           User pipereir
           IdentityFile ~/.ssh/id_rsa_maserati
-    """;
     '';
   };
 }
