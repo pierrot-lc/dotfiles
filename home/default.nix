@@ -39,6 +39,7 @@
     ./newsboat.nix
     ./nix.nix
     ./nvim.nix
+    ./printing.nix
     ./programs.nix
     ./ssh.nix
   ];
