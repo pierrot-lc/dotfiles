@@ -166,6 +166,7 @@
     ./fonts.nix
     ./gaming.nix
     ./gnome.nix
+    ./printing.nix
     ./services.nix
     ./virtualisation.nix
   ];

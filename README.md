@@ -79,8 +79,8 @@ sudo nix-channel --update
 7. Install [home-manager].
 8. This repo uses a private flake input to hide personal information. Unless
    you're me and you have access to this repository, you should not use this
-   part of the config. So to avoid using `home/accounts`, set the option
-   `accounts.enable` to `false` and comment/remove the private flake input.
+   part of the config. So you can remove the parts where this private
+   information is used.
 
 ```sh
 home-manager switch --flake .#[your-username] -v

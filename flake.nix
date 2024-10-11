@@ -84,7 +84,7 @@
         inherit system;
         modules = [
           ./configuration
-          ./modules
+          ./options
           nixosConfigurationsParser.${host}
           optionsParser.${host}
         ];
@@ -101,7 +101,7 @@
 
         modules = [
           ./home
-          ./modules
+          ./options
           inputs.nvim-nix.nixosModules.${system}.default
           inputs.nix-index-database.hmModules.nix-index
           optionsParser.${host}

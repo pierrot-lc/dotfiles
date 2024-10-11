@@ -26,16 +26,17 @@
   };
 
   imports = [
-    ./accounts
     ./bash
     ./bat
     ./buku.nix
+    ./calendar.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix
     ./gnome
     ./gpg.nix
     ./kitty
+    ./mails.nix
     ./newsboat.nix
     ./nix.nix
     ./nvim.nix

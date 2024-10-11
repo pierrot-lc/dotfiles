@@ -1,5 +1,4 @@
 {
-  accounts.enable = true;
   docker.enable = true;
   gaming.enable = true;
   hardware.hasGPU = true;

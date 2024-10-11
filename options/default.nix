@@ -4,7 +4,6 @@
   ];
 
   options = {
-    accounts.enable = lib.mkEnableOption "Import accounts";
     arrs.enable = lib.mkEnableOption "Arrs services";
     docker.enable = lib.mkEnableOption "Enable Docker";
     gaming.enable = lib.mkEnableOption "Install game launchers and others";
