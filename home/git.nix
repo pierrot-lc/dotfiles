@@ -9,6 +9,7 @@
       a = "add";
       c = "commit";
       d = "diff";
+      f = "fetch";
       p = "pull";
       pp = "push";
       r = "restore";
