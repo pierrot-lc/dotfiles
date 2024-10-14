@@ -1,4 +1,4 @@
-{pkgs ? import <nixpkgs> {config.allowUnfree = true;}}: let
+{pkgs ? import <nixpkgs>}: let
   python-packages = ps:
     with ps; [
       pip
@@ -12,11 +12,13 @@
   ];
 in
   pkgs.mkShell {
-    buildInputs = [
-      (pkgs.python311.withPackages python-packages)
+    packages = [
+      (pkgs.python312.withPackages python-packages)
       pkgs.uv
     ];
 
-    # Make the `libstdc++.so.6` and `zlib.so` available.
-    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath libs;
+    env = {
+      # Make the `libstdc++.so.6` and `zlib.so` available.
+      LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath libs;
+    };
   }
