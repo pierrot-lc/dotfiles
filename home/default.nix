@@ -37,6 +37,7 @@
     ./gpg.nix
     ./kitty
     ./mails.nix
+    ./myrepos.nix
     ./newsboat.nix
     ./nix.nix
     ./nvim.nix
