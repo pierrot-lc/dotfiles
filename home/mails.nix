@@ -25,7 +25,7 @@ in {
         "mailnews.default_news_sort_type" = 18; # Sort by date.
         "mailnews.default_sort_order" = 2; # In descending order.
         "mailnews.default_sort_type" = 18; # Sort by date.
-        "mailnews.reply_on_top" = true; # Reply on top by default.
+        "mailnews.reply_on_top" = 1; # Reply on top by default.
       };
     };
   };
@@ -111,6 +111,19 @@ in {
 
       smtp = private.email-6.smtp;
       imap = private.email-6.imap;
+    };
+
+    "${private.email-7.mail}" = {
+      address = private.email-7.mail;
+      inherit realName;
+
+      thunderbird = {
+        enable = true;
+        profiles = ["pierre"];
+        settings = OAuth2Settings;
+      };
+
+      flavor = private.email-7.flavor;
     };
   };
 }
