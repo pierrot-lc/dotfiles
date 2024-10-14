@@ -138,34 +138,13 @@
   '';
   security.polkit.enable = true;
 
-  # Network configuration.
-  networking = {
-    # Enable networking.
-    networkmanager.enable = true;
-
-    # Configure network proxy if necessary
-    # proxy = {
-    #   default = "http://user:password@proxy:port/";
-    #   noProxy = "127.0.0.1,localhost,internal.domain";
-    # };
-
-    # firewall = {
-    #   enable = false; # Or disable the firewall altogether.
-    #   # Open ports in the firewall.
-    #   allowedTCPPorts = [ ... ];
-    #   allowedUDPPorts = [ ... ];
-    # };
-  };
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
   imports = [
     ./arrs.nix
     ./docker.nix
     ./fonts.nix
     ./gaming.nix
     ./gnome.nix
+    ./networking.nix
     ./printing.nix
     ./services.nix
     ./virtualisation.nix

@@ -31,8 +31,8 @@ in {
   };
 
   accounts.email.accounts = {
-    "${private.email-1.mail}" = {
-      address = private.email-1.mail;
+    "${private.mails.email-1.mail}" = {
+      address = private.mails.email-1.mail;
       primary = true;
       inherit realName;
 
@@ -42,11 +42,11 @@ in {
         settings = OAuth2Settings;
       };
 
-      flavor = private.email-1.flavor;
+      flavor = private.mails.email-1.flavor;
     };
 
-    "${private.email-2.mail}" = {
-      address = private.email-2.mail;
+    "${private.mails.email-2.mail}" = {
+      address = private.mails.email-2.mail;
       inherit realName;
 
       thunderbird = {
@@ -55,11 +55,11 @@ in {
         settings = OAuth2Settings;
       };
 
-      flavor = private.email-2.flavor;
+      flavor = private.mails.email-2.flavor;
     };
 
-    "${private.email-3.mail}" = {
-      address = private.email-3.mail;
+    "${private.mails.email-3.mail}" = {
+      address = private.mails.email-3.mail;
       inherit realName;
 
       thunderbird = {
@@ -68,26 +68,26 @@ in {
         settings = OAuth2Settings;
       };
 
-      flavor = private.email-3.flavor;
+      flavor = private.mails.email-3.flavor;
     };
 
-    "${private.email-4.mail}" = {
-      address = private.email-4.mail;
+    "${private.mails.email-4.mail}" = {
+      address = private.mails.email-4.mail;
       inherit realName;
-      userName = private.email-4.username;
+      userName = private.mails.email-4.username;
 
       thunderbird = {
         enable = true;
         profiles = ["pierre"];
       };
 
-      smtp = private.email-4.smtp;
-      imap = private.email-4.imap;
+      smtp = private.mails.email-4.smtp;
+      imap = private.mails.email-4.imap;
     };
 
-    "${private.email-5.mail}" = {
-      address = private.email-5.mail;
-      userName = private.email-5.username;
+    "${private.mails.email-5.mail}" = {
+      address = private.mails.email-5.mail;
+      userName = private.mails.email-5.username;
       inherit realName;
 
       thunderbird = {
@@ -95,26 +95,26 @@ in {
         profiles = ["pierre"];
       };
 
-      smtp = private.email-5.smtp;
-      imap = private.email-5.imap;
+      smtp = private.mails.email-5.smtp;
+      imap = private.mails.email-5.imap;
     };
 
-    "${private.email-6.mail}" = {
-      address = private.email-6.mail;
+    "${private.mails.email-6.mail}" = {
+      address = private.mails.email-6.mail;
       inherit realName;
-      userName = private.email-6.username;
+      userName = private.mails.email-6.username;
 
       thunderbird = {
         enable = true;
         profiles = ["pierre"];
       };
 
-      smtp = private.email-6.smtp;
-      imap = private.email-6.imap;
+      smtp = private.mails.email-6.smtp;
+      imap = private.mails.email-6.imap;
     };
 
-    "${private.email-7.mail}" = {
-      address = private.email-7.mail;
+    "${private.mails.email-7.mail}" = {
+      address = private.mails.email-7.mail;
       inherit realName;
 
       thunderbird = {
@@ -123,7 +123,7 @@ in {
         settings = OAuth2Settings;
       };
 
-      flavor = private.email-7.flavor;
+      flavor = private.mails.email-7.flavor;
     };
   };
 }

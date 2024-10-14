@@ -38,7 +38,10 @@
     };
 
     # Some private informations.
-    private.url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private";
+    private = {
+      url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -79,34 +82,43 @@
       "x250" = ./hosts/x250/options.nix;
     };
   in {
-    nixosConfigurations = lib.attrsets.concatMapAttrs (host: _: {
-      ${host} = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration
-          ./options
-          nixosConfigurationsParser.${host}
-          optionsParser.${host}
-        ];
-      };
-    }) hosts;
+    nixosConfigurations =
+      lib.attrsets.concatMapAttrs (host: _: {
+        ${host} = lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            private = inputs.private;
+          };
 
-    homeConfigurations = lib.attrsets.concatMapAttrs (host: _: {
-      "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {
-          username = "pierrot-lc";
-          private = inputs.private;
+          modules = [
+            ./configuration
+            ./options
+            inputs.private.secrets
+            nixosConfigurationsParser.${host}
+            optionsParser.${host}
+          ];
         };
+      })
+      hosts;
 
-        modules = [
-          ./home
-          ./options
-          inputs.nvim-nix.nixosModules.${system}.default
-          inputs.nix-index-database.hmModules.nix-index
-          optionsParser.${host}
-        ];
-      };
-    }) hosts;
+    homeConfigurations =
+      lib.attrsets.concatMapAttrs (host: _: {
+        "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            username = "pierrot-lc";
+            private = inputs.private;
+          };
+
+          modules = [
+            ./home
+            ./options
+            inputs.nvim-nix.nixosModules.${system}.default
+            inputs.nix-index-database.hmModules.nix-index
+            optionsParser.${host}
+          ];
+        };
+      })
+      hosts;
   };
 }
