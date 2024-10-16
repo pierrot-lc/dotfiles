@@ -10,7 +10,7 @@
   programs.eza = {
     enable = true;
     enableBashIntegration = true;
-    icons = true;
+    icons = "auto";
     git = true;
     extraOptions = [
       "--group-directories-first"
