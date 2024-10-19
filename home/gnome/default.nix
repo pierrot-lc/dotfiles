@@ -15,7 +15,6 @@ in {
       {package = blur-my-shell;}
       {package = caffeine;}
       {package = just-perfection;}
-      {package = runcat;}
       {package = tiling-shell;}
       {package = vitals;}
       {package = weather-oclock;}
@@ -93,13 +92,12 @@ in {
       show-notifications = false;
       restore-state = true;
     };
-    "org/gnome/shell/extensions/runcat" = {
-      displaying-items = "character-and-percentage";
-      idle-threshold = 15;
-    };
     "org/gnome/shell/extensions/vitals" = {
       hot-sensors =
-        (lib.optionals config.hardware.hasGPU [
+        [
+          "_processor_usage_"
+        ]
+        ++ (lib.optionals config.hardware.hasGPU [
           "_gpu#1_utilization_"
           "_gpu#1_memory_used_"
         ])
