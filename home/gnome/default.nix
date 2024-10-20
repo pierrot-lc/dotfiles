@@ -3,19 +3,13 @@
   lib,
   config,
   ...
-}: let
-  layouts-to-string = file: let
-    content = builtins.readFile file;
-  in
-    builtins.replaceStrings ["\n"] [""] content;
-in {
+}: {
   programs.gnome-shell = {
     enable = true;
     extensions = with pkgs.gnomeExtensions; [
       {package = blur-my-shell;}
       {package = caffeine;}
       {package = just-perfection;}
-      {package = tiling-shell;}
       {package = vitals;}
       {package = weather-oclock;}
     ];
@@ -84,10 +78,6 @@ in {
     };
 
     # Extensions.
-    "org/gnome/shell/extensions/tilingshell" = {
-      layouts-json = layouts-to-string ./layouts.json;
-      overridden-settings = "";
-    };
     "org/gnome/shell/extensions/caffeine" = {
       show-notifications = false;
       restore-state = true;
