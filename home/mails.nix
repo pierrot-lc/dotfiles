@@ -11,7 +11,6 @@
 in {
   home.packages = with pkgs; [
     protonmail-bridge
-    protonmail-bridge-gui
   ];
 
   programs.thunderbird = {
@@ -20,7 +19,7 @@ in {
       isDefault = true;
       settings = {
         # See https://kb.mozillazine.org/Mail_and_news_settings.
-        # "mail.identity.default.reply_on_top" = true;
+        "mail.identity.default.reply_on_top" = true;
         "mailnews.default_news_sort_order" = 2; # In descending order.
         "mailnews.default_news_sort_type" = 18; # Sort by date.
         "mailnews.default_sort_order" = 2; # In descending order.

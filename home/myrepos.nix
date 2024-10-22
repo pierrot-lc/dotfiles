@@ -10,4 +10,9 @@
       };
     };
   };
+
+  shellAliases = {
+    mru = "cd ~; mr update";
+    mrc = "cd ~; mr commit -m myrepos-commit";
+  };
 }

@@ -29,7 +29,10 @@
     };
 
     # My Neovim derivation.
-    nvim-nix.url = "github:pierrot-lc/nvim-nix";
+    nvim-nix = {
+      url = "github:pierrot-lc/nvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # My Librewolf derivation.
     librewolf-nix = {
