@@ -1,8 +1,11 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.librewolf-pkg]; # From my own librewolf derivation.
+  librewolf-nix = {
+    enable = true;
+    nativeMessagingHosts = with pkgs; [bukubrow];
+  };
 
   home.sessionVariables = {
     BROWSER = "librewolf";
-    MOZ_ENABLE_WAYLAND = 1; # Should now be working!
+    MOZ_ENABLE_WAYLAND = 1;
   };
 }

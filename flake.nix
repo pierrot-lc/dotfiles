@@ -61,9 +61,7 @@
       config = {
         allowUnfree = true;
       };
-      overlays = [
-        inputs.librewolf-nix.overlays.default
-      ];
+      overlays = [];
     };
 
     # Mappings of specific configurations for each hosts. It is used in
@@ -116,8 +114,9 @@
           modules = [
             ./home
             ./options
-            inputs.nvim-nix.nixosModules.${system}.default
+            inputs.librewolf-nix.hmModules.${system}.default
             inputs.nix-index-database.hmModules.nix-index
+            inputs.nvim-nix.hmModules.${system}.default
             optionsParser.${host}
           ];
         };
