@@ -12,7 +12,6 @@
   };
 
   shellAliases = {
-    mru = "cd ~; mr update; cd -";
-    mrc = "cd ~; mr commit -m myrepos-commit; cd -";
+    mru = "cd ~; mr commit -m myrepos-commit; mr update; mr push; cd -";
   };
 }
