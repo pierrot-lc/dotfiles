@@ -14,7 +14,7 @@ nvfetcher-update:
 fwupd-update:
   sudo fwupdmgr update -y
 myrepos-update:
-  cd ~; mr commit -m myrepos-commit; mr update; cd -
+  cd ~; mr commit -m myrepos-commit; mr update; mr push; cd -
 
 update-all: channel-update flake-update nvfetcher-update system-update home-update fwupd-update myrepos-update
 
