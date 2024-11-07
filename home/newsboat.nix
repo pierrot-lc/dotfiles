@@ -74,6 +74,11 @@
         url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest";
         title = "Paper With Code - Latest";
       }
+      {
+        tags = ["AI"];
+        url = "https://rohanpaul.substack.com/feed";
+        title = "Rohan's Bytes";
+      }
     ];
     extraConfig = ''
       # Taken from here: https://github.com/dracula/newsboat/blob/main/newsboat
