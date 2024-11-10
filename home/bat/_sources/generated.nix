@@ -27,15 +27,15 @@
   };
   kanagawa = {
     pname = "kanagawa";
-    version = "f491b0fe68fffbece7030181073dfe51f45cda81";
+    version = "ad3dddecd606746374ba4807324a08331dfca23c";
     src = fetchFromGitHub {
       owner = "rebelot";
       repo = "kanagawa.nvim";
-      rev = "f491b0fe68fffbece7030181073dfe51f45cda81";
+      rev = "ad3dddecd606746374ba4807324a08331dfca23c";
       fetchSubmodules = false;
-      sha256 = "sha256-UuKvWCPP4biV2OP18+OAookRxfpKfjBgm+1KMaf1z30=";
+      sha256 = "sha256-IG+eEhmSDRxRDBvfETeN9f3IjJvCntQm3u72QlY0ytE=";
     };
-    date = "2024-08-27";
+    date = "2024-11-07";
   };
   rose-pine = {
     pname = "rose-pine";

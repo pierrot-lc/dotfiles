@@ -41,7 +41,7 @@
     },
     "kanagawa": {
         "cargoLocks": null,
-        "date": "2024-08-27",
+        "date": "2024-11-07",
         "extract": null,
         "name": "kanagawa",
         "passthru": null,
@@ -53,11 +53,11 @@
             "name": null,
             "owner": "rebelot",
             "repo": "kanagawa.nvim",
-            "rev": "f491b0fe68fffbece7030181073dfe51f45cda81",
-            "sha256": "sha256-UuKvWCPP4biV2OP18+OAookRxfpKfjBgm+1KMaf1z30=",
+            "rev": "ad3dddecd606746374ba4807324a08331dfca23c",
+            "sha256": "sha256-IG+eEhmSDRxRDBvfETeN9f3IjJvCntQm3u72QlY0ytE=",
             "type": "github"
         },
-        "version": "f491b0fe68fffbece7030181073dfe51f45cda81"
+        "version": "ad3dddecd606746374ba4807324a08331dfca23c"
     },
     "rose-pine": {
         "cargoLocks": null,

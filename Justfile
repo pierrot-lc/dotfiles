@@ -16,7 +16,7 @@ fwupd-update:
 myrepos-update:
   cd ~; mr commit -m myrepos-commit; mr update; mr push; cd -
 
-update-all: channel-update flake-update nvfetcher-update system-update home-update fwupd-update myrepos-update
+update-all: channel-update flake-update nvfetcher-update system-update home-update myrepos-update fwupd-update
 
 clean-all:
   # nix-collect-garbage -d
