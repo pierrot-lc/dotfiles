@@ -56,7 +56,6 @@
     jq
     just
     keymapp
-    mullvad-vpn
     pandoc
     protonvpn-gui
     python3Full

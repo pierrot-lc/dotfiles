@@ -16,9 +16,10 @@
     # See https://nixos.wiki/wiki/Steam.
     programs.steam = {
       enable = true;
-      gamescopeSession.enable = true;
-      remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
+      gamescopeSession.enable = true;
+      protontricks.enable = true;
+      remotePlay.openFirewall = true;
     };
 
     programs.gamemode.enable = true;
