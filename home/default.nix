@@ -42,6 +42,7 @@
     ./newsflash.nix
     ./nix.nix
     ./nvim.nix
+    ./planify.nix
     ./printing.nix
     ./programs.nix
     ./ssh.nix

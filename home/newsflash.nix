@@ -8,7 +8,7 @@
   newsflashJsonPath = "${config.xdg.configHome}/news-flash/newsflash.json";
   freshrssJsonPath = "${config.xdg.configHome}/news-flash/freshrss.json";
 
-  # The default package does not add the newsflash to the desktop list of
+  # The default package does not add newsflash to the desktop list of
   # executables.
   newsflash = pkgs.newsflash.overrideAttrs (oldAttrs: {
     desktopItems = ["${pkgs.newsflash}/share/applications/io.gitlab.news_flash.NewsFlash.desktop"];
