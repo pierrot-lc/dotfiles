@@ -39,6 +39,7 @@
     ./mails.nix
     ./myrepos.nix
     ./newsboat.nix
+    ./newsflash.nix
     ./nix.nix
     ./nvim.nix
     ./printing.nix
