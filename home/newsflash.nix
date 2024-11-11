@@ -11,7 +11,7 @@
   # The default package does not add newsflash to the desktop list of
   # executables.
   newsflash = pkgs.newsflash.overrideAttrs (oldAttrs: {
-    desktopItems = ["${pkgs.newsflash}/share/applications/io.gitlab.news_flash.NewsFlash.desktop"];
+    desktopItems = ["$out/share/applications/io.gitlab.news_flash.NewsFlash.desktop"];
   });
 in {
   home.packages = [newsflash];
@@ -26,7 +26,7 @@ in {
       # Create the JSON file if it does not exists already. The JSON file is
       # automatically created when the application is launched. We use a dumb
       # command to do so.
-      ${pkgs.newsflash}/bin/io.gitlab.news_flash.NewsFlash -h > /dev/null
+      ${newsflash}/bin/io.gitlab.news_flash.NewsFlash -h > /dev/null
 
       # Add the freshrss backend.
       cat "${newsflashJsonPath}" | ${pkgs.jq}/bin/jq --arg "backend" "freshrss" '. + $ARGS.named' > "${newsflashJsonPath}.tmp"
