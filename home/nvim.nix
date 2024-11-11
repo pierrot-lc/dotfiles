@@ -5,7 +5,6 @@
 }: {
   nvim-nix = {
     enable = true;
-    transparentBackground = false;
     theme = config.theme.name;
   };
 
