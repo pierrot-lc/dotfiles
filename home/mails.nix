@@ -124,5 +124,19 @@ in {
 
       flavor = private.mails.email-7.flavor;
     };
+
+    "${private.mails.email-8.mail}" = {
+      address = private.mails.email-8.mail;
+      inherit realName;
+      userName = private.mails.email-8.username;
+
+      thunderbird = {
+        enable = true;
+        profiles = ["pierre"];
+      };
+
+      smtp = private.mails.email-8.smtp;
+      imap = private.mails.email-8.imap;
+    };
   };
 }

@@ -600,11 +600,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1731341361,
-        "narHash": "sha256-XzIFv5m8AeaC3/iDXT1md84VguB5Wwd0vhMup9J/yy8=",
+        "lastModified": 1731575024,
+        "narHash": "sha256-EnyLoJVuWJt6O9QkmdCeRT4qECOQFq2ddenpknh8AI8=",
         "ref": "refs/heads/main",
-        "rev": "ebd07439e0864fef70b1de1162a4fa9661d646d0",
-        "revCount": 13,
+        "rev": "facf81fa0a40423d5629ae2315c78978d6f11a16",
+        "revCount": 14,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private"
       },
