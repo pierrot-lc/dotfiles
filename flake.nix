@@ -45,6 +45,12 @@
       url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Extra packages.
+    television = {
+      url = "github:alexpasmantier/television";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -61,7 +67,11 @@
       config = {
         allowUnfree = true;
       };
-      overlays = [];
+      overlays = [
+        (final: prev: {
+          television = inputs.television.packages.${system}.default;
+        })
+      ];
     };
 
     # Mappings of specific configurations for each hosts. It is used in

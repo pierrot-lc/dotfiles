@@ -61,6 +61,7 @@
     python3Full
     ranger
     ripgrep
+    television
     tldr
     tokei
     tree
