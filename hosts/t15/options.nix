@@ -1,8 +1,8 @@
 {
   docker.enable = true;
-  gaming.enable = true;
+  gaming.enable = false;
   hardware.hasGPU = true;
   ollama.enable = true;
-  theme.name = "catppuccin";
+  theme.name = "rose-pine";
   virtual-machines.enable = true;
 }
