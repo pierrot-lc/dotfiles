@@ -1,4 +1,4 @@
 {
-  docker.enable = true;
+  docker.enable = false;
   theme.name = "kanagawa";
 }
