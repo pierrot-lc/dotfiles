@@ -59,7 +59,6 @@
     pandoc
     protonvpn-gui
     python3Full
-    ranger
     ripgrep
     television
     tldr
