@@ -13,7 +13,7 @@
   '';
 
   home.shellAliases = {
-    tvg = "cd `tv git-repos";
+    t = "cd `tv git-repos`";
     tvj = "nvim `tv`";
   };
 }
