@@ -38,7 +38,7 @@
     ./kitty
     ./mails.nix
     ./myrepos.nix
-    ./newsboat.nix
+    ./newsboat
     ./newsflash.nix
     ./nix.nix
     ./nvim.nix

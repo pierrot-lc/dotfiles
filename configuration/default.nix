@@ -8,7 +8,7 @@
 }: {
   # Overall Nix options.
   nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = ["nix-command" "flakes" "pipe-operators"];
     trusted-users = ["root" "pierrot-lc" "@wheel"];
     trusted-substituters = [
       "https://cache.nixos.org/"
