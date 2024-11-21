@@ -54,7 +54,7 @@ in {
   # Apply the theme for delta as well.
   programs.git.delta.options.syntax-theme = themeParser.${config.theme.name};
 
-  shellAliases = {
+  home.shellAliases = {
     cat = "bat";
   };
 }

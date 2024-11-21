@@ -4,7 +4,7 @@
     bukubrow
   ];
 
-  shellAliases = {
+  home.shellAliases = {
     b = "buku --suggest";
     fzf-buku = "buku -p -f 4 | fzf";
     fzf-buku-url = "buku -p -f 4 | fzf | cut --fields=2";

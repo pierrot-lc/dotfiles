@@ -28,7 +28,7 @@
     EDITOR = "nvim";
   };
 
-  shellAliases = {
+  home.shellAliases = {
     bim = "nvim";
     cim = "nvim";
     ivm = "nvim";

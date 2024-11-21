@@ -1,5 +1,5 @@
-{config, ...}: {
-  shellAliases = {
+{
+  home.shellAliases = {
     chgrp = "chgrp --preserve-root";
     chmod = "chmod --preserve-root";
     chown = "chown --preserve-root";
@@ -27,15 +27,14 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = /* bash */ ''
-      export PATH="$HOME/go/bin:$PATH"
-      export PATH="$HOME/.local/bin:$PATH"
-      export PATH="$HOME/.cargo/bin:$PATH"
-    '';
+        export PATH="$HOME/go/bin:$PATH"
+        export PATH="$HOME/.local/bin:$PATH"
+        export PATH="$HOME/.cargo/bin:$PATH"
+      '';
     initExtra = builtins.readFile ./init_extra.sh;
     historyIgnore = [
       "exit*"
       "pwd"
     ];
-    shellAliases = config.shellAliases;
   };
 }

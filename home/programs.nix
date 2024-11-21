@@ -5,7 +5,7 @@
   };
 
   programs.bottom.enable = true;
-  shellAliases.htop = "btm";
+  home.shellAliases.htop = "btm";
 
   programs.eza = {
     enable = true;
@@ -18,7 +18,7 @@
   };
 
   programs.fastfetch.enable = true;
-  shellAliases = {neofetch = "fastfetch";};
+  home.shellAliases = {neofetch = "fastfetch";};
 
   programs.obs-studio = {
     enable = true;

@@ -11,7 +11,7 @@
     };
   };
 
-  shellAliases = {
+  home.shellAliases = {
     mru = "cd ~; mr commit -m myrepos-commit; mr update; mr push; cd -";
   };
 }

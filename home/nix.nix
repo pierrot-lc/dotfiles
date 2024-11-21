@@ -13,7 +13,7 @@
     };
   };
 
-  shellAliases = {
+  home.shellAliases = {
     nd = "nix develop";
     nfu = "nix flake update";
     ns = "nix-shell";
@@ -35,7 +35,8 @@
     nix-output-monitor
     nvfetcher
   ];
-  shellAliases = {
+
+  home.shellAliases = {
     fzf-manix = /* bash */ ''
       manix "" |\
         grep '^# ' |\

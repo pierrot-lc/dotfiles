@@ -37,7 +37,7 @@
     enable = true;
   };
 
-  shellAliases = {
+  home.shellAliases = {
     g = "git";
   };
 }
