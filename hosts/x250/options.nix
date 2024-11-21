@@ -1,4 +1,3 @@
 {
-  docker.enable = false;
-  theme.name = "kanagawa";
+  theme.name = "gruvbox";
 }

@@ -60,7 +60,6 @@
     protonvpn-gui
     python3Full
     ripgrep
-    television
     tldr
     tokei
     tree
