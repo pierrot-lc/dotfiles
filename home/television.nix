@@ -14,6 +14,6 @@
 
   home.shellAliases = {
     t = "cd `tv git-repos`";
-    tvj = "nvim `tv`";
+    v = "nvim `tv`";
   };
 }
