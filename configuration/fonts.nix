@@ -4,7 +4,8 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["FiraCode" "NerdFontsSymbolsOnly"];})
+      nerd-fonts.fira-code
+      nerd-fonts.symbols-only
       commit-mono
       dejavu_fonts
       jetbrains-mono
