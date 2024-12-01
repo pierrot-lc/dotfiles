@@ -5,6 +5,7 @@
 }: {
   nvim-nix = {
     enable = true;
+    version = "nightly";
     theme = config.theme.name;
   };
 

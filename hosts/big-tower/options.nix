@@ -1,5 +1,5 @@
 {
-  arrs.enable = true;
+  arrs.enable = false;
   docker.enable = true;
   gaming.enable = true;
   hardware.hasGPU = true;

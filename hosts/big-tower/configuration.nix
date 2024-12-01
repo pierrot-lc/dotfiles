@@ -32,7 +32,6 @@
     # Use the open source version of the kernel module.
     # Only available on driver 515.43.04+ on recents GOUs.
     # See https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
-    # Note: cuda is not available with the open kernel!
     open = false;
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
@@ -45,7 +44,7 @@
     nvidiaSettings = false;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
   nixpkgs.config.cudaSupport = true;
 }
