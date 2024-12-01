@@ -16,6 +16,8 @@
     ip4 = "curl -s https://api.ipify.org";
     ip6 = "curl -s https://api6.ipify.org";
     kk = "ll";
+    pva = "source .venv/bin/activate";
+    pvc = "python3 -m venv .venv; source .venv/bin/activate";
     rm = "rm --preserve-root";
     sl = "ls";
     su = "sudo -i";
