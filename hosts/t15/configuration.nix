@@ -36,7 +36,7 @@
 
     # Use the open source version of the kernel module.
     # Only available on driver 515.43.04+
-    open = false;
+    open = true;
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     # Enable this if you have graphical corruption issues or application
@@ -52,7 +52,7 @@
     nvidiaSettings = false;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     # See https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29.
     prime = {
