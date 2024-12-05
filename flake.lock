@@ -363,11 +363,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733342204,
-        "narHash": "sha256-MVgFAzk10tWV0SW3hV24/xeAxmkQ7peJYUUOi6cvVPM=",
+        "lastModified": 1733389730,
+        "narHash": "sha256-KZMu4ddMll5khS0rYkJsVD0hVqjMNHlhTM3PCQar0Ag=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1cd17a2f76f7711b06d5d59f1746cef602974498",
+        "rev": "65912bc6841cf420eb8c0a20e03df7cbbff5963f",
         "type": "github"
       },
       "original": {
@@ -764,11 +764,11 @@
         "nixpkgs-mozilla": "nixpkgs-mozilla"
       },
       "locked": {
-        "lastModified": 1733152813,
-        "narHash": "sha256-l7knpi3XXdSJ8NAT6yiKciP3oxVbdDTehvED+GOlKOg=",
+        "lastModified": 1733356359,
+        "narHash": "sha256-NsVh9zDmndhHRNaXVeDEEu0xR1r+2CyIosEa5WAPvuA=",
         "owner": "alexpasmantier",
         "repo": "television",
-        "rev": "fee4ed2671be1aee9c6f3fd2c77d45c208525c83",
+        "rev": "b6f12b372b85c571539989d73b4bbfec6f548541",
         "type": "github"
       },
       "original": {
