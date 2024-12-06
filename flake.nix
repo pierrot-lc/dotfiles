@@ -47,10 +47,7 @@
     };
 
     # Extra packages.
-    television = {
-      url = "github:alexpasmantier/television";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # ...
   };
 
   outputs = inputs @ {
@@ -68,9 +65,7 @@
         allowUnfree = true;
       };
       overlays = [
-        (final: prev: {
-          television = inputs.television.packages.${system}.default;
-        })
+        # ...
       ];
     };
 
