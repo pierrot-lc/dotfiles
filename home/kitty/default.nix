@@ -10,16 +10,16 @@
       "light" = "Catppuccin-Latte";
     };
     "everforest" = {
-      "dark" = "Everforest Dark Hard";
-      "light" = "Everforest Light Hard";
+      "dark" = "everforest_dark_hard";
+      "light" = "everforest_light_hard";
     };
     "gruvbox" = {
-      "dark" = "Gruvbox Material Dark Hard";
-      "light" = "Gruvbox Material Light Hard";
+      "dark" = "gruvbox-dark-hard";
+      "light" = "gruvbox-light-hard";
     };
     "rose-pine" = {
-      "dark" = "Rosé Pine";
-      "light" = "Rosé Pine Dawn";
+      "dark" = "rose-pine";
+      "light" = "rose-pine-dawn";
     };
   };
 in {

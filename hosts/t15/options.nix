@@ -3,7 +3,7 @@
   gaming.enable = false;
   hardware.hasGPU = true;
   ollama.enable = true;
-  theme.name = "catppuccin-macchiato";
+  theme.name = "gruvbox";
   theme.flavour = "dark";
   virtual-machines.enable = true;
 }

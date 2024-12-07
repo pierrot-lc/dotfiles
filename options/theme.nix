@@ -6,7 +6,7 @@
 # List of currently impacted applications that themes must support:
 # - bat (fzf, git-delta, television)
 # - kitty
-# - nvim
+# - nvim (should support common plugins such as mini.nvim)
 #
 # Valid themes:
 # - [catppuccin](https://catppuccin.com/)
