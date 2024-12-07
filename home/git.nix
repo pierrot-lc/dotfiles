@@ -1,8 +1,11 @@
-{pkgs, ...}: {
+{config, ...}: {
   programs.git = {
     enable = true;
     lfs.enable = true;
-    delta.enable = true;
+    delta = {
+      enable = true;
+      options.syntax-theme = config.programs.bat.config.theme;
+    };
     userEmail = "pierrotlc@proton.me";
     userName = "Pierrot LC";
     aliases = {

@@ -525,11 +525,11 @@
         "vim-characterize": "vim-characterize"
       },
       "locked": {
-        "lastModified": 1733524137,
-        "narHash": "sha256-npLtXqzgZ/udMgtYuxeaeaO7+z601/8dIsHDbITHr5s=",
+        "lastModified": 1733566305,
+        "narHash": "sha256-Mw2fJVf6j71GFHWr44P/O7rBME1JUR5bNpqKg+hWtOg=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "a6cff839c0e68772b90d638ce22f3e3ee0ad2aa5",
+        "rev": "c9a06969365ecb2eee002b3ac642284a12fd2ae2",
         "type": "github"
       },
       "original": {

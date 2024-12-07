@@ -5,54 +5,74 @@
 }: let
   sources = pkgs.callPackage ./_sources/generated.nix {};
 
-  catppuccin-frappe = {
+  themes = {
+    catppuccin-frappe = {
       src = sources.catppuccin.src;
       file = "themes/Catppuccin Frappe.tmTheme";
     };
-  everforest-dark = {
-    src = sources.everforest.src;
-    file = "Everforest Dark/Everforest Dark.tmTheme";
-  };
-  kanagawa = {
-    src = sources.kanagawa.src;
-    file = "extras/kanagawa.tmTheme";
-  };
-  rose-pine = {
-    src = sources.rose-pine.src;
-    file = "dist/themes/rose-pine-moon.tmTheme";
-  };
-  rose-pine-dawn = {
-    src = sources.rose-pine.src;
-    file = "dist/themes/rose-pine-dawn.tmTheme";
+    catppuccin-latte = {
+      src = sources.catppuccin.src;
+      file = "themes/Catppuccin Latte.tmTheme";
+    };
+    catppuccin-macchiato = {
+      src = sources.catppuccin.src;
+      file = "themes/Catppuccin Macchiato.tmTheme";
+    };
+    catppuccin-mocha = {
+      src = sources.catppuccin.src;
+      file = "themes/Catppuccin Mocha.tmTheme";
+    };
+
+    everforest-dark = {
+      src = sources.everforest.src;
+      file = "Everforest Dark/Everforest Dark.tmTheme";
+    };
+    everforest-light = {
+      src = sources.everforest.src;
+      file = "Everforest Light/Everforest Light.tmTheme";
+    };
+
+    rose-pine-dark = {
+      src = sources.rose-pine.src;
+      file = "dist/themes/rose-pine.tmTheme";
+    };
+    rose-pine-light = {
+      src = sources.rose-pine.src;
+      file = "dist/themes/rose-pine-dawn.tmTheme";
+    };
   };
 
   themeParser = {
-    "catppuccin" = "catppuccin-frappe";
-    "everforest" = "everforest-dark";
-    "gruvbox" = "gruvbox-dark";
-    "kanagawa" = "kanagawa";
-    "nord" = "Nord";
-    "rose-pine" = "rose-pine";
-    "rose-pine-dawn" = "rose-pine-dawn";
+    "catppuccin-macchiato" = {
+      "dark" = "catppuccin-macchiato";
+      "light" = "catppuccin-frappe";
+    };
+    "catppuccin-mocha" = {
+      "dark" = "catppuccin-mocha";
+      "light" = "catppuccin-latte";
+    };
+    "everforest" = {
+      "dark" = "everforest-dark";
+      "light" = "everforest-light";
+    };
+    "gruvbox" = {
+      "dark" = "gruvbox-dark";
+      "light" = "gruvbox-light";
+    };
+    "rose-pine" = {
+      "dark" = "rose-pine-dark";
+      "light" = "rose-pine-light";
+    };
   };
 in {
   programs.bat = {
     enable = true;
     config = {
-      theme = themeParser.${config.theme.name};
+      theme = themeParser.${config.theme.name}.${config.theme.flavour};
       italic-text = "always";
     };
-    themes = {
-      inherit catppuccin-frappe;
-      inherit everforest-dark;
-      inherit kanagawa;
-      inherit rose-pine;
-      inherit rose-pine-dawn;
-    };
+    inherit themes;
   };
-
-  # Apply the theme for delta as well.
-  programs.git.delta.options.syntax-theme = themeParser.${config.theme.name};
 
   home.shellAliases = {
     cat = "bat";

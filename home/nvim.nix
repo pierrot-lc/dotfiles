@@ -6,7 +6,7 @@
   nvim-nix = {
     enable = true;
     version = "nightly";
-    theme = config.theme.name;
+    inherit (config) theme;
   };
 
   # Add some LSPs and formatters.

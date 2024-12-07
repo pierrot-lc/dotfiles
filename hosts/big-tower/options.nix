@@ -5,4 +5,5 @@
   hardware.hasGPU = true;
   ollama.enable = true;
   theme.name = "gruvbox";
+  theme.flavour = "dark";
 }

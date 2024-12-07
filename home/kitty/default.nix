@@ -1,13 +1,26 @@
 {config, ...}: let
   # Those are the themes that are builtin in kitty. There's no need to source them.
   themeParser = {
-    "catppuccin" = "Catppuccin-Frappe";
-    "everforest" = "everforest_dark_hard";
-    "gruvbox" = "GruvboxMaterialDarkSoft";
-    "kanagawa" = "kanagawa_dragon";
-    "nord" = "Nord";
-    "rose-pine" = "rose-pine-moon";
-    "rose-pine-dawn" = "rose-pine-dawn";
+    "catppuccin-macchiato" = {
+      "dark" = "Catppuccin-Macchiato";
+      "light" = "Catppuccin-Frappe";
+    };
+    "catppuccin-mocha" = {
+      "dark" = "Catppuccin-Mocha";
+      "light" = "Catppuccin-Latte";
+    };
+    "everforest" = {
+      "dark" = "Everforest Dark Hard";
+      "light" = "Everforest Light Hard";
+    };
+    "gruvbox" = {
+      "dark" = "Gruvbox Material Dark Hard";
+      "light" = "Gruvbox Material Light Hard";
+    };
+    "rose-pine" = {
+      "dark" = "Rosé Pine";
+      "light" = "Rosé Pine Dawn";
+    };
   };
 in {
   programs.kitty = {
@@ -16,8 +29,7 @@ in {
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
     ];
-    themeFile = themeParser.${config.theme.name};
-    shellIntegration.enableBashIntegration = true;
+    themeFile = themeParser.${config.theme.name}.${config.theme.flavour};
   };
 
   home.sessionVariables = {
