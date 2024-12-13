@@ -1,13 +1,3 @@
-@document.meta
-title: flatpak
-description: My list of flatpaks.
-authors: pierrot-lc
-categories: notes
-created: 2023-11-18T11:13:46+0100
-updated: 2023-11-18T11:13:46+0100
-version: 1.1.1
-@end
-
 Flatpaks can't be declaratively installed on Nix (yet!). Since I like my apps
 to be up-to-date, some of the GUI apps I used are not properly maintained in
 the Nix store (or even non-existant). So here is the list of the flapatks so
