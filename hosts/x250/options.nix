@@ -1,4 +1,4 @@
 {
-  theme.name = "gruvbox";
+  theme.name = "catppuccin-mocha";
   theme.flavour = "dark";
 }

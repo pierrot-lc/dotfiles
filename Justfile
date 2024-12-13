@@ -28,9 +28,9 @@ git-crypt:
 
 lockfile-pin:
   git add flake.lock
-  git commit -m "pin: flake.lock"
+  git commit -m "update: flake.lock"
   git push
 options-pin:
   git add hosts/**/options.nix
-  git commit -m "pin: options"
+  git commit -m "update: options"
   git push
