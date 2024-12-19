@@ -29,5 +29,6 @@
     dconf-editor
     gnome-extension-manager
     gnome-tweaks
+    papers
   ];
 }

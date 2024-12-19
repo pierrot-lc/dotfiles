@@ -3,7 +3,35 @@
   lib,
   config,
   ...
-}: {
+}: let
+  themeParser = {
+    "catppuccin-macchiato" = {
+      "dark" = "blue";
+      "light" = "slate";
+    };
+    "catppuccin-mocha" = {
+      "dark" = "purple";
+      "light" = "blue";
+    };
+    "everforest" = {
+      "dark" = "green";
+      "light" = "teal";
+    };
+    "gruvbox" = {
+      "dark" = "orange";
+      "light" = "yellow";
+    };
+    "rose-pine" = {
+      "dark" = "purple";
+      "light" = "red";
+    };
+  };
+
+  colorScheme = {
+    "dark" = "prefer-dark";
+    "light" = "default";
+  };
+in {
   programs.gnome-shell = {
     enable = true;
     extensions = with pkgs.gnomeExtensions; [
@@ -24,6 +52,13 @@
     };
     "org/gnome/shell/weather" = {
       automatic-location = true;
+    };
+    "org/gnome/desktop/interface" = {
+      accent-color = themeParser.${config.theme.name}.${config.theme.flavour};
+      color-scheme = colorScheme.${config.theme.flavour};
+    };
+    "org/gnome/TextEditor" = {
+      restore-session = false;
     };
 
     # Keybindings.
