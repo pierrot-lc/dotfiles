@@ -30,6 +30,7 @@
     ./bat
     ./buku.nix
     ./calendar.nix
+    ./contacts.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix
