@@ -1,6 +1,6 @@
 {
   docker.enable = true;
-  gaming.enable = false;
+  gaming.enable = true;
   hardware.hasGPU = true;
   ollama.enable = true;
   theme.name = "catppuccin-macchiato";
