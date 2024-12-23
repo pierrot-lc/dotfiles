@@ -1,13 +1,31 @@
 {
   pkgs,
+  lib,
   private,
   ...
 }: let
+  profileName = "main";
   OAuth2Settings = id: {
     "mail.smtpserver.smtp_${id}.authMethod" = 10;
     "mail.server.server_${id}.authMethod" = 10;
   };
-  realName = "Pierre Pereira";
+
+  # OAuth2Settings is needed if the account is either a gmail or an outlook
+  # account.
+  thunderbird = mailAttrs: let
+    flavor =
+      if mailAttrs ? flavor
+      then mailAttrs.flavor
+      else "plain";
+    settings =
+      if lib.elem flavor ["gmail.com" "outlook.office365.com"]
+      then OAuth2Settings
+      else _: {};
+  in {
+    enable = true;
+    inherit settings;
+    profiles = [profileName];
+  };
 in {
   home.packages = with pkgs; [
     protonmail-bridge
@@ -15,7 +33,7 @@ in {
 
   programs.thunderbird = {
     enable = true;
-    profiles.pierre = {
+    profiles.${profileName} = {
       isDefault = true;
       settings = {
         # See https://kb.mozillazine.org/Mail_and_news_settings.
@@ -29,114 +47,9 @@ in {
     };
   };
 
-  accounts.email.accounts = {
-    "${private.mails.email-1.mail}" = {
-      address = private.mails.email-1.mail;
-      primary = true;
-      inherit realName;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-        settings = OAuth2Settings;
-      };
-
-      flavor = private.mails.email-1.flavor;
-    };
-
-    "${private.mails.email-2.mail}" = {
-      address = private.mails.email-2.mail;
-      inherit realName;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-        settings = OAuth2Settings;
-      };
-
-      flavor = private.mails.email-2.flavor;
-    };
-
-    "${private.mails.email-3.mail}" = {
-      address = private.mails.email-3.mail;
-      inherit realName;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-        settings = OAuth2Settings;
-      };
-
-      flavor = private.mails.email-3.flavor;
-    };
-
-    "${private.mails.email-4.mail}" = {
-      address = private.mails.email-4.mail;
-      inherit realName;
-      userName = private.mails.email-4.username;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-      };
-
-      smtp = private.mails.email-4.smtp;
-      imap = private.mails.email-4.imap;
-    };
-
-    "${private.mails.email-5.mail}" = {
-      address = private.mails.email-5.mail;
-      userName = private.mails.email-5.username;
-      inherit realName;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-      };
-
-      smtp = private.mails.email-5.smtp;
-      imap = private.mails.email-5.imap;
-    };
-
-    "${private.mails.email-6.mail}" = {
-      address = private.mails.email-6.mail;
-      inherit realName;
-      userName = private.mails.email-6.username;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-      };
-
-      smtp = private.mails.email-6.smtp;
-      imap = private.mails.email-6.imap;
-    };
-
-    "${private.mails.email-7.mail}" = {
-      address = private.mails.email-7.mail;
-      inherit realName;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-        settings = OAuth2Settings;
-      };
-
-      flavor = private.mails.email-7.flavor;
-    };
-
-    "${private.mails.email-8.mail}" = {
-      address = private.mails.email-8.mail;
-      inherit realName;
-      userName = private.mails.email-8.username;
-
-      thunderbird = {
-        enable = true;
-        profiles = ["pierre"];
-      };
-
-      smtp = private.mails.email-8.smtp;
-      imap = private.mails.email-8.imap;
-    };
-  };
+  accounts.email.accounts =
+    lib.concatMapAttrs (mail: attrs: {
+      "${mail}" = attrs // {thunderbird = thunderbird attrs;};
+    })
+    private.mails.accounts;
 }

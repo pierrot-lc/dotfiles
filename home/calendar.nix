@@ -3,10 +3,10 @@
     enable = true;
   };
 
-  accounts.calendar.accounts.proton-calendar = {
+  accounts.calendar.accounts.main = {
     primary = true;
-    name = "proton-calendar";
-    remote.url = private.mails.email-5.calendar;
+    name = "main";
+    remote.url = private.mails.calendar;
 
     qcal.enable = true;
   };
