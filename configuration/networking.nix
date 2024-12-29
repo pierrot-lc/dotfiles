@@ -1,4 +1,4 @@
-{private, ...}: {
+{
   networking = {
     # Enable networking.
     networkmanager.enable = true;
@@ -19,11 +19,10 @@
       autoStart = false;
       gateway = "vpn.inria.fr";
       protocol = "anyconnect";
-      user = private.mails.email-6.username;
+      user = "pipereir";
       passwordFile = "/run/secrets/inria-vpn";
     };
   };
-
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
