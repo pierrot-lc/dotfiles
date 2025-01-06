@@ -41,7 +41,7 @@
     },
     "rose-pine": {
         "cargoLocks": null,
-        "date": "2024-04-23",
+        "date": "2025-01-01",
         "extract": null,
         "name": "rose-pine",
         "passthru": null,
@@ -53,10 +53,10 @@
             "name": null,
             "owner": "rose-pine",
             "repo": "tm-theme",
-            "rev": "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec",
-            "sha256": "sha256-jji8WOKDkzAq8K+uSZAziMULI8Kh7e96cBRimGvIYKY=",
+            "rev": "f20cc24e5ca70afdeb251a9778624272ee2063d6",
+            "sha256": "sha256-bQSGi9tuv8F4gHWqoJNOm2nTRt3XiJ/90EDz9D8/iIY=",
             "type": "github"
         },
-        "version": "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec"
+        "version": "f20cc24e5ca70afdeb251a9778624272ee2063d6"
     }
 }
