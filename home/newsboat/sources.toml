@@ -14,11 +14,6 @@ url = "https://feed.tedium.co/"
 tags = ["general"]
 
 [[sources]]
-title = "It's FOSS News"
-url = "https://news.itsfoss.com/latest/rss/"
-tags = ["linux"]
-
-[[sources]]
 title = "Phoronix"
 url = "https://www.phoronix.com/rss.php"
 tags = ["linux"]
@@ -44,11 +39,6 @@ url = "https://kagi.com/api/v1/smallweb/feed/?gh"
 tags = ["tech"]
 
 [[sources]]
-title = "HuggingFace Blog"
-url = "https://huggingface.co/blog/feed.xml"
-tags = ["AI"]
-
-[[sources]]
 title = "AI News"
 url = "https://buttondown.email/ainews/rss"
 tags = ["AI"]
@@ -66,9 +56,4 @@ tags = ["AI"]
 [[sources]]
 title = "Paper With Code - Latest"
 url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest"
-tags = ["AI"]
-
-[[sources]]
-title = "Rohan's Bytes"
-url = "https://rohanpaul.substack.com/feed"
 tags = ["AI"]

@@ -3,15 +3,15 @@
 {
   catppuccin = {
     pname = "catppuccin";
-    version = "d2bbee4f7e7d5bac63c054e4d8eca57954b31471";
+    version = "699f60fc8ec434574ca7451b444b880430319941";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "bat";
-      rev = "d2bbee4f7e7d5bac63c054e4d8eca57954b31471";
+      rev = "699f60fc8ec434574ca7451b444b880430319941";
       fetchSubmodules = false;
-      sha256 = "sha256-x1yqPCWuoBSx/cI94eA+AWwhiSA42cLNUOFJl7qjhmw=";
+      sha256 = "sha256-6fWoCH90IGumAMc4buLRWL0N61op+AuMNN9CAR9/OdI=";
     };
-    date = "2024-10-18";
+    date = "2024-12-23";
   };
   everforest = {
     pname = "everforest";
