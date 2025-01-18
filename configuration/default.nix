@@ -75,11 +75,10 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pierrot-lc = {
-    isNormalUser = true;
     description = "Pierrot LC";
     extraGroups = ["wheel" "networkmanager" "libvirtd"];
-    packages = with pkgs; [
-    ];
+    isNormalUser = true;
+    packages = [];
   };
 
   # Allow unfree packages

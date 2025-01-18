@@ -26,7 +26,6 @@
   };
 
   imports = [
-    ./bash
     ./bat
     ./buku.nix
     ./calendar.nix
@@ -46,6 +45,7 @@
     ./planify.nix
     ./printing.nix
     ./programs.nix
+    ./shell
     ./ssh.nix
     ./television.nix
   ];

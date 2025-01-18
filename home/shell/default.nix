@@ -8,8 +8,6 @@
     ducks = "du -h --max-depth=1 | sort -hr | head";
     dust = "dust --reverse";
     env = "env | sort";
-    ff = "find . -name "; # Find a file from the current directory.
-    find = "find";
     forecast = "curl wttr.in"; # Show meteo.
     grep = "rg";
     hsi = "history | grep -i"; # Search in history.
@@ -25,18 +23,7 @@
     wget = "wget -c"; # Resume by default.
   };
 
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    bashrcExtra = /* bash */ ''
-        export PATH="$HOME/go/bin:$PATH"
-        export PATH="$HOME/.local/bin:$PATH"
-        export PATH="$HOME/.cargo/bin:$PATH"
-      '';
-    initExtra = builtins.readFile ./init_extra.sh;
-    historyIgnore = [
-      "exit*"
-      "pwd"
-    ];
-  };
+  imports = [
+    ./bash.nix
+  ];
 }
