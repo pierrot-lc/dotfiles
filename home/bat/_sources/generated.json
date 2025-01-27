@@ -15,6 +15,7 @@
             "repo": "bat",
             "rev": "699f60fc8ec434574ca7451b444b880430319941",
             "sha256": "sha256-6fWoCH90IGumAMc4buLRWL0N61op+AuMNN9CAR9/OdI=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "699f60fc8ec434574ca7451b444b880430319941"
@@ -35,13 +36,14 @@
             "repo": "everforest-textmate",
             "rev": "aa1850676e2c2908e7c5cf5ea7863b130fd65016",
             "sha256": "sha256-4GexSj/T+FKsa98kmKfninJMdFKHgQyZFQGVNBFYIuc=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "aa1850676e2c2908e7c5cf5ea7863b130fd65016"
     },
     "rose-pine": {
         "cargoLocks": null,
-        "date": "2025-01-01",
+        "date": "2025-01-16",
         "extract": null,
         "name": "rose-pine",
         "passthru": null,
@@ -53,10 +55,11 @@
             "name": null,
             "owner": "rose-pine",
             "repo": "tm-theme",
-            "rev": "f20cc24e5ca70afdeb251a9778624272ee2063d6",
-            "sha256": "sha256-bQSGi9tuv8F4gHWqoJNOm2nTRt3XiJ/90EDz9D8/iIY=",
+            "rev": "45061dc3fda6bd2126305df8fd6c81ef5a0f9c27",
+            "sha256": "sha256-N68TUiNQkyVdgEFQ4EH1PpSAjHCsavha7moXHUg89/w=",
+            "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f20cc24e5ca70afdeb251a9778624272ee2063d6"
+        "version": "45061dc3fda6bd2126305df8fd6c81ef5a0f9c27"
     }
 }
