@@ -3,14 +3,12 @@
     chgrp = "chgrp --preserve-root";
     chmod = "chmod --preserve-root";
     chown = "chown --preserve-root";
-    count = "ls -l | wc -l";
     df = "df -h";
     ducks = "du -h --max-depth=1 | sort -hr | head";
     dust = "dust --reverse";
     env = "env | sort";
     forecast = "curl wttr.in"; # Show meteo.
     grep = "rg";
-    hsi = "history | grep -i"; # Search in history.
     ip4 = "curl -s https://api.ipify.org";
     ip6 = "curl -s https://api6.ipify.org";
     kk = "ll";
@@ -22,6 +20,8 @@
     top = "htop";
     wget = "wget -c"; # Resume by default.
   };
+
+  programs.fish.enable = true;
 
   imports = [
     ./bash.nix
