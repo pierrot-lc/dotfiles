@@ -18,7 +18,10 @@
   };
 
   programs.fastfetch.enable = true;
-  home.shellAliases = {neofetch = "fastfetch";};
+  home.shellAliases = {
+    neofetch = "fastfetch";
+    ff = "fastfetch";
+  };
 
   programs.obs-studio = {
     enable = true;
