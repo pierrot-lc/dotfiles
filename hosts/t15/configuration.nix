@@ -26,7 +26,7 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs; [vpl-gpu-rt];  # See https://nixos.wiki/wiki/Intel_Graphics.
+    extraPackages = with pkgs; [vpl-gpu-rt]; # See https://nixos.wiki/wiki/Intel_Graphics.
   };
 
   # See https://nixos.wiki/wiki/Nvidia.
