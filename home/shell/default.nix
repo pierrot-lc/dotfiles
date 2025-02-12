@@ -21,9 +21,8 @@
     wget = "wget -c"; # Resume by default.
   };
 
-  programs.fish.enable = true;
-
   imports = [
     ./bash.nix
+    ./fish.nix
   ];
 }
