@@ -14,7 +14,7 @@
     '';
 
   home.shellAliases = {
-    t = "cd `tv git-repos`";
-    v = "nvim `tv`";
+    t = "cd $(tv git-repos)";
+    v = "nvim $(tv)";
   };
 }
