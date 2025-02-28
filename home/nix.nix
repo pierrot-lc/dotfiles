@@ -30,33 +30,8 @@
   programs.nix-index-database.comma.enable = true;
 
   home.packages = with pkgs; [
-    manix
     nh
     nix-output-monitor
     nvfetcher
   ];
-
-  home.shellAliases = {
-    fzf-manix = /* bash */ ''
-      manix "" |\
-        grep '^# ' |\
-        sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' |\
-        fzf --preview="manix '{}'" |\
-        xargs manix
-    '';
-    fzf-hm = /* bash */ ''
-      manix "" --source hm_options |\
-        grep '^# ' |\
-        sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' |\
-        fzf --preview="manix '{}'" |\
-        xargs manix
-    '';
-    fzf-nixos = /* bash */ ''
-      manix "" --source nixos_options |\
-        grep '^# ' |\
-        sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' |\
-        fzf --preview="manix '{}'" |\
-        xargs manix
-    '';
-  };
 }
