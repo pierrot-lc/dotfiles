@@ -21,8 +21,8 @@
   '';
 
   home.shellAliases = {
+    n = "wl-copy $(tv nixpkgs)";
     t = "cd $(tv git-repos)";
     v = "nvim $(tv)";
-    n = "tv nixpkgs";
   };
 }
