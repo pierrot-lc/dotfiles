@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, username, ...}: {
   nix = {
     package = pkgs.nix;
     settings = {
@@ -9,6 +9,7 @@
         "https://cache.nixos.org/"
         "https://nix-community.cachix.org"
       ];
+      trusted-users = [username];
       warn-dirty = false;
     };
   };

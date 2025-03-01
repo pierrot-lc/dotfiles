@@ -56,26 +56,12 @@
     home-manager,
     ...
   }: let
-    system = "x86_64-linux";
     lib = nixpkgs.lib;
-
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-      overlays = [
-        # ...
-      ];
-    };
-
-    # Mappings of specific configurations for each hosts. It is used in
-    # `concatMapAttrs` which needs an attribute set to work so we add dumb
-    # values.
     hosts = {
-      "big-tower" = null;
-      "t15" = null;
-      "x250" = null;
+      "big-tower" = "x86_64-linux";
+      "google-kukui" = "aarch64-linux";
+      "t15" = "x86_64-linux";
+      "x250" = "x86_64-linux";
     };
     nixosConfigurationsParser = {
       "big-tower" = ./hosts/big-tower/configuration.nix;
@@ -84,12 +70,13 @@
     };
     optionsParser = {
       "big-tower" = ./hosts/big-tower/options.nix;
+      "google-kukui" = ./hosts/google-kukui/options.nix;
       "t15" = ./hosts/t15/options.nix;
       "x250" = ./hosts/x250/options.nix;
     };
   in {
     nixosConfigurations =
-      lib.attrsets.concatMapAttrs (host: _: {
+      lib.attrsets.concatMapAttrs (host: system: {
         ${host} = lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -108,7 +95,17 @@
       hosts;
 
     homeConfigurations =
-      lib.attrsets.concatMapAttrs (host: _: {
+      lib.attrsets.concatMapAttrs (host: system: let
+        pkgs = import nixpkgs {
+          inherit system;
+          config = {
+            allowUnfree = true;
+          };
+          overlays = [
+            # ...
+          ];
+        };
+      in {
         "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {

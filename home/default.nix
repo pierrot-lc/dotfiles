@@ -31,12 +31,12 @@
     ./calendar.nix
     ./contacts.nix
     ./feh.nix
-    ./firefox.nix
     ./fzf.nix
     ./git.nix
     ./gnome
     ./gpg.nix
     ./kitty
+    ./librewolf.nix
     ./mails.nix
     ./myrepos.nix
     ./newsboat

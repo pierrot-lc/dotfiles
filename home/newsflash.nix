@@ -14,22 +14,24 @@
     desktopItems = ["$out/share/applications/io.gitlab.news_flash.NewsFlash.desktop"];
   });
 in {
-  home.packages = [newsflash];
+  config = lib.mkIf config.newsflash.enable {
+    home.packages = [newsflash];
 
-  # Add the freshrss account.
-  home.file."${freshrssJsonPath}".text = builtins.toJSON private.newsflash;
+    # Add the freshrss account.
+    home.file."${freshrssJsonPath}".text = builtins.toJSON private.newsflash;
 
-  # Specify the backend to be freshrss. The config file should remain editable
-  # so the file is generated from the following activation script.
-  home.activation.newsflashBackend =
-    lib.hm.dag.entryAfter ["installPackages"] /* bash */ ''
-      # Create the JSON file if it does not exists already. The JSON file is
-      # automatically created when the application is launched. We use a dumb
-      # command to do so.
-      ${newsflash}/bin/io.gitlab.news_flash.NewsFlash -h > /dev/null
+    # Specify the backend to be freshrss. The config file should remain editable
+    # so the file is generated from the following activation script.
+    home.activation.newsflashBackend =
+      lib.hm.dag.entryAfter ["installPackages"] /* bash */ ''
+        # Create the JSON file if it does not exists already. The JSON file is
+        # automatically created when the application is launched. We use a dumb
+        # command to do so.
+        ${newsflash}/bin/io.gitlab.news_flash.NewsFlash -h > /dev/null
 
-      # Add the freshrss backend.
-      cat "${newsflashJsonPath}" | ${pkgs.jq}/bin/jq --arg "backend" "freshrss" '. + $ARGS.named' > "${newsflashJsonPath}.tmp"
-      mv "${newsflashJsonPath}.tmp" "${newsflashJsonPath}"
-    '';
+        # Add the freshrss backend.
+        cat "${newsflashJsonPath}" | ${pkgs.jq}/bin/jq --arg "backend" "freshrss" '. + $ARGS.named' > "${newsflashJsonPath}.tmp"
+        mv "${newsflashJsonPath}.tmp" "${newsflashJsonPath}"
+      '';
+  };
 }

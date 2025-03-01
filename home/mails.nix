@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   private,
   ...
 }: let
@@ -27,29 +28,31 @@
     profiles = [profileName];
   };
 in {
-  home.packages = with pkgs; [
-    protonmail-bridge
-  ];
+  config = lib.mkIf config.mails.enable {
+    home.packages = with pkgs; [
+      protonmail-bridge
+    ];
 
-  programs.thunderbird = {
-    enable = true;
-    profiles.${profileName} = {
-      isDefault = true;
-      settings = {
-        # See https://kb.mozillazine.org/Mail_and_news_settings.
-        "mail.identity.default.reply_on_top" = true;
-        "mailnews.default_news_sort_order" = 2; # In descending order.
-        "mailnews.default_news_sort_type" = 18; # Sort by date.
-        "mailnews.default_sort_order" = 2; # In descending order.
-        "mailnews.default_sort_type" = 18; # Sort by date.
-        "mailnews.reply_on_top" = 1; # Reply on top by default.
+    programs.thunderbird = {
+      enable = true;
+      profiles.${profileName} = {
+        isDefault = true;
+        settings = {
+          # See https://kb.mozillazine.org/Mail_and_news_settings.
+          "mail.identity.default.reply_on_top" = true;
+          "mailnews.default_news_sort_order" = 2; # In descending order.
+          "mailnews.default_news_sort_type" = 18; # Sort by date.
+          "mailnews.default_sort_order" = 2; # In descending order.
+          "mailnews.default_sort_type" = 18; # Sort by date.
+          "mailnews.reply_on_top" = 1; # Reply on top by default.
+        };
       };
     };
-  };
 
-  accounts.email.accounts =
-    lib.concatMapAttrs (mail: attrs: {
-      "${mail}" = attrs // {thunderbird = thunderbird attrs;};
-    })
-    private.mails.accounts;
+    accounts.email.accounts =
+      lib.concatMapAttrs (mail: attrs: {
+        "${mail}" = attrs // {thunderbird = thunderbird attrs;};
+      })
+      private.mails.accounts;
+    };
 }
