@@ -49,6 +49,7 @@
     du-dust
     duf
     fd
+    feh
     ffmpeg
     file
     gdu
