@@ -1,16 +1,9 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: let
+{pkgs, ...}: let
   # The default package does not add planify to the desktop list of
   # executables.
   planify = pkgs.planify.overrideAttrs (oldAttrs: {
     desktopItems = ["$out/share/applications/io.github.alainm23.planify.desktop"];
   });
 in {
-  config = lib.mkIf config.planify.enable {
-    home.packages = [planify];
-  };
+  home.packages = [planify];
 }

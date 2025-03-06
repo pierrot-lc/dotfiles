@@ -1,4 +1,8 @@
-{pkgs, username, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   nix = {
     package = pkgs.nix;
     settings = {

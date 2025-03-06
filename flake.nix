@@ -58,25 +58,40 @@
   }: let
     lib = nixpkgs.lib;
     hosts = {
-      "big-tower" = "x86_64-linux";
-      "google-kukui" = "aarch64-linux";
-      "t15" = "x86_64-linux";
-      "x250" = "x86_64-linux";
-    };
-    nixosConfigurationsParser = {
-      "big-tower" = ./hosts/big-tower/configuration.nix;
-      "t15" = ./hosts/t15/configuration.nix;
-      "x250" = ./hosts/x250/configuration.nix;
-    };
-    optionsParser = {
-      "big-tower" = ./hosts/big-tower/options.nix;
-      "google-kukui" = ./hosts/google-kukui/options.nix;
-      "t15" = ./hosts/t15/options.nix;
-      "x250" = ./hosts/x250/options.nix;
+      "big-tower" = {
+        system = "x86_64-linux";
+        options = ./hosts/big-tower/options.nix;
+        nixosConf = ./hosts/big-tower/configuration.nix;
+        hmModules = [./home/cli-apps ./home/dekstops ./home/gui-apps ./home/services ./home/shells];
+      };
+      "google-kukui" = {
+        system = "aarch64-linux";
+        options = ./hosts/google-kukui/options.nix;
+        hmModules = [./home/cli-apps ./home/services ./home/shells];
+      };
+      "t15" = {
+        system = "x86_64-linux";
+        options = ./hosts/t15/options.nix;
+        nixosConf = ./hosts/t15/configuration.nix;
+        hmModules = [./home/cli-apps ./home/dekstops ./home/gui-apps ./home/services ./home/shells];
+      };
+      "x250" = {
+        system = "x86_64-linux";
+        options = ./hosts/x250/options.nix;
+        nixosConf = ./hosts/x250/configuration.nix;
+        hmModules = [./home/cli-apps ./home/dekstops ./home/gui-apps ./home/services ./home/shells];
+      };
     };
   in {
+    # Build the NixOS configurations for each hosts that have `nixConf` defined
+    # in its attribute set.
     nixosConfigurations =
-      lib.attrsets.concatMapAttrs (host: system: {
+      lib.attrsets.concatMapAttrs (host: {
+        system,
+        nixosConf,
+        options,
+        ...
+      }: {
         ${host} = lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -87,40 +102,42 @@
             ./configuration
             ./options
             inputs.private.secrets
-            nixosConfigurationsParser.${host}
-            optionsParser.${host}
+            nixosConf
+            options
           ];
         };
       })
+      lib.attrsets.filterAttrs (n: v: v ? nixConf)
       hosts;
 
     homeConfigurations =
-      lib.attrsets.concatMapAttrs (host: system: let
-        pkgs = import nixpkgs {
-          inherit system;
-          config = {
-            allowUnfree = true;
-          };
-          overlays = [
-            # ...
-          ];
-        };
-      in {
+      lib.attrsets.concatMapAttrs (host: {
+        system,
+        options,
+        hmModules,
+        ...
+      }: {
         "pierrot-lc@${host}" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            overlays = [];
+          };
           extraSpecialArgs = {
             username = "pierrot-lc";
             private = inputs.private;
           };
 
-          modules = [
-            ./home
-            ./options
-            inputs.librewolf-nix.hmModules.${system}.default
-            inputs.nix-index-database.hmModules.nix-index
-            inputs.nvim-nix.hmModules.${system}.default
-            optionsParser.${host}
-          ];
+          modules =
+            [
+              ./home
+              ./options
+              inputs.librewolf-nix.hmModules.${system}.default
+              inputs.nix-index-database.hmModules.nix-index
+              inputs.nvim-nix.hmModules.${system}.default
+              options
+            ]
+            ++ hmModules;
         };
       })
       hosts;

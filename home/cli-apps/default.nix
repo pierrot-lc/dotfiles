@@ -1,8 +1,5 @@
 {pkgs, ...}: {
-  programs.autojump = {
-    enable = true;
-    enableBashIntegration = true;
-  };
+  programs.autojump.enable = true;
 
   programs.bottom.enable = true;
   home.shellAliases.htop = "btm";
@@ -23,54 +20,44 @@
     ff = "fastfetch";
   };
 
-  programs.obs-studio = {
-    enable = false;
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-    ];
-  };
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    settings = {
-      add_newline = false;
-      directory.truncate_to_repo = false;
-      time.disabled = false;
-      nix_shell = {
-        format = "via [$symbol(\($name\))]($style) ";
-        symbol = " ";
-      };
-    };
-  };
-
   home.packages = with pkgs; [
     curl
     du-dust
     duf
     fd
-    feh
     ffmpeg
     file
     gdu
     glances
-    glow
     gnumake
     gnutar
     imagemagick
     jq
     just
-    keymapp
     pandoc
-    protonvpn-gui
     python3Full
     ripgrep
     tldr
-    tokei
     tree
     typst
     unzip
     wl-clipboard
     zip
+  ];
+
+  imports = [
+    ./bat
+    ./buku.nix
+    ./feh.nix
+    ./fzf.nix
+    ./git.nix
+    ./gpg.nix
+    ./khard.nix
+    ./myrepos.nix
+    ./nvim.nix
+    ./pass.nix
+    ./qcal.nix
+    ./starship.nix
+    ./television.nix
   ];
 }

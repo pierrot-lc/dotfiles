@@ -1,8 +1,4 @@
-{
-  pkgs,
-  username,
-  ...
-}: {
+{username, ...}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = username;
@@ -10,45 +6,14 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
   # Show news after update.
   news.display = "show";
 
   xdg.enable = true;
 
-  # Security declarations.
-  programs.password-store = {
-    enable = true;
-    package = pkgs.pass.withExtensions (exts: [exts.pass-otp exts.pass-import]);
-
-    settings = {
-      PASSWORD_STORE_DIR = "$XDG_DATA_HOME/password-store";
-    };
-  };
-
   imports = [
-    ./bat
-    ./buku.nix
-    ./calendar.nix
-    ./contacts.nix
-    ./feh.nix
-    ./fzf.nix
-    ./git.nix
-    ./gnome
-    ./gpg.nix
-    ./kitty
-    ./librewolf.nix
-    ./mails.nix
-    ./myrepos.nix
-    ./newsboat
-    ./newsflash.nix
     ./nix.nix
-    ./nvim.nix
-    ./planify.nix
-    ./printing.nix
-    ./programs.nix
-    ./shell
-    ./ssh.nix
-    ./television.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
