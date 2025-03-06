@@ -107,8 +107,7 @@
           ];
         };
       })
-      lib.attrsets.filterAttrs (n: v: v ? nixConf)
-      hosts;
+      (lib.attrsets.filterAttrs (n: v: v ? nixosConf) hosts);
 
     homeConfigurations =
       lib.attrsets.concatMapAttrs (host: {
