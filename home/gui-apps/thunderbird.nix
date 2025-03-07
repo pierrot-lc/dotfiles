@@ -48,7 +48,7 @@ in {
 
   accounts.email.accounts =
     lib.concatMapAttrs (mail: attrs: {
-      mail = attrs // {thunderbird = setParams attrs;};
+      "${mail}" = attrs // {thunderbird = setParams attrs;};
     })
     private.mails.accounts;
 }
