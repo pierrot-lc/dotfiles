@@ -14,7 +14,7 @@ flake-update:
     nix flake update
 
 nvfetcher-update:
-    cd home/bat/; nvfetcher; cd -
+    cd home/cli-apps/bat/; nvfetcher; cd -
 
 fwupd-update:
     sudo fwupdmgr update -y

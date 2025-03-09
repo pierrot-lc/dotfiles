@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     keymapp
+    mediawriter
     protonvpn-gui
   ];
 

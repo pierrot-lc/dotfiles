@@ -13,7 +13,6 @@ flatpak install -y com.github.taiko2k.avvie
 flatpak install -y com.github.tchx84.Flatseal
 flatpak install -y com.jgraph.drawio.desktop
 flatpak install -y com.rafaelmardojai.Blanket
-flatpak install -y com.system76.Popsicle
 flatpak install -y com.ultimaker.cura
 flatpak install -y dev.bragefuglseth.Keypunch
 flatpak install -y io.github.nokse22.inspector
