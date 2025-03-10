@@ -17,6 +17,9 @@
             HostName maserati.inria.fr
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
+        Host raspi-4
+            HostName 192.168.1.95
+            User pierrot-lc
       '';
   };
 }
