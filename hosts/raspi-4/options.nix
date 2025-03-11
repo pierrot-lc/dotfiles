@@ -1,5 +1,8 @@
 {
   desktop.enable = false;
-  theme.flavour = "dark";
-  theme.name = "gruvbox";
+
+  docker = {
+    enable = true;
+    pihole = true;
+  };
 }
