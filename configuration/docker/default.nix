@@ -3,15 +3,18 @@
   lib,
   ...
 }: let
-  pihole = import ./pihole.nix {};
+  pihole = import ./pihole.nix;
 in {
   config = lib.mkIf config.docker.enable {
-    virtualisation.docker.enable = true;
-    users.extraGroups.docker.members = ["pierrot-lc"];
+    virtualisation = {
+      docker.enable = true;
+      oci-containers.backend = "docker";
+      oci-containers.containers = lib.mkMerge [
+        (lib.mkIf config.docker.pihole {pihole = pihole;})
+      ];
+    };
 
-    virtualisation.oci-containers.containers = lib.mkMerge [
-      (lib.mkIf config.docker.pihole {pihole = pihole;})
-    ];
+    users.extraGroups.docker.members = ["pierrot-lc"];
   };
   options = {
     docker = {
