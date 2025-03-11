@@ -9,6 +9,9 @@
 
   networking.hostName = "big-tower";
 
+  # NixOS-level options.
+  docker.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -8,6 +8,9 @@
     ./hardware-configuration.nix
   ];
 
+  # NixOS-level options.
+  docker.enable = true;
+
   networking.hostName = "t15";
 
   # Bootloader.

@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs.ssh = {
     enable = true;
     extraConfig = /* sshconfig */ ''
@@ -17,8 +17,9 @@
             HostName maserati.inria.fr
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
+
         Host raspi-4
-            HostName 192.168.1.95
+            HostName ${config.raspi-4.ip4}
             User pierrot-lc
             IdentityFile ~/.ssh/id_ed25519_raspi-4
       '';
