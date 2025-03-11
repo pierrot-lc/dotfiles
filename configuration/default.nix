@@ -2,8 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  config,
   pkgs,
+  lib,
+  config,
   ...
 }: {
   # Overall Nix options.
@@ -27,7 +28,7 @@
   };
 
   # Select kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -47,22 +48,21 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "fr";
-    variant = "";
-  };
-
-  # Configure console keymap
+  # Configure console keymap.
   console.keyMap = "fr";
 
+  # Enable the X11 windowing system.
+  services.xserver = {
+    enable = config.desktop.enable;
+
+    # Configure keymap in X11.
+    xkb.layout = "fr";
+  };
+
   # Enable sound with pipewire.
-  security.rtkit.enable = true;
+  security.rtkit.enable = config.desktop.enable;
   services.pipewire = {
-    enable = true;
+    enable = config.desktop.enable;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
@@ -70,18 +70,15 @@
     # jack.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pierrot-lc = {
     description = "Pierrot LC";
-    extraGroups = ["wheel" "networkmanager" "libvirtd"];
+    extraGroups = ["wheel" "networkmanager"];
     isNormalUser = true;
     packages = [];
   };
 
-  # Allow unfree packages
+  # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
@@ -89,34 +86,12 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # List packages installed in system profile.
   environment.systemPackages = with pkgs;
-    [
-      cachix
-      firefox
-      git
-      gparted
-      htop
-      vim
-      virt-manager
-      wget
-    ]
-    ++ (lib.optionals config.hardware.hasGPU [
-      nvitop
-    ]);
+    [cachix firefox git gparted htop vim virt-manager wget]
+    ++ (lib.optionals config.hardware.hasGPU [nvitop]);
 
-  services.xserver.excludePackages = with pkgs; [
-    xterm
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  services.xserver.excludePackages = with pkgs; [xterm];
 
   programs.dconf.enable = true;
 
@@ -124,9 +99,7 @@
   hardware.keyboard.zsa.enable = true;
 
   # Enable virtual webcam (OBS).
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
   boot.extraModprobeConfig = ''
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';

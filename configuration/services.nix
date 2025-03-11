@@ -13,7 +13,6 @@
   services.dbus.enable = true;
   services.flatpak.enable = true;
   services.fwupd.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   # Periodically update the database for the `locate` command.
   services.locate = {

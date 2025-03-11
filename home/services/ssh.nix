@@ -20,6 +20,7 @@
         Host raspi-4
             HostName 192.168.1.95
             User pierrot-lc
+            IdentityFile ~/.ssh/id_ed25519_raspi-4
       '';
   };
 }
