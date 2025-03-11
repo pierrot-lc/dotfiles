@@ -9,6 +9,11 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
 
+  # Overwrite some default settings.
+  services.printing.enable = false;
+  services.avahi.enable = false;
+
+  # Add my local wifi.
   networking = {
     inherit (private.networking) wireless;
     networkmanager.enable = false;

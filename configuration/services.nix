@@ -11,7 +11,7 @@
   };
 
   services.dbus.enable = true;
-  services.flatpak.enable = true;
+  services.flatpak.enable = config.desktop.enable;
   services.fwupd.enable = true;
 
   # Periodically update the database for the `locate` command.
