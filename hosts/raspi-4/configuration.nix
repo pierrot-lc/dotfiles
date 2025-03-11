@@ -7,6 +7,8 @@
     ./hardware-configuration.nix
   ];
 
+  networking.hostName = "raspi-4";
+
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
 
   # User password hash.

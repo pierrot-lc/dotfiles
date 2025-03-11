@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   boot.initrd.availableKernelModules = ["xhci_pci" "usbhid" "usb_storage"];
   boot.loader.grub.enable = false;
   boot.loader.generic-extlinux-compatible.enable = true;
@@ -12,4 +12,5 @@
   };
 
   hardware.enableRedistributableFirmware = true;
+  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }
