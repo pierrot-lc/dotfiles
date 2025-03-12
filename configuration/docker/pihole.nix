@@ -16,8 +16,6 @@
     "./etc-pihole:/etc/pihole"
   ];
   capabilities = {
-    NET_ADMIN = true;
-    SYS_TIME = true;
     SYS_NICE = true;
   };
 }
