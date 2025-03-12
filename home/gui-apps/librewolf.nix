@@ -14,7 +14,7 @@
       };
       # Proton VPN
       "vpn@proton.ch" = {
-        install_url = "https://addons.mozilla.org/firefox/downloads/file/4413146/proton_vpn_firefox_extension-latest.xpi"
+        install_url = "https://addons.mozilla.org/firefox/downloads/file/4413146/proton_vpn_firefox_extension-latest.xpi";
         installation_mode = "force_installed";
       };
     };
