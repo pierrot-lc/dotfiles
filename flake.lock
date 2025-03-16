@@ -329,11 +329,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1739522571,
-        "narHash": "sha256-4bZuvF3+9Ohw33G0IXp7psWenLF4m3F/xT7wYKGjxvY=",
+        "lastModified": 1742082015,
+        "narHash": "sha256-dbel23mNYFTdE+t0lxF4xcFWpIJm/wXvxERx3i2bAoU=",
         "owner": "pierrot-lc",
         "repo": "librewolf-nix",
-        "rev": "e7966a61027bba42c2a1688710a7f0236e1c8908",
+        "rev": "5090ee8d9c2772c2ef999cdfeea0a45943d21382",
         "type": "github"
       },
       "original": {
@@ -405,11 +405,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741619381,
-        "narHash": "sha256-koZtlJRqi0/MD/AKd0KrXLA2NuBOVzlIyAJprjzpxZE=",
+        "lastModified": 1742096597,
+        "narHash": "sha256-CUy00dj513aIvtN2NGiDKLCVEQSz4xHWSDf229EiJdU=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "66537fb185462ba9b07f4e6f2d54894a1b2d04ab",
+        "rev": "5c77c6d6f2e8cc6007c2b1a4df1a507834404a67",
         "type": "github"
       },
       "original": {
@@ -420,11 +420,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1741851582,
-        "narHash": "sha256-cPfs8qMccim2RBgtKGF+x9IBCduRvd/N5F4nYpU0TVE=",
+        "lastModified": 1742069588,
+        "narHash": "sha256-C7jVfohcGzdZRF6DO+ybyG/sqpo1h6bZi9T56sxLy+k=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+        "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
         "type": "github"
       },
       "original": {
@@ -543,11 +543,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1741657235,
-        "narHash": "sha256-GJqAlTKFgmrrU5Ku0i1n22DGGTUhBYSHQTOB//J/zsc=",
+        "lastModified": 1742084536,
+        "narHash": "sha256-uQySwaGwFKXEeGJMLvM/n/a3TLKaBlUAHbRV/uVgt8U=",
         "ref": "refs/heads/main",
-        "rev": "bdf752db8716fcbbaaa1b7fa6bd29dfbdefbc325",
-        "revCount": 25,
+        "rev": "cbf9076ef5706386e4eaba78c5422552c4d086ce",
+        "revCount": 27,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private"
       },

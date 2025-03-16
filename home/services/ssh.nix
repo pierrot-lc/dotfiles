@@ -1,4 +1,4 @@
-{config, ...}: {
+{private, ...}: {
   programs.ssh = {
     enable = true;
     extraConfig = /* sshconfig */ ''
@@ -18,8 +18,14 @@
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
 
+        Host home
+            HostName ${private.networking.box.ip}
+            Port ${private.networking.box.ssh-port}
+            User pierrot-lc
+            IdentityFile ~/.ssh/id_ed25519_raspi-4
+
         Host raspi-4
-            HostName ${config.raspi-4.ip4}
+            HostName ${private.networking.raspi-4.ip}
             User pierrot-lc
             IdentityFile ~/.ssh/id_ed25519_raspi-4
       '';

@@ -30,5 +30,6 @@
     settings.PasswordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
   };
-  users.users.pierrot-lc.openssh.authorizedKeys.keys = [private.networking.raspi-4_pub];
+  users.users.pierrot-lc.openssh.authorizedKeys.keys = [private.networking.raspi-4.pub];
+  services.fail2ban.enable = true;
 }
