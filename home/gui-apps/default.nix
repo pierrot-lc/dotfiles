@@ -5,6 +5,7 @@
   };
 
   home.packages = with pkgs; [
+    jabref
     keymapp
     mediawriter
     protonvpn-gui
@@ -12,6 +13,7 @@
 
   imports = [
     ./kitty
+    ./libreoffice.nix
     ./librewolf.nix
     ./newsboat
     ./newsflash.nix

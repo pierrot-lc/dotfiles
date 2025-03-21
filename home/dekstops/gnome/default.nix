@@ -105,6 +105,7 @@ in {
         switch-windows-backward = ["<Shift><Alt>Space" "<Shift><Alt>Tab"];
       };
       "org/gnome/mutter" = {
+        dynamic-workspaces = false;
         edge-tiling = false;
       };
       "org/gnome/mutter/keybindings" = {
