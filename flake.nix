@@ -42,7 +42,7 @@
 
     # Some private informations.
     private = {
-      url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private";
+      url = "git+ssh://git@github.com/pierrot-lc/dotfiles-private.git?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
