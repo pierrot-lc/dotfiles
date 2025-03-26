@@ -8,6 +8,7 @@
     jabref
     keymapp
     mediawriter
+    planify
     protonvpn-gui
   ];
 
@@ -17,7 +18,6 @@
     ./librewolf.nix
     ./newsboat
     ./newsflash.nix
-    ./planify.nix
     ./thunderbird.nix
   ];
 }

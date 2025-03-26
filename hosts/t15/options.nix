@@ -4,6 +4,6 @@
   hardware.hasGPU = true;
   ollama.enable = true;
   theme.flavour = "dark";
-  theme.name = "catppuccin-macchiato";
+  theme.name = "catppuccin-mocha";
   virtual-machines.enable = false;
 }
