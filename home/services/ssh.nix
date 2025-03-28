@@ -18,10 +18,16 @@
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
 
-        Host abaca
-            HostName access.sophia.grid5000.fr
+        Host grid5000
+            HostName access.grid5000.fr
             User ppereira
             IdentityFile ~/.ssh/id_ed25519_nef
+
+        Host abaca
+            HostName sophia
+            User ppereira
+            IdentityFile ~/.ssh/id_rsa_abaca
+            proxyjump grid5000
 
         Host home
             HostName ${private.networking.box.ip}

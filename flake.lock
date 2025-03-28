@@ -522,11 +522,11 @@
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1742978749,
-        "narHash": "sha256-exyPQ90LruMDTgZfGw9M2QoeMugp9EilZ6fHYBZSqSo=",
+        "lastModified": 1743183003,
+        "narHash": "sha256-iBsWrxkrVXe+yEcjcu4N7/q6lgdvDt8ZPsFJ9JkbYYM=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "6285ebbf4be2eecf282c093945b049099dfb69f2",
+        "rev": "cd2e57987847d880e00908b28c5a3ea245929860",
         "type": "github"
       },
       "original": {
@@ -543,10 +543,10 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1742084536,
-        "narHash": "sha256-uQySwaGwFKXEeGJMLvM/n/a3TLKaBlUAHbRV/uVgt8U=",
+        "lastModified": 1743194238,
+        "narHash": "sha256-oZVwdyekTm2Ljwx5a6Hj9LVjnBjzxwzlx+MtF/tovMs=",
         "ref": "refs/heads/main",
-        "rev": "cbf9076ef5706386e4eaba78c5422552c4d086ce",
+        "rev": "495b445a0cfef0e0cfe98e457cd5c795e28dba0e",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private.git"
