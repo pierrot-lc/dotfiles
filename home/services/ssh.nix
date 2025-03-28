@@ -18,6 +18,11 @@
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
 
+        Host abaca
+            HostName access.sophia.grid5000.fr
+            User ppereira
+            IdentityFile ~/.ssh/id_ed25519_nef
+
         Host home
             HostName ${private.networking.box.ip}
             Port ${private.networking.box.ssh-port}
