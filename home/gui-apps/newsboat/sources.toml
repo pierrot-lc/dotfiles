@@ -1,37 +1,12 @@
 [[sources]]
-title = "Knowable Magazine"
-url = "https://knowablemagazine.org/rss"
-tags = ["general"]
-
-[[sources]]
-title = "Kagi Small Web - Appreciated"
-url = "https://kagi.com/smallweb/appreciated"
-tags = ["general"]
-
-[[sources]]
-title = "Tedium"
-url = "https://feed.tedium.co/"
-tags = ["general"]
-
-[[sources]]
 title = "Phoronix"
 url = "https://www.phoronix.com/rss.php"
 tags = ["linux"]
 
 [[sources]]
-title = "The Verge"
-url = "https://www.theverge.com/rss/index.xml"
-tags = ["tech"]
-
-[[sources]]
-title = "Tech Crunch"
-url = "https://techcrunch.com/feed/"
-tags = ["tech"]
-
-[[sources]]
-title = "Ars Technica"
-url = "http://feeds.arstechnica.com/arstechnica/index"
-tags = ["tech"]
+title = "Kagi Small Web - Appreciated"
+url = "https://kagi.com/smallweb/appreciated"
+tags = ["general"]
 
 [[sources]]
 title = "Kagi Small Web - Code"
@@ -41,6 +16,16 @@ tags = ["tech"]
 [[sources]]
 title = "AI News"
 url = "https://buttondown.email/ainews/rss"
+tags = ["AI"]
+
+[[sources]]
+title = "Hugging Face - Blog"
+url = "https://huggingface.co/blog/feed.xml"
+tags = ["AI"]
+
+[[sources]]
+title = "Google Research"
+url = "https://research.google/blog/rss/"
 tags = ["AI"]
 
 [[sources]]
