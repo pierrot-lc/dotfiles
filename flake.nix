@@ -58,17 +58,6 @@
   }: let
     lib = nixpkgs.lib;
     hosts = {
-      "big-tower" = {
-        system = "x86_64-linux";
-        options = ./hosts/big-tower/options.nix;
-        nixosConf = ./hosts/big-tower/configuration.nix;
-        hmModules = [./home/cli-apps ./home/dekstops ./home/gui-apps ./home/services ./home/shells];
-      };
-      "google-kukui" = {
-        system = "aarch64-linux";
-        options = ./hosts/google-kukui/options.nix;
-        hmModules = [./home/cli-apps ./home/services ./home/shells];
-      };
       "raspi-4" = {
         system = "aarch64-linux";
         options = ./hosts/raspi-4/options.nix;
