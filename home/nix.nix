@@ -5,6 +5,17 @@
 }: {
   nix = {
     package = pkgs.nix;
+    registry.pierrot = {
+      from = {
+        id = "pierrot";
+        type = "indirect";
+      };
+      to = {
+        owner = "pierrot-lc";
+        repo = "flake-templates";
+        type = "github";
+      };
+    };
     settings = {
       # Make sure these subtituters and their public keys are defined
       # in the `trusted-substituters` and `trusted-public-keys` nix options.
