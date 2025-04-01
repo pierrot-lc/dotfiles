@@ -55,7 +55,6 @@
     ./khard.nix
     ./myrepos.nix
     ./nvim.nix
-    ./pass.nix
     ./qcal.nix
     ./starship.nix
     ./television.nix

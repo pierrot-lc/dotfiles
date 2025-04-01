@@ -10,6 +10,7 @@
     mediawriter
     planify
     protonvpn-gui
+    ungoogled-chromium
   ];
 
   imports = [

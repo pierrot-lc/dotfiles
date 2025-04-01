@@ -8,9 +8,6 @@
       "${config.xdg.dataHome}/contacts" = {
         checkout = "git clone git@gitea.com:pierrot-lc/contacts.git";
       };
-      "${config.xdg.dataHome}/password-store" = {
-        checkout = "git clone git@gitea.com:pierrot-lc/password-store.git";
-      };
     };
   };
 
