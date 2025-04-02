@@ -4,6 +4,10 @@ home-update:
 
 system-update:
     # sudo nixos-rebuild switch -v --flake .
+    # NOTE: when using `sudo`, nix won't find the user's ssh keys. If not using
+    # nh, there's the alternative of first using `nixos-rebuild` without sudo
+    # and then relaunch the command with `sudo`. The first time it will fetch
+    # deps with user permissions and the second time it will apply the updates.
     nh os switch .
 
 channel-update:
