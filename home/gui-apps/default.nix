@@ -10,7 +10,10 @@
     mediawriter
     planify
     protonvpn-gui
+    qbittorrent
+    resources
     ungoogled-chromium
+    zotero
   ];
 
   imports = [
