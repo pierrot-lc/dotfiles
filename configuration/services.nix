@@ -13,6 +13,7 @@
   services.dbus.enable = true;
   services.flatpak.enable = config.desktop.enable;
   services.fwupd.enable = true;
+  services.hardware.openrgb.enable = true;
 
   # Periodically update the database for the `locate` command.
   services.locate = {

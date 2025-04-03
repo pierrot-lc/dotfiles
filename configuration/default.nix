@@ -48,15 +48,9 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  # Configure console keymap.
-  console.keyMap = "fr";
-
   # Enable the X11 windowing system.
   services.xserver = {
     enable = config.desktop.enable;
-
-    # Configure keymap in X11.
-    xkb.layout = "fr";
   };
 
   # Enable sound with pipewire.
@@ -95,9 +89,6 @@
 
   programs.dconf.enable = true;
 
-  # Enable special udev rules for zsa keyboards (flashing firmware).
-  hardware.keyboard.zsa.enable = true;
-
   # Enable virtual webcam (OBS).
   boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
   boot.extraModprobeConfig = ''
@@ -111,6 +102,7 @@
     ./fonts.nix
     ./gaming.nix
     ./gnome.nix
+    ./keyboards.nix
     ./networking.nix
     ./printing.nix
     ./services.nix
