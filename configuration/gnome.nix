@@ -25,8 +25,7 @@
     environment.gnome.excludePackages = with pkgs; [
       cheese
       epiphany
-      gnome-music
-      gnome-photos
+      evince
       gnome-terminal
       gnome-tour
       totem
