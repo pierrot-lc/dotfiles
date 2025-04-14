@@ -18,6 +18,11 @@
             User pipereir
             IdentityFile ~/.ssh/id_rsa_maserati
 
+        Host antipasti
+            HostName antipasti.inria.fr
+            User pipereir
+            IdentityFile ~/.ssh/id_rsa_maserati
+
         Host grid5000
             HostName access.grid5000.fr
             User ppereira
