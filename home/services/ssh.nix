@@ -34,6 +34,12 @@
             IdentityFile ~/.ssh/id_rsa_abaca
             proxyjump grid5000
 
+        Host rennes
+            HostName rennes
+            User ppereira
+            IdentityFile ~/.ssh/id_rsa_abaca
+            proxyjump grid5000
+
         Host home
             HostName ${private.networking.box.ip}
             Port ${private.networking.box.ssh-port}
