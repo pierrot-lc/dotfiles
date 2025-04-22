@@ -23,15 +23,6 @@
       file = "themes/Catppuccin Mocha.tmTheme";
     };
 
-    everforest-dark = {
-      src = sources.everforest.src;
-      file = "Everforest Dark/Everforest Dark.tmTheme";
-    };
-    everforest-light = {
-      src = sources.everforest.src;
-      file = "Everforest Light/Everforest Light.tmTheme";
-    };
-
     rose-pine-dark = {
       src = sources.rose-pine.src;
       file = "dist/themes/rose-pine.tmTheme";
@@ -50,10 +41,6 @@
     "catppuccin-mocha" = {
       "dark" = "catppuccin-mocha";
       "light" = "catppuccin-latte";
-    };
-    "everforest" = {
-      "dark" = "everforest-dark";
-      "light" = "everforest-light";
     };
     "gruvbox" = {
       "dark" = "gruvbox-dark";

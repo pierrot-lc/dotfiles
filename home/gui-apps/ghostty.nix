@@ -8,13 +8,9 @@
       "dark" = "catppuccin-mocha";
       "light" = "catppuccin-latte";
     };
-    "everforest" = {
-      "dark" = "everforest_dark_hard";
-      "light" = "everforest_light_hard";
-    };
     "gruvbox" = {
-      "dark" = "gruvbox-dark-hard";
-      "light" = "gruvbox-light-hard";
+      "dark" = "GruvboxDarkHard";
+      "light" = "GruvboxLightHard";
     };
     "rose-pine" = {
       "dark" = "rose-pine";

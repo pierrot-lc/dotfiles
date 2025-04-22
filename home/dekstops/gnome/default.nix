@@ -13,10 +13,6 @@
       "dark" = "purple";
       "light" = "blue";
     };
-    "everforest" = {
-      "dark" = "green";
-      "light" = "teal";
-    };
     "gruvbox" = {
       "dark" = "orange";
       "light" = "yellow";

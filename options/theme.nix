@@ -10,7 +10,6 @@
 #
 # Valid themes:
 # - [catppuccin](https://catppuccin.com/)
-# - [everforest](https://github.com/sainnhe/everforest/wiki)
 # - [gruvbox](https://github.com/gruvbox-community/gruvbox-contrib)
 # - [rosé-pine](https://rosepinetheme.com/)
 {lib, ...}: {
@@ -20,7 +19,6 @@
         type = lib.types.enum [
           "catppuccin-macchiato"
           "catppuccin-mocha"
-          "everforest"
           "gruvbox"
           "rose-pine"
         ];

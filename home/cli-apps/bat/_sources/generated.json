@@ -20,27 +20,6 @@
         },
         "version": "699f60fc8ec434574ca7451b444b880430319941"
     },
-    "everforest": {
-        "cargoLocks": null,
-        "date": "2023-02-03",
-        "extract": null,
-        "name": "everforest",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "mhanberg",
-            "repo": "everforest-textmate",
-            "rev": "aa1850676e2c2908e7c5cf5ea7863b130fd65016",
-            "sha256": "sha256-4GexSj/T+FKsa98kmKfninJMdFKHgQyZFQGVNBFYIuc=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "aa1850676e2c2908e7c5cf5ea7863b130fd65016"
-    },
     "rose-pine": {
         "cargoLocks": null,
         "date": "2025-03-29",

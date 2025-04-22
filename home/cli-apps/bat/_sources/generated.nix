@@ -13,18 +13,6 @@
     };
     date = "2024-12-23";
   };
-  everforest = {
-    pname = "everforest";
-    version = "aa1850676e2c2908e7c5cf5ea7863b130fd65016";
-    src = fetchFromGitHub {
-      owner = "mhanberg";
-      repo = "everforest-textmate";
-      rev = "aa1850676e2c2908e7c5cf5ea7863b130fd65016";
-      fetchSubmodules = false;
-      sha256 = "sha256-4GexSj/T+FKsa98kmKfninJMdFKHgQyZFQGVNBFYIuc=";
-    };
-    date = "2023-02-03";
-  };
   rose-pine = {
     pname = "rose-pine";
     version = "c4cab0c431f55a3c4f9897407b7bdad363bbb862";

@@ -2,10 +2,6 @@
 src.git = "https://github.com/catppuccin/bat.git"
 fetch.github = "catppuccin/bat"
 
-[everforest]
-src.git = "https://github.com/mhanberg/everforest-textmate.git"
-fetch.github = "mhanberg/everforest-textmate"
-
 [rose-pine]
 src.git = "https://github.com/rose-pine/tm-theme.git"
 fetch.github = "rose-pine/tm-theme"
