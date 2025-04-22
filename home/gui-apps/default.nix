@@ -17,6 +17,7 @@
   ];
 
   imports = [
+    ./ghostty.nix
     ./kitty
     ./libreoffice.nix
     ./librewolf.nix
