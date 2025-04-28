@@ -28,7 +28,6 @@
       evince
       gnome-terminal
       gnome-tour
-      totem
     ];
 
     environment.systemPackages = with pkgs; [

@@ -21,6 +21,7 @@
   };
 
   home.packages = with pkgs; [
+    circumflex
     curl
     du-dust
     duf
