@@ -4,11 +4,14 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
-      nerd-fonts.fira-code
-      nerd-fonts.symbols-only
       commit-mono
       dejavu_fonts
+      fira
+      fira-code
+      fira-math
       jetbrains-mono
+      nerd-fonts.fira-code
+      nerd-fonts.symbols-only
       noto-fonts
       noto-fonts-color-emoji
       twemoji-color-font

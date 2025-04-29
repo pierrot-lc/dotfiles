@@ -15,7 +15,7 @@ tags = ["tech"]
 
 [[sources]]
 title = "AI News"
-url = "https://buttondown.email/ainews/rss"
+url = "https://news.smol.ai/rss.xml"
 tags = ["AI"]
 
 [[sources]]
