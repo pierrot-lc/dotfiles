@@ -128,6 +128,7 @@ in {
             "_memory_allocated_"
             "_storage_used_"
           ];
+        show-gpu = config.hardware.hasGPU;
       };
     };
   };
