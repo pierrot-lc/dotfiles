@@ -7,7 +7,7 @@
     enableSshSupport = true;
     maxCacheTtl = 86400;
     maxCacheTtlSsh = 86400;
-    pinentryPackage = pkgs.pinentry-gnome3; # Previously `pkgs.pinentry-curses`.
+    pinentry.package = pkgs.pinentry-gnome3;
   };
   programs.gpg = {
     enable = true;

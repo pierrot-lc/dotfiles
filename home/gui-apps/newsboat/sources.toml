@@ -42,3 +42,8 @@ tags = ["AI"]
 title = "Paper With Code - Latest"
 url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest"
 tags = ["AI"]
+
+[[sources]]
+title = "Emergent Mind"
+url = "https://www.emergentmind.com/feeds/rss"
+tags = ["AI"]
