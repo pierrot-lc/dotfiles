@@ -22,7 +22,6 @@
       src = sources.catppuccin.src;
       file = "themes/Catppuccin Mocha.tmTheme";
     };
-
     rose-pine-dark = {
       src = sources.rose-pine.src;
       file = "dist/themes/rose-pine.tmTheme";

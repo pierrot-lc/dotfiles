@@ -4,5 +4,5 @@
   hardware.hasGPU = true;
   ollama.enable = true;
   theme.flavour = "dark";
-  theme.name = "gruvbox";
+  theme.name = "catppuccin-mocha";
 }
