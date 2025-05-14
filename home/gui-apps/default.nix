@@ -8,6 +8,7 @@
     jabref
     keymapp
     mediawriter
+    mission-center
     planify
     qbittorrent
     resources
