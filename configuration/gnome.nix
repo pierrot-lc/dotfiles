@@ -26,6 +26,7 @@
       cheese
       epiphany
       evince
+      gnome-music
       gnome-terminal
       gnome-tour
     ];
