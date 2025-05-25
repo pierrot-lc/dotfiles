@@ -22,6 +22,11 @@
   networking = {
     inherit (private.networking) wireless;
     networkmanager.enable = false;
+
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [80 443 8000];
+    };
   };
 
   # Enable the OpenSSH daemon.
