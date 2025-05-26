@@ -48,15 +48,13 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = config.desktop.enable;
-  };
+  # Enable the X11/Wayland windowing system.
+  services.xserver.enable = true;
 
   # Enable sound with pipewire.
-  security.rtkit.enable = config.desktop.enable;
+  security.rtkit.enable = true;
   services.pipewire = {
-    enable = config.desktop.enable;
+    enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;

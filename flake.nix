@@ -58,11 +58,6 @@
   }: let
     lib = nixpkgs.lib;
     hosts = {
-      "raspi-4" = {
-        system = "aarch64-linux";
-        options = ./hosts/raspi-4/options.nix;
-        nixosConf = ./hosts/raspi-4/configuration.nix;
-      };
       "t15" = {
         system = "x86_64-linux";
         options = ./hosts/t15/options.nix;
