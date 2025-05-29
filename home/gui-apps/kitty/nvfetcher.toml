@@ -1,0 +1,3 @@
+[melange]
+src.git = "https://github.com/savq/melange-nvim.git"
+fetch.github = "savq/melange-nvim"

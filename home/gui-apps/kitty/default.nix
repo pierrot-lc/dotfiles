@@ -1,6 +1,9 @@
-{config, ...}: let
-  # Those are the themes that are builtin in kitty. There's no need to source them.
-  themeParser = {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  builtinThemes = {
     "catppuccin-macchiato" = {
       "dark" = "Catppuccin-Macchiato";
       "light" = "Catppuccin-Frappe";
@@ -18,14 +21,23 @@
       "light" = "rose-pine-dawn";
     };
   };
+
+  sources = pkgs.callPackage ./_sources/generated.nix {};
+  extraThemes = {
+    "melange" = {
+      "dark" = builtins.readFile "${sources.melange.src}/term/kitty/melange_dark.conf";
+      "light" = builtins.readFile "${sources.melange.src}/term/kitty/melange_light.conf";
+    };
+  };
 in {
   programs.kitty = {
     enable = true;
     extraConfig = builtins.concatStringsSep "\n" [
       (builtins.readFile ./kitty.conf)
       (builtins.readFile ./font.conf)
+      extraThemes.${config.theme.name}.${config.theme.flavour} or ""
     ];
-    themeFile = themeParser.${config.theme.name}.${config.theme.flavour};
+    themeFile = builtinThemes.${config.theme.name}.${config.theme.flavour} or null;
   };
 
   home.sessionVariables = {

@@ -45,6 +45,10 @@
       "dark" = "gruvbox-dark";
       "light" = "gruvbox-light";
     };
+    "melange" = {
+      "dark" = "gruvbox-dark";
+      "light" = "gruvbox-light";
+    };
     "rose-pine" = {
       "dark" = "rose-pine-dark";
       "light" = "rose-pine-light";

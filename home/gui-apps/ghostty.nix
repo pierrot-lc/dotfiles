@@ -12,16 +12,23 @@
       "dark" = "GruvboxDarkHard";
       "light" = "GruvboxLightHard";
     };
+    "melange" = {
+      "dark" = "Melange_dark";
+      "light" = "Melange_light";
+    };
     "rose-pine" = {
       "dark" = "rose-pine";
       "light" = "rose-pine-dawn";
     };
   };
+
+  darkTheme = themeParser.${config.theme.name}.dark;
+  lightTheme = themeParser.${config.theme.name}.light;
 in {
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = themeParser.${config.theme.name}.${config.theme.flavour};
+      theme = "dark:${darkTheme},light:${lightTheme}";
     };
   };
 }

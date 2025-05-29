@@ -1,0 +1,23 @@
+{
+    "melange": {
+        "cargoLocks": null,
+        "date": "2025-01-16",
+        "extract": null,
+        "name": "melange",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "savq",
+            "repo": "melange-nvim",
+            "rev": "2db5407f2f6d6d6286f50f2f7365728d66f6f3ae",
+            "sha256": "sha256-a88JaW688N9Jb6zQzLk2AEB0rcNicZLRUnbPpiNOTFE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2db5407f2f6d6d6286f50f2f7365728d66f6f3ae"
+    }
+}

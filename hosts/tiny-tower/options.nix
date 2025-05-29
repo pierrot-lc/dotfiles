@@ -3,6 +3,6 @@
   gaming.enable = true;
   hardware.hasGPU = true;
   ollama.enable = true;
-  theme.flavour = "dark";
-  theme.name = "catppuccin-mocha";
+  theme.flavour = "light";
+  theme.name = "melange";
 }

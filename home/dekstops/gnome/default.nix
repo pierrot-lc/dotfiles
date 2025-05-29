@@ -17,6 +17,10 @@
       "dark" = "orange";
       "light" = "yellow";
     };
+    "melange" = {
+      "dark" = "yellow";
+      "light" = "teal";
+    };
     "rose-pine" = {
       "dark" = "purple";
       "light" = "red";

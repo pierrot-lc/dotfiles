@@ -19,6 +19,7 @@ flake-update:
 
 nvfetcher-update:
     cd home/cli-apps/bat/; nvfetcher; cd -
+    cd home/gui-apps/kitty/; nvfetcher; cd -
 
 fwupd-update:
     sudo fwupdmgr update -y

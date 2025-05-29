@@ -11,6 +11,7 @@
 # Valid themes:
 # - [catppuccin](https://catppuccin.com/)
 # - [gruvbox](https://github.com/gruvbox-community/gruvbox-contrib)
+# - [melange](https://github.com/savq/melange-nvim)
 # - [rosé-pine](https://rosepinetheme.com/)
 {lib, ...}: {
   options = {
@@ -20,6 +21,7 @@
           "catppuccin-macchiato"
           "catppuccin-mocha"
           "gruvbox"
+          "melange"
           "rose-pine"
         ];
         default = "catppuccin-mocha";
