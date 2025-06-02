@@ -6,7 +6,6 @@
     df = "df -h";
     ducks = "du -h --max-depth=1 | sort -hr | head";
     dust = "dust --reverse";
-    env = "env | sort";
     forecast = "curl wttr.in"; # Show meteo.
     grep = "rg";
     ip4 = "curl -s https://api.ipify.org";
