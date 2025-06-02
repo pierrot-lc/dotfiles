@@ -3,14 +3,14 @@
 {
   melange = {
     pname = "melange";
-    version = "2db5407f2f6d6d6286f50f2f7365728d66f6f3ae";
+    version = "a51c6faa4fb09331382f87be99f71a8aa48dd422";
     src = fetchFromGitHub {
       owner = "savq";
       repo = "melange-nvim";
-      rev = "2db5407f2f6d6d6286f50f2f7365728d66f6f3ae";
+      rev = "a51c6faa4fb09331382f87be99f71a8aa48dd422";
       fetchSubmodules = false;
-      sha256 = "sha256-a88JaW688N9Jb6zQzLk2AEB0rcNicZLRUnbPpiNOTFE=";
+      sha256 = "sha256-qVnr0Rwqqq+wQbOf2yTAS+paB5g2Jp5uvqHwT2uQgow=";
     };
-    date = "2025-01-16";
+    date = "2025-06-01";
   };
 }
