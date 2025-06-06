@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     discord
+    fractal
     jabref
     keymapp
     mediawriter
