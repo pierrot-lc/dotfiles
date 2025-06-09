@@ -1,7 +1,7 @@
 {
     "melange": {
         "cargoLocks": null,
-        "date": "2025-06-01",
+        "date": "2025-06-08",
         "extract": null,
         "name": "melange",
         "passthru": null,
@@ -13,11 +13,11 @@
             "name": null,
             "owner": "savq",
             "repo": "melange-nvim",
-            "rev": "a51c6faa4fb09331382f87be99f71a8aa48dd422",
-            "sha256": "sha256-qVnr0Rwqqq+wQbOf2yTAS+paB5g2Jp5uvqHwT2uQgow=",
+            "rev": "c8266cfea088f4e92eac6026d61759ecc0ce6fab",
+            "sha256": "sha256-+O84Iep2xv3O8J+oXFTPJomw3HKgltpFO+ucle0DACs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a51c6faa4fb09331382f87be99f71a8aa48dd422"
+        "version": "c8266cfea088f4e92eac6026d61759ecc0ce6fab"
     }
 }
