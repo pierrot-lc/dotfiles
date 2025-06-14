@@ -21,6 +21,7 @@
   };
 
   home.packages = with pkgs; [
+    caligula
     circumflex
     curl
     du-dust
