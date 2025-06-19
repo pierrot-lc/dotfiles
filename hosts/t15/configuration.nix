@@ -11,6 +11,8 @@
   # NixOS-level options.
   docker.enable = true;
 
+  services.hardware.bolt.enable = true;
+
   networking.hostName = "t15";
 
   # Bootloader.
