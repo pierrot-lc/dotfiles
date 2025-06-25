@@ -1,5 +1,5 @@
 {
   desktop.name = "GNOME";
   theme.flavour = "dark";
-  theme.name = "gruvbox";
+  theme.name = "melange";
 }
