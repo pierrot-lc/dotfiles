@@ -11,7 +11,7 @@
     keymapp
     mediawriter
     mission-center
-    # planify
+    planify
     qbittorrent
     resources
     ungoogled-chromium
