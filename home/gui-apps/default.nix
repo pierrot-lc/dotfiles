@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     discord
     fractal
+    gradia
     jabref
     keymapp
     mediawriter
@@ -14,7 +15,9 @@
     planify
     qbittorrent
     resources
+    switcheroo
     ungoogled-chromium
+    upscaler
     zotero
   ];
 

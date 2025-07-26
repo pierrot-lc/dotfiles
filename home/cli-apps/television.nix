@@ -3,26 +3,32 @@
   config,
   ...
 }: {
+  # TODO: Add tv text -> vim opening
+  # TODO: Add bash integration, removing fzf ?
+  # TODO: Add fzf sources as channels
   home.packages = [pkgs.television pkgs.nix-search-tv];
   home.file."${config.xdg.configHome}/television/config.toml".text = /* toml */ ''
       [ui]
       use_nerd_font_icons = true
       input_bar_position = "top"
-
-      [previewers.file]
-      theme = "${config.programs.bat.config.theme}"
     '';
 
-  home.file."${config.xdg.configHome}/television/channels.toml".text = /* toml */ ''
-      [[cable_channel]]
-      name = "nixpkgs"
-      source_command = "nix-search-tv print"
-      preview_command = "nix-search-tv preview {}"
-  '';
+  home.file."${config.xdg.configHome}/television/cable/nix-search.toml".text = /* toml */ ''
+      [metadata]
+      name = "nix"
+      description = "Search through nixpkgs, home-manager and nixos options"
+      requirements = ["nix-search-tv"]
+
+      [source]
+      command = "nix-search-tv print"
+
+      [preview]
+      command = "nix-search-tv preview {}"
+    '';
 
   home.shellAliases = {
-    n = "wl-copy $(tv nixpkgs)";
-    t = "cd $(tv git-repos)";
-    v = "nvim $(tv)";
+    n = "wl-copy $(tv nix)";
+    r = "cd $(tv git-repos)";
+    v = "nvim $(tv files)";
   };
 }

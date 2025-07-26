@@ -47,3 +47,13 @@ tags = ["AI"]
 title = "Emergent Mind"
 url = "https://www.emergentmind.com/feeds/rss"
 tags = ["AI"]
+
+[[sources]]
+title = "Pierrot LC"
+url = "https://pierrot-lc.dev/feed.xml"
+tags = ["debug"]
+
+[[sources]]
+title = "Pierrot LC - Journal"
+url = "https://pierrot-lc.dev/phd-journal/feed.xml"
+tags = ["debug"]

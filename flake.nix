@@ -127,7 +127,7 @@
               ./home
               ./options
               inputs.librewolf-nix.hmModules.${system}.default
-              inputs.nix-index-database.hmModules.nix-index
+              inputs.nix-index-database.homeModules.nix-index
               inputs.nvim-nix.hmModules.${system}.default
               options
             ]

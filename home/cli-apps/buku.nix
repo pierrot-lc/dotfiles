@@ -1,8 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    buku
-    bukubrow
-  ];
+  home.packages = [pkgs.buku];
 
   home.shellAliases = {
     b = "buku --suggest";
