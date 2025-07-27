@@ -34,21 +34,6 @@ url = "https://machinelearning.apple.com/rss.xml"
 tags = ["AI"]
 
 [[sources]]
-title = "Paper With Code - Trending"
-url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/trending"
-tags = ["AI"]
-
-[[sources]]
-title = "Paper With Code - Latest"
-url = "https://us-east1-ml-feeds.cloudfunctions.net/pwc/latest"
-tags = ["AI"]
-
-[[sources]]
-title = "Emergent Mind"
-url = "https://www.emergentmind.com/feeds/rss"
-tags = ["AI"]
-
-[[sources]]
 title = "Pierrot LC"
 url = "https://pierrot-lc.dev/feed.xml"
 tags = ["debug"]
