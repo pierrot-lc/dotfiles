@@ -1,0 +1,10 @@
+[metadata]
+name = "nix"
+description = "Search through nixpkgs, home-manager and nixos options"
+requirements = ["nix-search-tv"]
+
+[source]
+command = "nix-search-tv print"
+
+[preview]
+command = "nix-search-tv preview {}"

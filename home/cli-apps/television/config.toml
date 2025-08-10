@@ -1,0 +1,7 @@
+[ui]
+use_nerd_font_icons = true
+input_bar_position = "top"
+
+[keybindings]
+ctrl-d = "scroll_preview_half_page_down"
+ctrl-u = "scroll_preview_half_page_up"

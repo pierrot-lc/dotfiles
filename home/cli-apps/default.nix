@@ -20,13 +20,17 @@
     ff = "fastfetch";
   };
 
+  programs.fd.enable = true;
+  home.shellAliases = {
+    find = "fd";
+  };
+
   home.packages = with pkgs; [
     caligula
     circumflex
     curl
     du-dust
     duf
-    fd
     ffmpeg
     file
     gdu
@@ -59,6 +63,6 @@
     ./nvim.nix
     ./qcal.nix
     ./starship.nix
-    ./television.nix
+    ./television
   ];
 }
