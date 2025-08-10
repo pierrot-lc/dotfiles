@@ -1,0 +1,26 @@
+[metadata]
+name = "buku"
+description = "Select buku bookmarks"
+requirements = ["buku"]
+
+[source]
+command = "buku --nostdin -p -f 4"
+display = "[{split:	:2}] {split:	:3} {split:	:1}"
+output = "{split:	:1}"
+
+[preview]
+command = "buku --nostdin -p {split:	:0}"
+
+[ui.preview_panel]
+header = "[{split:	:2}]"
+scrollbar = false
+
+[actions.view]
+description = "Open seleected bookmarks in browser"
+command = "buku --nostdin -o {split:\n:..|map:{split:	:0}|join: }"
+separator = "\n"
+# Join the multiple selections with "\n", split them into a list, select the id
+# for each item, and finally join the ids together.
+
+[keybindings]
+ctrl-e = "actions:view"

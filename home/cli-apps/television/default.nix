@@ -12,6 +12,7 @@
   home.file."${config.xdg.configHome}/television/cable/".source = ./cable;
 
   home.shellAliases = {
+    b = "tv buku";
     n = "tv nix";
     r = "cd $(tv git-repos)";
     v = "nvim $(tv files)";
