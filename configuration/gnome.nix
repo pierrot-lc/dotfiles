@@ -13,10 +13,6 @@
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "pierrot-lc";
 
-    # Workaround for gnome autologin: https://github.com/nixos/nixpkgs/issues/103746#issuecomment-945091229.
-    systemd.services."getty@tty1".enable = false;
-    systemd.services."autovt@tty1".enable = false;
-
     services.gnome.gnome-keyring.enable = true;
 
     # Exclude some gnome packages installed by default when using gnome.
