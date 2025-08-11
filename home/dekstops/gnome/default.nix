@@ -62,6 +62,18 @@ in {
         restore-session = false;
       };
 
+      # Shell layout.
+      "org/gnome/shell" = {
+        favorite-apps = [
+          "kitty.desktop"
+          "librewolf.desktop"
+          "io.gitlab.news_flash.NewsFlash.desktop"
+          "io.github.alainm23.planify.desktop"
+          "thunderbird.desktop"
+          "org.gnome.Nautilus.desktop"
+        ];
+      };
+
       # Keybindings.
       "org/gnome/desktop/input-sources" = {
         xkb-options = ["compose:rwin" "terminate:ctrl_alt_bksp"];
