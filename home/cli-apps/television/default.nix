@@ -15,6 +15,6 @@
     b = "tv buku";
     n = "tv nix";
     r = "cd $(tv git-repos)";
-    v = "nvim $(tv files)";
+    v = "tv files";
   };
 }

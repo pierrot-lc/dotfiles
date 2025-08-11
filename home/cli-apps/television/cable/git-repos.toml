@@ -1,0 +1,11 @@
+[metadata]
+name = "git-repos"
+requirements = ["fd", "git", "tree"]
+description = "Select from git repositories on your local machine."
+
+[source]
+command = "fd --glob .git --hidden --follow --type directory --max-depth 10 --prune ~ --exec dirname '{}'"
+display = "{split:/:-1}"
+
+[preview]
+command = "tree -L 3 -C --gitignore '{}'"
