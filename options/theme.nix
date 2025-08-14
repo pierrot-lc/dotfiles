@@ -4,7 +4,8 @@
 # - be open source and have a nice community around it
 #
 # List of currently impacted applications that themes must support:
-# - bat (fzf, git-delta)
+# - bat
+# - ghostty
 # - kitty
 # - nvim (should support common plugins such as mini.nvim)
 #

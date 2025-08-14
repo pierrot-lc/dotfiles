@@ -39,8 +39,4 @@
   programs.lazygit = {
     enable = true;
   };
-
-  home.shellAliases = {
-    g = "git";
-  };
 }

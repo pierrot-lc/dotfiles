@@ -55,7 +55,6 @@
     ./bat
     ./buku.nix
     ./feh.nix
-    ./fzf.nix
     ./git.nix
     ./gpg.nix
     ./khard.nix

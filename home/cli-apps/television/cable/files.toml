@@ -9,11 +9,12 @@ command = "fd --type file"
 [preview]
 command = "bat --number --color=always '{}'"
 
-[ui]
-preview_panel = { "size" = 70, "scrollbar" = true }
+[ui.preview_panel]
+size = 70
+scrollbar = true
 
 [actions.edit]
-description = "Edit selected bookmarks"
+description = "Edit selected files"
 command = "$EDITOR {}"
 mode = "execute"
 

@@ -3,9 +3,6 @@
   config,
   ...
 }: {
-  # TODO: Add tv text -> vim opening
-  # TODO: Add bash integration, removing fzf ?
-  # TODO: Add fzf sources as channels
   programs.television.enable = true;
   home.packages = [pkgs.nix-search-tv];
   home.file."${config.xdg.configHome}/television/config.toml".source = ./config.toml;
@@ -13,6 +10,7 @@
 
   home.shellAliases = {
     b = "tv buku";
+    g = "tv text";
     n = "tv nix";
     r = "cd $(tv git-repos)";
     v = "tv files";
