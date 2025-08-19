@@ -20,3 +20,6 @@ mode = "execute"
 
 [keybindings]
 enter = "actions:edit"
+ctrl-s = "actions:edit"
+ctrl-v = "actions:edit"
+ctrl-x = "actions:edit"
