@@ -9,9 +9,7 @@
   home.file."${config.xdg.configHome}/television/cable/".source = ./cable;
 
   home.shellAliases = {
-    b = "tv buku";
-    g = "tv text";
-    n = "tv nix";
+    t = "tv text";
     r = "cd $(tv git-repos)";
     v = "tv files";
   };

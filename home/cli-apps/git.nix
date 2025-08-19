@@ -36,6 +36,8 @@
     };
   };
 
+  home.shellAliases.g = "git";
+
   programs.lazygit = {
     enable = true;
   };
