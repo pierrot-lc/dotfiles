@@ -16,7 +16,7 @@ header = '{split:\::..2}'
 
 [actions.edit]
 description = "Edit selected files"
-command = '$EDITOR +{split:\::1} {split:\::0}'
+command = '$EDITOR +{split:\::1} {split:\::0}'  # Works for vim and neovim.
 mode = "execute"
 
 [keybindings]
