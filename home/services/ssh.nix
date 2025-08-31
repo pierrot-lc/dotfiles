@@ -1,55 +1,68 @@
-{private, ...}: {
+{
+  private,
+  lib,
+  ...
+}: {
+  services.ssh-agent.enable = true;
+
   programs.ssh = {
     enable = true;
-    extraConfig = /* sshconfig */ ''
-        Host nef-frontal
-            HostName nef-frontal.inria.fr
-            User pipereir
-            IdentityFile ~/.ssh/id_ed25519_nef
+    enableDefaultConfig = false;
 
-        Host nef-devel
-            HostName nef-devel.inria.fr
-            User pipereir
-            IdentityFile ~/.ssh/id_ed25519_nef
-            proxyjump nef-frontal
+    matchBlocks = {
+      "*" = {
+        addKeysToAgent = "yes";
+        compression = false;
+        forwardAgent = false;
+        hashKnownHosts = false;
+        serverAliveInterval = 0;
+      };
 
-        Host maserati
-            HostName maserati.inria.fr
-            User pipereir
-            IdentityFile ~/.ssh/id_rsa_maserati
+      "nef-frontal" = {
+        hostname = "nef-frontal.inria.fr";
+        user = "pipereir";
+        identityFile = "~/.ssh/id_ed25519_nef";
+      };
+      "nef-devel" = lib.hm.dag.entryBefore ["nef-frontal"] {
+        hostname = "nef-devel.inria.fr";
+        user = "pipereir";
+        identityFile = "~/.ssh/id_ed25519_nef";
+        proxyJump = "nef-frontal";
+      };
+      "grid5000" = {
+        hostname = "access.grid5000.fr";
+        user = "ppereira";
+        identityFile = "~/.ssh/id_ed25519_nef";
+      };
+      "abaca" = lib.hm.dag.entryBefore ["grid5000"] {
+        hostname = "sophia";
+        user = "ppereira";
+        identityFile = "~/.ssh/id_ed25519_nef";
+        proxyJump = "grid5000";
+      };
 
-        Host antipasti
-            HostName antipasti.inria.fr
-            User pipereir
-            IdentityFile ~/.ssh/id_rsa_maserati
+      "maserati" = {
+        hostname = "maserati.inria.fr";
+        user = "pipereir";
+        identityFile = "~/.ssh/id_rsa_maserati";
+      };
+      "antipasti" = {
+        hostname = "antipasti.inria.fr";
+        user = "pipereir";
+        identityFile = "~/.ssh/id_rsa_maserati";
+      };
 
-        Host grid5000
-            HostName access.grid5000.fr
-            User ppereira
-            IdentityFile ~/.ssh/id_ed25519_nef
-
-        Host abaca
-            HostName sophia
-            User ppereira
-            IdentityFile ~/.ssh/id_rsa_abaca
-            proxyjump grid5000
-
-        Host rennes
-            HostName rennes
-            User ppereira
-            IdentityFile ~/.ssh/id_rsa_abaca
-            proxyjump grid5000
-
-        Host home
-            HostName ${private.networking.box.ip}
-            Port ${private.networking.box.ssh-port}
-            User pierrot-lc
-            IdentityFile ~/.ssh/id_ed25519_raspi-4
-
-        Host raspi-4
-            HostName ${private.networking.raspi-4.ip}
-            User pierrot-lc
-            IdentityFile ~/.ssh/id_ed25519_raspi-4
-      '';
+      "home" = {
+        hostname = private.networking.box.ip;
+        port = private.networking.box.ssh-port;
+        user = "pierrot-lc";
+        identityFile = "~/.ssh/id_ed25519_raspi-4";
+      };
+      "raspi-4" = {
+        hostname = private.networking.raspi-4.ip;
+        user = "pierrot-lc";
+        identityFile = "~/.ssh/id_ed25519_raspi-4";
+      };
+    };
   };
 }
