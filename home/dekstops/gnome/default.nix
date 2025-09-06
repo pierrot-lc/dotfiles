@@ -127,23 +127,22 @@ in {
       };
 
       # Extensions.
+      "org/gnome/shell/extensions/just-perfection" = {
+        animation = 3;
+        workspace = true;
+        workspace-popup = false;
+        workspace-switcher-should-show = true;
+        workspaces-in-app-grid = true;
+      };
       "org/gnome/shell/extensions/caffeine" = {
         show-notifications = false;
         restore-state = true;
       };
       "org/gnome/shell/extensions/vitals" = {
         hot-sensors =
-          [
-            "_processor_usage_"
-          ]
-          ++ (lib.optionals config.hardware.hasGPU [
-            "_gpu#1_utilization_"
-            "_gpu#1_memory_used_"
-          ])
-          ++ [
-            "_memory_allocated_"
-            "_storage_used_"
-          ];
+          ["_processor_usage_"]
+          ++ (lib.optionals config.hardware.hasGPU ["_gpu#1_utilization_" "_gpu#1_memory_used_"])
+          ++ ["_memory_allocated_" "_storage_used_"];
         show-gpu = config.hardware.hasGPU;
       };
     };
