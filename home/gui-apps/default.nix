@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     discord
+    drawio
     fractal
     gradia
     jabref

@@ -4,6 +4,7 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
+      cm_unicode  # Latex font.
       commit-mono
       dejavu_fonts
       fira

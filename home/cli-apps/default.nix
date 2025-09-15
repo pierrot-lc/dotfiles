@@ -41,7 +41,7 @@
     jq
     just
     pandoc
-    python3Full
+    python3
     ripgrep
     tldr
     tree
