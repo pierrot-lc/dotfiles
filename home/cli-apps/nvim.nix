@@ -23,6 +23,7 @@
     shfmt
     stylua
     tinymist
+    ty
   ];
 
   home.sessionVariables = {
