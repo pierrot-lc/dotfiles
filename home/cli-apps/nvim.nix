@@ -7,6 +7,11 @@
     enable = true;
     version = "nightly";
     inherit (config) theme;
+    extraLuaConfig = /* lua */ ''
+      -- Prevent nix from changing the builtin shell when being in a `nix develop` session.
+      -- See https://github.com/NixOS/nix/issues/12008.
+      vim.opt.shell = "/run/current-system/sw/bin/bash"
+    '';
   };
 
   # Add some LSPs and formatters.
