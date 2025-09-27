@@ -11,6 +11,7 @@
   news.display = "show";
 
   xdg.enable = true;
+  xdg.mimeApps.enable = true;
 
   imports = [
     ./nix.nix
