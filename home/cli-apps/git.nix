@@ -31,7 +31,8 @@
       ".venv"
     ];
     signing = {
-      key = "9FD5351D70EB6A4C";
+      format = "ssh";
+      key = "~/.ssh/id_ed25519.pub";
       signByDefault = true;
     };
   };

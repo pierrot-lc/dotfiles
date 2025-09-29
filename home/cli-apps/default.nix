@@ -56,7 +56,6 @@
     ./buku.nix
     ./feh.nix
     ./git.nix
-    ./gpg.nix
     ./khard.nix
     ./myrepos.nix
     ./nvim.nix
