@@ -12,5 +12,12 @@
     services.displayManager.gdm.enable = true;
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "pierrot-lc";
+
+    environment.systemPackages = with pkgs; [
+      gnome-text-editor
+      loupe
+      nautilus
+      papers
+    ];
   };
 }
