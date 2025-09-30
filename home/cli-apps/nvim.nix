@@ -31,9 +31,8 @@
     ty
   ];
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables.EDITOR = "nvim";
+  systemd.user.sessionVariables.EDITOR = "nvim";
 
   home.shellAliases = {
     bim = "nvim";

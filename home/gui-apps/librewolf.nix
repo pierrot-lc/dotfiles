@@ -21,4 +21,8 @@
     BROWSER = "librewolf";
     MOZ_ENABLE_WAYLAND = 1;
   };
+  systemd.user.sessionVariables = {
+    BROWSER = "librewolf";
+    MOZ_ENABLE_WAYLAND = 1;
+  };
 }

@@ -40,7 +40,6 @@ in {
     themeFile = builtinThemes.${config.theme.name}.${config.theme.flavour} or null;
   };
 
-  home.sessionVariables = {
-    TERMINAL = "kitty";
-  };
+  home.sessionVariables.TERMINAL = "kitty";
+  systemd.user.sessionVariables.TERMINAL = "kitty";
 }
