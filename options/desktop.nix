@@ -3,6 +3,7 @@
     desktop.name = lib.mkOption {
       type = lib.types.enum [
         "GNOME"
+        "Hyprland"
         "none"
       ];
       default = "none";

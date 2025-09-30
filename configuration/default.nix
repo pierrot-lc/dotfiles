@@ -73,11 +73,6 @@
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
-  environment.sessionVariables = {
-    # Enable Ozone Wayland support for Electron and Chromium based applications.
-    NIXOS_OZONE_WL = "1";
-  };
-
   # List packages installed in system profile.
   environment.systemPackages = with pkgs;
     [cachix firefox git gparted htop just vim virt-manager wget]
@@ -96,10 +91,10 @@
 
   imports = [
     ./arrs.nix
+    ./desktops
     ./docker
     ./fonts.nix
     ./gaming.nix
-    ./gnome.nix
     ./keyboards.nix
     ./networking.nix
     ./printing.nix
