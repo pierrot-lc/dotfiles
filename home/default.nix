@@ -10,31 +10,9 @@
   # Show news after update.
   news.display = "show";
 
-  xdg.enable = true;
-  xdg.mimeApps.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "text/html" = "librewolf.desktop";
-    "x-scheme-handler/about" = "librewolf.desktop";
-    "x-scheme-handler/http" = "librewolf.desktop";
-    "x-scheme-handler/https" = "librewolf.desktop";
-    "x-scheme-handler/unknown" = "librewolf.desktop";
-
-    "text/markdown" = "org.gnome.TextEditor.desktop";
-    "text/plain" = "org.gnome.TextEditor.desktop";
-    "text/x-python" = "org.gnome.TextEditor.desktop";
-    "text/x-typst" = "org.gnome.TextEditor.desktop";
-
-    "image/gif" = "org.gnome.Loupe.desktop";
-    "image/jpeg" = "org.gnome.Loupe.desktop";
-    "image/png" = "org.gnome.Loupe.desktop";
-    "image/svg+xml" = "org.gnome.Loupe.desktop";
-    "image/webp" = "org.gnome.Loupe.desktop";
-
-    "application/pdf" = "org.gnome.Papers.desktop";
-  };
-
   imports = [
     ./nix.nix
+    ./xdg.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
