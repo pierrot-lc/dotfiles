@@ -10,7 +10,7 @@
   };
 
   imports = [
-    ./gnome.nix
+    ./gnome
     ./hyprland.nix
   ];
 }

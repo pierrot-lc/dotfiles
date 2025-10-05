@@ -1,6 +1,3 @@
 {
-  imports = [
-    ./gnome
-    ./hyprland
-  ];
+  imports = [./hyprland];
 }
