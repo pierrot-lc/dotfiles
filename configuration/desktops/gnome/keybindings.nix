@@ -25,7 +25,9 @@
             name = "Launch terminal";
           };
           "org/gnome/shell/keybindings" = {
+            toggle-application-view = ["<Super>Tab"];
             toggle-message-tray = ["<Super>m"];
+
             toggle-quick-settings = ["disabled"];
           };
           "org/gnome/desktop/wm/keybindings" = {
@@ -57,10 +59,13 @@
             switch-to-workspace-9 = ["<Super>o"];
             switch-to-workspace-10 = ["<Super>p"];
 
-            switch-to-workspace-left = ["disabled"];
-            switch-to-workspace-right = ["disabled"];
             switch-windows = ["<Alt>Space" "<Alt>Tab"];
             switch-windows-backward = ["<Shift><Alt>Space" "<Shift><Alt>Tab"];
+
+            switch-applications = ["disabled"];
+            switch-applications-backward = ["disabled"];
+            switch-to-workspace-left = ["disabled"];
+            switch-to-workspace-right = ["disabled"];
           };
           "org/gnome/mutter/keybindings" = {
             switch-monitor = ["XF86Display"]; # Disable the "<Super>p" shortcut, but keep the original special key.

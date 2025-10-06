@@ -25,9 +25,17 @@
             dynamic-workspaces = false;
             edge-tiling = false;
           };
-          "org/gnome/desktop/wm/preferences".num-workspaces = lib.gvariant.mkUint32 10;
+          "org/gnome/desktop/wm/preferences".num-workspaces = lib.gvariant.mkInt32 10;
           "org/gnome/shell/app-switcher".current-workspace-only = true;
           "org/gnome/shell/weather".automatic-location = true;
+          "org/gnome/shell".favorite-apps = [
+            "kitty.desktop"
+            "librewolf.desktop"
+            "io.gitlab.news_flash.NewsFlash.desktop"
+            "io.github.alainm23.planify.desktop"
+            "thunderbird.desktop"
+            "org.gnome.Nautilus.desktop"
+          ];
         };
       }
     ];
