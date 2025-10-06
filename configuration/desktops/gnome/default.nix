@@ -25,6 +25,7 @@
             dynamic-workspaces = false;
             edge-tiling = false;
           };
+          "org/gnome/desktop/wm/preferences".num-workspaces = lib.gvariant.mkUint32 10;
           "org/gnome/shell/app-switcher".current-workspace-only = true;
           "org/gnome/shell/weather".automatic-location = true;
         };
