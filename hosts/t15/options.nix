@@ -4,6 +4,6 @@
   hardware.hasGPU = true;
   ollama.enable = true;
   theme.flavour = "dark";
-  theme.name = "rose-pine";
+  theme.name = "melange";
   virtual-machines.enable = false;
 }
