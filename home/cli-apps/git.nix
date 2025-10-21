@@ -2,28 +2,26 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    delta = {
-      enable = true;
-      options.syntax-theme = config.programs.bat.config.theme;
-    };
-    userEmail = "pierrotlc@proton.me";
-    userName = "Pierrot LC";
-    aliases = {
-      a = "add";
-      c = "commit";
-      d = "diff";
-      f = "fetch";
-      p = "pull";
-      pp = "push";
-      r = "restore";
-      s = "status";
-    };
-    extraConfig = {
+    settings = {
+      alias = {
+        a = "add";
+        c = "commit";
+        d = "diff";
+        f = "fetch";
+        p = "pull";
+        pp = "push";
+        r = "restore";
+        s = "status";
+      };
       core.editor = "nvim";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
       rerere.enabled = true;
+      user = {
+        email = "pierrotlc@proton.me";
+        name = "Pierrot LC";
+      };
     };
     ignores = [
       "**/*.pyc"
@@ -39,7 +37,10 @@
 
   home.shellAliases.g = "git";
 
-  programs.lazygit = {
+  programs.lazygit.enable = true;
+  programs.delta = {
     enable = true;
+    enableGitIntegration = true;
+    options.syntax-theme = config.programs.bat.config.theme;
   };
 }
