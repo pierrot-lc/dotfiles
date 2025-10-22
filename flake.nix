@@ -47,7 +47,10 @@
     };
 
     # Extra packages.
-    # ...
+    wifitui = {
+      url = "github:shazow/wifitui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -115,7 +118,7 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [];
+            overlays = [(final: prev: {wifitui = inputs.wifitui.packages.${system}.default;})];
           };
           extraSpecialArgs = {
             username = "pierrot-lc";
