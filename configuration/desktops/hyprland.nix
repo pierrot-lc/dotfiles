@@ -13,7 +13,11 @@
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "pierrot-lc";
 
+    # Ashell requirements.
+    services.upower.enable = true;
+
     environment.systemPackages = with pkgs; [
+      ashell
       gnome-text-editor
       loupe
       nautilus
