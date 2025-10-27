@@ -43,6 +43,7 @@
     pandoc
     python3
     ripgrep
+    timewarrior
     tldr
     tree
     typst

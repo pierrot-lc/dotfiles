@@ -19,6 +19,7 @@
     switcheroo
     ungoogled-chromium
     upscaler
+    vlc
     zotero
   ];
 
@@ -29,6 +30,7 @@
     ./librewolf.nix
     ./newsboat
     ./newsflash.nix
+    ./proton.nix
     ./thunderbird.nix
   ];
 }

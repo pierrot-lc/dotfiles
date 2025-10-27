@@ -310,11 +310,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761081701,
-        "narHash": "sha256-IwpfaKg5c/WWQiy8b5QGaVPMvoEQ2J6kpwRFdpVpBNQ=",
+        "lastModified": 1761468550,
+        "narHash": "sha256-nY4vyN1QdHhC5Gj3545fI2Y7FSr/gs8ID4gPmF8HPww=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "9b4a2a7c4fbd75b422f00794af02d6edb4d9d315",
+        "rev": "1830716059bfee7cbcfbfcc38d7be98e482a5762",
         "type": "github"
       },
       "original": {
@@ -407,11 +407,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760846226,
-        "narHash": "sha256-xmU8kAsRprJiTGBTaGrwmjBP3AMA9ltlrxHKFuy5JWc=",
+        "lastModified": 1761451000,
+        "narHash": "sha256-qBJL6xEIjqYq9zOcG2vf2nPTeVBppNJzvO0LuQWMwMo=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "5024e1901239a76b7bf94a4cd27f3507e639d49e",
+        "rev": "ed6b293161b378a7368cda38659eb8d3d9a0dac4",
         "type": "github"
       },
       "original": {
@@ -422,11 +422,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1760878510,
-        "narHash": "sha256-K5Osef2qexezUfs0alLvZ7nQFTGS9DL2oTVsIXsqLgs=",
+        "lastModified": 1761373498,
+        "narHash": "sha256-Q/uhWNvd7V7k1H1ZPMy/vkx3F8C13ZcdrKjO7Jv7v0c=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5e2a59a5b1a82f89f2c7e598302a9cacebb72a67",
+        "rev": "6a08e6bb4e46ff7fcbb53d409b253f6bad8a28ce",
         "type": "github"
       },
       "original": {
@@ -523,11 +523,11 @@
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1758725868,
-        "narHash": "sha256-aV9leBrRHeW48zN2SoIqJAo3vrUS2WWtHrouRI2PA+E=",
+        "lastModified": 1761172356,
+        "narHash": "sha256-MG44Zr5OkakErNfBLU84GX9jlUSa6JudJWqEQ0cVxNc=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "fb7682bc24e9db363c70d9f27104142bbd64ccc8",
+        "rev": "57ef477b6d910ebcecc4240645994345eac82b86",
         "type": "github"
       },
       "original": {
@@ -697,11 +697,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760047447,
-        "narHash": "sha256-ezD81ePZVlBSDlYA1GVSrsPDU2nfZUHmzVXKcwKxXJs=",
+        "lastModified": 1761324411,
+        "narHash": "sha256-Woh9T+Iu7WupXSvlWoFXJyeGrkkCbrWV5vapCnWrX4M=",
         "owner": "shazow",
         "repo": "wifitui",
-        "rev": "bfbd2bf729c2e660d662fe8b2f89ee594928a2dc",
+        "rev": "6cdfafd0acffa00ca3151a6a73aa4f096dcd4f24",
         "type": "github"
       },
       "original": {
