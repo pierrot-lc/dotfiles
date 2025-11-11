@@ -29,8 +29,8 @@
     caligula
     circumflex
     curl
-    du-dust
     duf
+    dust
     ffmpeg
     file
     gdu
