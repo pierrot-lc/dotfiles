@@ -15,14 +15,14 @@
   };
   rose-pine = {
     pname = "rose-pine";
-    version = "c4cab0c431f55a3c4f9897407b7bdad363bbb862";
+    version = "417d201beb5f0964faded5448147c252ff12c4ae";
     src = fetchFromGitHub {
       owner = "rose-pine";
       repo = "tm-theme";
-      rev = "c4cab0c431f55a3c4f9897407b7bdad363bbb862";
+      rev = "417d201beb5f0964faded5448147c252ff12c4ae";
       fetchSubmodules = false;
-      sha256 = "sha256-maQp4QTJOlK24eid7mUsoS7kc8P0gerKcbvNaxO8Mic=";
+      sha256 = "sha256-aNDOqY81FLFQ6bvsTiYgPyS5lJrqZnFMpvpTCSNyY0Y=";
     };
-    date = "2025-03-29";
+    date = "2025-11-11";
   };
 }

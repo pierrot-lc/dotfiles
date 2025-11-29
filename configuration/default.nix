@@ -15,6 +15,7 @@
       "https://cache.nixos.org/"
       "https://nix-community.cachix.org"
       "https://cuda-maintainers.cachix.org"
+      "https://cache.flox.dev"  # CUDA cache.
       "https://ploop.cachix.org" # Jax related stuffs.
       "https://pierrot-lc.cachix.org"
     ];
@@ -22,6 +23,7 @@
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
+      "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
       "ploop.cachix.org-1:i6+Fqarsbf5swqH09RXOEDvxy7Wm7vbiIXu4A9HCg1g="
       "pierrot-lc.cachix.org-1:w7k8ahk6hJ1cqx36IywPkuDSs+nX2lHy2uW7PGZQHoY="
     ];
@@ -98,7 +100,7 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs;
-    [cachix firefox git gparted htop just vim virt-manager wget]
+    [cachix git gparted htop just vim virt-manager wget]
     ++ (lib.optionals config.hardware.hasGPU [nvitop]);
 
   services.xserver.excludePackages = with pkgs; [xterm];
