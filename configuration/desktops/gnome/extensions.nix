@@ -20,7 +20,7 @@ in {
         settings = {
           "org/gnome/shell".enabled-extensions = map (e: e.extensionUuid) extensions;
           "org/gnome/shell/extensions/just-perfection" = {
-            animation = lib.gvariant.mkInt32 3;
+            animation = lib.gvariant.mkInt32 1;
             workspace = true;
             workspace-popup = false;
             workspace-switcher-should-show = true;
