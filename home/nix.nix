@@ -37,8 +37,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Replace command-not-found by nix-index.
-  programs.command-not-found.enable = false;
   programs.nix-index = {
     enable = true;
     enableBashIntegration = true;
