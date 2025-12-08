@@ -15,7 +15,7 @@
       "https://cache.nixos.org/"
       "https://nix-community.cachix.org"
       "https://cuda-maintainers.cachix.org"
-      "https://cache.flox.dev"  # CUDA cache.
+      "https://cache.flox.dev" # CUDA cache.
       "https://ploop.cachix.org" # Jax related stuffs.
       "https://pierrot-lc.cachix.org"
     ];
