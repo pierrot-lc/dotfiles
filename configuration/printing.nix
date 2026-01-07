@@ -6,7 +6,7 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = lib.mkDefault true;
-    drivers = [pkgs.cnijfilter2];
+    # drivers = [pkgs.cnijfilter2];
   };
 
   users.extraGroups.lpadmin.members = ["pierrot-lc"];

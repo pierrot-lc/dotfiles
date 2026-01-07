@@ -94,7 +94,7 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs;
-    [cachix git gparted htop just vim virt-manager wget]
+    [git gparted htop just vim virt-manager wget]
     ++ (lib.optionals config.hardware.hasGPU [nvitop]);
 
   services.xserver.excludePackages = with pkgs; [xterm];

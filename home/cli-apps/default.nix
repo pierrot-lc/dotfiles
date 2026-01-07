@@ -48,7 +48,6 @@
     tree
     typst
     unzip
-    wifitui
     wl-clipboard
     zip
   ];
