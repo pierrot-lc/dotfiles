@@ -11,6 +11,6 @@
 
   imports = [
     ./gnome
-    ./hyprland.nix
+    ./hyprland
   ];
 }
