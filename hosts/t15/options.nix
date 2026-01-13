@@ -1,5 +1,5 @@
 {
-  desktop.name = "GNOME";
+  desktop.name = "Hyprland";
   gaming.enable = true;
   hardware.hasGPU = true;
   theme.flavour = "dark";

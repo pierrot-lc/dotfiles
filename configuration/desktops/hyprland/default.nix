@@ -26,7 +26,11 @@
 
     environment.systemPackages = with pkgs; [
       ashell
+      brightnessctl
+      firefox
       gnome-text-editor
+      hyprlock
+      hyprshot
       loupe
       nautilus
       papers

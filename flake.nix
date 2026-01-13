@@ -59,19 +59,19 @@
         system = "x86_64-linux";
         options = ./hosts/t15/options.nix;
         nixosConf = ./hosts/t15/configuration.nix;
-        hmModules = [./home/cli-apps ./home/desktops ./home/gui-apps ./home/services ./home/shells];
+        hmModules = [./home/cli-apps ./home/gui-apps ./home/services ./home/shells];
       };
       "tiny-tower" = {
         system = "x86_64-linux";
         options = ./hosts/tiny-tower/options.nix;
         nixosConf = ./hosts/tiny-tower/configuration.nix;
-        hmModules = [./home/cli-apps ./home/desktops ./home/gui-apps ./home/services ./home/shells];
+        hmModules = [./home/cli-apps ./home/gui-apps ./home/services ./home/shells];
       };
       "x250" = {
         system = "x86_64-linux";
         options = ./hosts/x250/options.nix;
         nixosConf = ./hosts/x250/configuration.nix;
-        hmModules = [./home/cli-apps ./home/desktops ./home/gui-apps ./home/services ./home/shells];
+        hmModules = [./home/cli-apps ./home/gui-apps ./home/services ./home/shells];
       };
     };
   in {
