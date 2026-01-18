@@ -27,13 +27,15 @@
     environment.systemPackages = with pkgs; [
       ashell
       brightnessctl
-      firefox
       gnome-text-editor
+      hyprlauncher
       hyprlock
+      hyprpaper
       hyprshot
       loupe
       nautilus
       papers
+      socat
     ];
   };
 }
