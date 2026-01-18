@@ -1,7 +1,7 @@
 [metadata]
 name = "text"
 description = "Find files with specific content"
-requirements = ["rg", "bat"]
+requirements = ["rg", "bat", "nvim"]
 
 [source]
 command = "rg . --no-heading --line-number --color=never"
@@ -16,7 +16,7 @@ header = '{split:\::..2}'
 
 [actions.edit]
 description = "Edit selected files"
-command = '$EDITOR +{split:\::1} {split:\::0}'  # Works for vim and neovim.
+command = 'nvim +{split:\::1} {split:\::0}'
 mode = "execute"
 
 [keybindings]
