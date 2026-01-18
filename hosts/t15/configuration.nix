@@ -46,7 +46,11 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs; [vpl-gpu-rt]; # See https://nixos.wiki/wiki/Intel_Graphics.
+    extraPackages = with pkgs; [
+      libvdpau-va-gl
+      nvidia-vaapi-driver
+      vpl-gpu-rt # See https://nixos.wiki/wiki/Intel_Graphics.
+    ];
   };
 
   # See https://nixos.wiki/wiki/Nvidia.
@@ -62,7 +66,7 @@
     # Enable this if you have graphical corruption issues or application
     # crashes after waking up from sleep. This fixes it by saving the entire
     # VRAM memory to /tmp/ instead of just the bare essentials.
-    powerManagement.enable = true;
+    powerManagement.enable = false;
 
     # Fine-grained power management. Turns off GPU when not in use.
     # Experimental and only works on modern Nvidia GPUs (Turing or newer).
@@ -76,9 +80,7 @@
 
     # See https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29.
     prime = {
-      reverseSync.enable = true;
-      allowExternalGpu = false;
-
+      sync.enable = true;
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
