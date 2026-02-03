@@ -21,20 +21,20 @@
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "pierrot-lc";
 
-    # Ashell requirements.
     services.upower.enable = true;
 
     environment.systemPackages = with pkgs; [
-      ashell
       brightnessctl
       gnome-text-editor
       hyprlauncher
       hyprlock
       hyprpaper
+      hyprpicker
       hyprshot
       loupe
       nautilus
       papers
+      quickshell
       socat
     ];
   };
