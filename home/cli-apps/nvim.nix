@@ -20,6 +20,7 @@
     bash-language-server
     inotify-tools # https://github.com/neovim/neovim/pull/29374.
     just
+    kdePackages.qtdeclarative
     lua-language-server
     marksman
     nixd

@@ -40,6 +40,7 @@
     imagemagick
     jq
     just
+    opencode
     pandoc
     python3
     ripgrep

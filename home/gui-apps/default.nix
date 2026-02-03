@@ -18,7 +18,6 @@
     resources
     switcheroo
     ungoogled-chromium
-    upscaler
     vlc
     zotero
   ];
