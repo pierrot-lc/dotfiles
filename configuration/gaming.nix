@@ -36,7 +36,7 @@
       mangohud
       parsec-bin
       steam-run
-      wineWowPackages.waylandFull
+      wineWow64Packages.waylandFull
     ];
   };
 }
