@@ -1,6 +1,6 @@
 {
     "catppuccin": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-06-29",
         "extract": null,
         "name": "catppuccin",
@@ -21,7 +21,7 @@
         "version": "6810349b28055dce54076712fc05fc68da4b8ec0"
     },
     "rose-pine": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-11-11",
         "extract": null,
         "name": "rose-pine",
