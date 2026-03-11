@@ -31,6 +31,7 @@
     curl
     duf
     dust
+    eilmeldung
     ffmpeg
     file
     gdu
