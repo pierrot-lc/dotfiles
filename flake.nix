@@ -44,7 +44,7 @@
     };
 
     # Extra packages.
-    eilmeldung.url = "github:christo-auer/eilmeldung";
+    # ...
   };
 
   outputs = inputs @ {
@@ -112,7 +112,6 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [inputs.eilmeldung.overlays.default];
           };
           extraSpecialArgs = {
             username = "pierrot-lc";
