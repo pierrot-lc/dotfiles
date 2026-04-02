@@ -1,24 +1,24 @@
 {config, ...}: let
   themeParser = {
     "catppuccin-macchiato" = {
-      "dark" = "catppuccin-macchiato";
-      "light" = "catppuccin-frappe";
+      "dark" = "Catppuccin Macchiato";
+      "light" = "Catppuccin Frappe";
     };
     "catppuccin-mocha" = {
-      "dark" = "catppuccin-mocha";
-      "light" = "catppuccin-latte";
+      "dark" = "Catppuccin Mocha";
+      "light" = "Catppuccin Latte";
     };
     "gruvbox" = {
-      "dark" = "GruvboxDarkHard";
-      "light" = "GruvboxLightHard";
+      "dark" = "Gruvbox Dark Hard";
+      "light" = "Gruvbox Light Hard";
     };
     "melange" = {
-      "dark" = "Melange_dark";
-      "light" = "Melange_light";
+      "dark" = "Melange Dark";
+      "light" = "Melange Light";
     };
     "rose-pine" = {
-      "dark" = "rose-pine";
-      "light" = "rose-pine-dawn";
+      "dark" = "Rose Pine";
+      "light" = "Rose Pine Dawn";
     };
   };
 
