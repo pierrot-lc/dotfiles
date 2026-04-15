@@ -168,11 +168,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775781825,
-        "narHash": "sha256-L5yKTpR+alrZU2XYYvIxCeCP4LBHU5jhwSj7H1VAavg=",
+        "lastModified": 1776184304,
+        "narHash": "sha256-No6QGBmIv5ChiwKCcbkxjdEQ/RO2ZS1gD7SFy6EZ7rc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e35c39fca04fee829cecdf839a50eb9b54d8a701",
+        "rev": "3c7524c68348ef79ce48308e0978611a050089b2",
         "type": "github"
       },
       "original": {
@@ -264,11 +264,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775365369,
-        "narHash": "sha256-DgH5mveLoau20CuTnaU5RXZWgFQWn56onQ4Du2CqYoI=",
+        "lastModified": 1775970782,
+        "narHash": "sha256-7jt9Vpm48Yy5yAWigYpde+HxtYEpEuyzIQJF4VYehhk=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "cef5cf82671e749ac87d69aadecbb75967e6f6c3",
+        "rev": "bedba5989b04614fc598af9633033b95a937933f",
         "type": "github"
       },
       "original": {
@@ -385,11 +385,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1759397254,
-        "narHash": "sha256-3iof7gJjXBWqUKO0vyR/m4GZxXyRlGNLfkg+8omSgFs=",
+        "lastModified": 1776171459,
+        "narHash": "sha256-VAN5BYfo81EbC7xwKfArWKaFtkkCz4k7MarvB41V9Rc=",
         "ref": "refs/heads/main",
-        "rev": "63710f8502568698c4f713b7824de80e3fd6ded6",
-        "revCount": 37,
+        "rev": "e445cab8ce84324bb5311779f8866ee1bf7870f2",
+        "revCount": 39,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private.git"
       },

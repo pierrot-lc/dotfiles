@@ -3,6 +3,6 @@
   gaming.enable = true;
   hardware.hasGPU = true;
   theme.flavour = "dark";
-  theme.name = "rose-pine";
+  theme.name = "catppuccin-macchiato";
   virtual-machines.enable = false;
 }
