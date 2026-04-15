@@ -24,11 +24,11 @@
     };
     rose-pine-dark = {
       src = sources.rose-pine.src;
-      file = "dist/themes/rose-pine.tmTheme";
+      file = "dist/rose-pine.tmTheme";
     };
     rose-pine-light = {
       src = sources.rose-pine.src;
-      file = "dist/themes/rose-pine-dawn.tmTheme";
+      file = "dist/rose-pine-dawn.tmTheme";
     };
   };
 
