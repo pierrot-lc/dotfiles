@@ -3,5 +3,5 @@
   gaming.enable = true;
   hardware.hasGPU = true;
   theme.flavour = "dark";
-  theme.name = "gruvbox";
+  theme.name = "catppuccin-mocha";
 }
