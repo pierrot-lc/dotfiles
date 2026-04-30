@@ -22,6 +22,7 @@
       dconf-editor
       gnome-tweaks
       papers
+      rewaita
     ];
   };
 }
