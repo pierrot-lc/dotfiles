@@ -24,19 +24,15 @@
 
     programs.gamemode.enable = true;
 
-    # See https://nixos.wiki/wiki/Appimage.
+    # See https://nixos.wiki/wiki/Appimage and https://nixos.wiki/wiki/Steam.
     programs.appimage = {
       enable = true;
       binfmt = true;
     };
 
     environment.systemPackages = with pkgs; [
-      bottles
-      lutris
-      mangohud
       parsec-bin
       steam-run
-      wineWow64Packages.waylandFull
     ];
   };
 }
