@@ -73,6 +73,12 @@
         nixosConf = ./hosts/x250/configuration.nix;
         hmModules = [./home/cli-apps ./home/gui-apps ./home/services ./home/shells];
       };
+      "zen-tower" = {
+        system = "x86_64-linux";
+        options = ./hosts/zen-tower/options.nix;
+        nixosConf = ./hosts/zen-tower/configuration.nix;
+        hmModules = [./home/cli-apps ./home/gui-apps ./home/services ./home/shells];
+      };
     };
   in {
     # Build the NixOS configurations for each hosts that have `nixConf` defined
