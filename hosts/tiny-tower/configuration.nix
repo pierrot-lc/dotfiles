@@ -38,13 +38,11 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    # extraPackages = with pkgs; [vpl-gpu-rt]; # See https://nixos.wiki/wiki/Intel_Graphics.
   };
 
   # See https://nixos.wiki/wiki/Nvidia.
   hardware.nvidia = {
-    # Modesetting is needed for most wayland compositors.
-    modesetting.enable = true;
+    branch = "latest";
 
     # Use the open source version of the kernel module.
     # Only available on driver 515.43.04+
@@ -62,9 +60,6 @@
 
     # Enable the nvidia settings menu.
     nvidiaSettings = false;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   nixpkgs.config.cudaSupport = true;
