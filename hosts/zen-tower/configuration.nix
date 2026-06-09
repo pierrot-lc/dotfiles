@@ -16,8 +16,21 @@
   # Bootloader.
   boot.loader = {
     efi.canTouchEfiVariables = true;
-    systemd-boot.enable = true;
+    limine = {
+      enable = true;
+      secureBoot.enable = true;
+      style = {
+        interface.resolution = "1920x1080";
+        graphicalTerminal.font.scale = "2x2";
+      };
+      extraEntries = ''
+        /Windows
+          protocol: efi
+          path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+      '';
+    };
   };
+  environment.systemPackages = [pkgs.sbctl]; # Generate secure boot keys.
 
   # Tell Xorg and Wayland to use the nvidia driver.
   services.xserver.videoDrivers = ["nvidia"];
