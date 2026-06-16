@@ -17,6 +17,7 @@
     programs.steam = {
       enable = true;
       dedicatedServer.openFirewall = true;
+      extest.enable = true; # Prevent the "allow remote control" popup window with the steam controller.
       gamescopeSession.enable = true;
       protontricks.enable = true;
       remotePlay.openFirewall = true;
