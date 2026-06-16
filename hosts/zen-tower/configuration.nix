@@ -59,7 +59,7 @@
     powerManagement.finegrained = false;
 
     # Enable the nvidia settings menu.
-    nvidiaSettings = false;
+    nvidiaSettings = true;
   };
 
   nixpkgs.config.cudaSupport = true;
