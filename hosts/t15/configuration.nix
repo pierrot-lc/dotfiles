@@ -83,20 +83,20 @@
   };
 
   # # Create a boot entry with offload enabled. This is a power efficient entry.
-  # specialisation.on-the-go.configuration = {
-  #   system.nixos.tags = ["on-the-go"];
-  #   hardware.nvidia = {
-  #     powerManagement.enable = lib.mkForce true;
-  #     powerManagement.finegrained = lib.mkForce true;
-  #
-  #     prime = {
-  #       offload.enable = lib.mkForce true;
-  #       offload.enableOffloadCmd = lib.mkForce true;
-  #       sync.enable = lib.mkForce false;
-  #       reverseSync.enable = lib.mkForce false;
-  #     };
-  #   };
-  # };
+  specialisation.on-the-go.configuration = {
+    system.nixos.tags = ["on-the-go"];
+    hardware.nvidia = {
+      powerManagement.enable = lib.mkForce true;
+      powerManagement.finegrained = lib.mkForce true;
+
+      prime = {
+        offload.enable = lib.mkForce true;
+        offload.enableOffloadCmd = lib.mkForce true;
+        sync.enable = lib.mkForce false;
+        reverseSync.enable = lib.mkForce false;
+      };
+    };
+  };
 
   nixpkgs.config.cudaSupport = true;
 }
