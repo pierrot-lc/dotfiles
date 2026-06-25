@@ -63,6 +63,11 @@
         user = "pierrot-lc";
         identityFile = "~/.ssh/id_ed25519_raspi-4";
       };
+      "tiny-tower" = {
+        hostname = private.networking.tiny-tower.ip;
+        user = "pierrot-lc";
+        identityFile = "~/.ssh/id_ed25519_tiny-tower";
+      };
     };
   };
 }
