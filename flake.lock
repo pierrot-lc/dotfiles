@@ -168,11 +168,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782166451,
-        "narHash": "sha256-SA7LyrayyZBvtzZnesnSLV7haciFuVLeZaX2hd5v4j4=",
+        "lastModified": 1782423922,
+        "narHash": "sha256-qPNd6lUohHP5gcJhqQ7rLV87RwIx0xYR2A4Frb9Zjc4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "471a1d2f840eb7fcbdfd541d99c13a64096f46db",
+        "rev": "5d320ab301cfaaca7d32514f13815d19d109f5f4",
         "type": "github"
       },
       "original": {
@@ -384,11 +384,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1776171459,
-        "narHash": "sha256-VAN5BYfo81EbC7xwKfArWKaFtkkCz4k7MarvB41V9Rc=",
+        "lastModified": 1782475011,
+        "narHash": "sha256-E3lSd2+7XfjFULAlL5IasTYa0mz1EEwAmc+QuWPi+2k=",
         "ref": "refs/heads/main",
-        "rev": "e445cab8ce84324bb5311779f8866ee1bf7870f2",
-        "revCount": 39,
+        "rev": "14ad147aa2eae4da632fde85a4c8ac673d6577be",
+        "revCount": 44,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private.git"
       },

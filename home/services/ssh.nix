@@ -63,10 +63,17 @@
         user = "pierrot-lc";
         identityFile = "~/.ssh/id_ed25519_raspi-4";
       };
+
+      "bastion" = {
+        hostname = "bastion.i3s.unice.fr";
+        user = "pereira";
+        identityFile = "~/.ssh/id_ed25519_i3s";
+      };
       "tiny-tower" = {
         hostname = private.networking.tiny-tower.ip;
         user = "pierrot-lc";
         identityFile = "~/.ssh/id_ed25519_tiny-tower";
+        proxyJump = "bastion";
       };
     };
   };
