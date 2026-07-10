@@ -13,12 +13,38 @@
 
   networking.hostName = "tiny-tower";
   programs.coolercontrol.enable = true;
-  # boot.extraModulePackages = with config.boot.kernelPackages; [liquidtux it87];
-  # boot.kernelModules = ["liquidtux" "it87"];
-  # boot.extraModprobeConfig = ''
-  #   options it87 ignore_resource_conflict=1
-  #   options it87 force_id=0x8628
-  # '';
+
+  networking = {
+    networkmanager.enable = false;
+    useDHCP = false;
+    useNetworkd = true;
+    wireless.enable = true;
+  };
+
+  systemd.network = {
+    enable = true;
+    networks."10-enp7s0" = {
+      matchConfig.Name = "enp7s0";
+      address = ["134.59.131.74/24"];
+      routes = [{Gateway = "134.59.131.254";}];
+      networkConfig.DNS = ["134.59.190.7"];
+      linkConfig.RequiredForOnline = "routable";
+    };
+  };
+
+  specialisation = {
+    dynamic-network.configuration = {
+      system.nixos.tags = ["dynamic-network"];
+      networking = {
+        networkmanager.enable = lib.mkForce true;
+        useDHCP = lib.mkForce true;
+        useNetworkd = lib.mkForce false;
+        wireless.enable = lib.mkForce true;
+      };
+
+      systemd.network.enable = lib.mkForce false;
+    };
+  };
 
   services.openssh = {
     enable = true;
@@ -49,7 +75,11 @@
       };
     };
   };
-  environment.systemPackages = [pkgs.sbctl pkgs.coolercontrol.coolercontrold]; # Generate secure boot keys.
+  environment.systemPackages = [
+    pkgs.coolercontrol.coolercontrold
+    pkgs.sbctl
+    pkgs.tmux
+  ];
 
   # Tell Xorg and Wayland to use the nvidia driver.
   services.xserver.videoDrivers = ["nvidia"];

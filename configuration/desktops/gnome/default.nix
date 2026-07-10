@@ -14,6 +14,7 @@
     services.displayManager.autoLogin.user = "pierrot-lc";
 
     services.gnome.gnome-keyring.enable = true;
+    services.flatpak.enable = true;
 
     # Some general behaviours.
     programs.dconf.enable = true;
