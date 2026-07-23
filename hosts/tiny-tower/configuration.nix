@@ -53,7 +53,7 @@
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
-      AllowUsers = ["pierrot-lc"];
+      AllowUsers = ["pierrot-lc" "enatale"];
       MaxAuthTries = 3;
       PerSourcePenalties = "crash:3600s authfail:3600s max:86400s";
     };
@@ -62,6 +62,17 @@
   users.users."pierrot-lc".openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBs7sAEMmR9+Ej6rTE4ke1RmcsaUt6Y2rM2iLC48Iq/p pierrot-lc@tiny-tower"
   ];
+
+  users.users.enatale = {
+    description = "Emanuele Natale";
+    extraGroups = ["networkmanager"];
+    isNormalUser = true;
+    packages = [];
+
+    openssh.authorizedKeys.keys = [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYC/YQsIwiwOJZ9c5/T3KovoLJqwPaPt3rMc/5lpl1kDddUh9iyfqK/yBX8sQirqYCJ542Nz+qc7KkaXrhSCt9tPk1YPbALn2Aylys2TZ2fPGKcxZpc2H5lvhBRlOt/eAiIm+2gdJNvjG4YVTiWykHqWUcxY2m5I4OFF7IE3n9ZmveL4d3Fr+Cl6cdHnOaWLOT/gZhUtDAG5N4G+dWM10bWOLnKBWI1xkpfLfuvdN9uH/6EPQcaDzgGvQkVZ/X0wVfxOqDTbfCKjYXs0UN1a9/CFwykyZAJjg9jMZ3ow8gmdlS/DZJqF9UZFCpf15b1df8fZqZq8ldQ63Gd9h1n/vUTui9H7EjX6YrpVYtA7TRJ1ilT49RkduuSaiYcvNFkDmc+fTAsIz3kpIWLNedeDOa9PROPNBHDhTmSoRGKesk8KVjGfbXyWaa1VtlcOt9ulWkqqc3ht3PbOa4QamDK5NcDZavL48XVyxDw8COTrPFjUbU3EjXA5C4TPy3ah2O+aU= enatale@fedora"
+    ];
+  };
 
   # Bootloader.
   boot.loader = {
