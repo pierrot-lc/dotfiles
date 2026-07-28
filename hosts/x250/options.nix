@@ -1,5 +1,5 @@
 {
-  desktop.name = "Hyprland";
+  desktop.name = "GNOME";
   theme.flavour = "dark";
-  theme.name = "melange";
+  theme.name = "rose-pine";
 }
