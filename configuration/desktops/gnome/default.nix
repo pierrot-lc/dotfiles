@@ -12,6 +12,7 @@
     # Enable automatic login for the user.
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = "pierrot-lc";
+    security.pam.services.login.enableGnomeKeyring = true;
 
     services.gnome.gnome-keyring.enable = true;
     services.flatpak.enable = true;
