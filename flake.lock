@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775087534,
-        "narHash": "sha256-91qqW8lhL7TLwgQWijoGBbiD4t7/q75KTi8NxjVmSmA=",
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "3107b77cd68437b9a76194f0f7f9c55f2329ca5b",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
         "type": "github"
       },
       "original": {
@@ -168,11 +168,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786719456,
-        "narHash": "sha256-B74DLQs/VjlqyhnnX3tguWwghqJHWSJX30TKZuAljIg=",
+        "lastModified": 1790365885,
+        "narHash": "sha256-iQ0ebhiVo64NktTnwft9hNxlFu4j5cvljVxyJaEVIP4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "83b7606dcf44abe3a94b86e8bb2b3355d22e8797",
+        "rev": "7b4c5ec4bedaf1e062bbc1bcaeddbc6bd242aa1b",
         "type": "github"
       },
       "original": {
@@ -228,11 +228,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775693082,
-        "narHash": "sha256-nnhkpfWsRutQh//KmVoIV7e9Gk90tBezjcoRr775BfU=",
+        "lastModified": 1789430561,
+        "narHash": "sha256-1N0A0souh9i9QgLMFhDERyzamJKDsnQbigz8/Uf49Xg=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "21b2795e6aeb4a0110bdc7bd81bad59c022c9986",
+        "rev": "1198930da876cc5c932ed1784c442b569e2ef7b5",
         "type": "github"
       },
       "original": {
@@ -244,11 +244,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1775689880,
-        "narHash": "sha256-savZYhFAaBm3BQUdTrPOv7i5K18JFANJvyHv0uuvaWM=",
+        "lastModified": 1789367273,
+        "narHash": "sha256-18V89CCvYoSk+sHGSIceh8WzMtq+aZJUzBPUD5ahTIw=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "eefb50e352a689ec1a0a55d6827abea79960cd3d",
+        "rev": "aaee64e00882d1ea2a290636c196b14678f11237",
         "type": "github"
       },
       "original": {
@@ -264,11 +264,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786249295,
-        "narHash": "sha256-Y2mSr+HLKYoOsjiackgilxkHXe8gkJ3z4hFFekjQX3I=",
+        "lastModified": 1790499302,
+        "narHash": "sha256-Gbf/U9ptJhQh0qnDnJ/+a8MAcq1HXunbArUTHR2wNYk=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "14d55b8069119e3b88da7aa2f6c97f86a2cd3cd6",
+        "rev": "161d7c91accd93034bb3c295224d9d895a778573",
         "type": "github"
       },
       "original": {
@@ -279,12 +279,12 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1785692966,
-        "narHash": "sha256-vUfIeBEfpbAfZ5zjgIkYk7eHBeVfCYVjLbWnMkseYnk=",
-        "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
-        "revCount": 1046609,
+        "lastModified": 1789921291,
+        "narHash": "sha256-Ft/BRnIqw1MywFoXydKobjjWmDFgDdYtSpJliE8+yUw=",
+        "rev": "44a91898084f46797b5fac650c7e8c9ac38c43d4",
+        "revCount": 1077143,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/nixpkgs-weekly/0.1.1046609%2Brev-643809054d65fdd466a63e3155b8c498cb483c04/019fef5d-61d1-7aa2-988a-826d330d1e14/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/nixpkgs-weekly/0.1.1077143%2Brev-44a91898084f46797b5fac650c7e8c9ac38c43d4/01a0ebad-51ce-7451-8dd8-3e80d608beae/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -363,11 +363,11 @@
         "vim-minizinc": "vim-minizinc"
       },
       "locked": {
-        "lastModified": 1776320865,
-        "narHash": "sha256-J0lfEvTFjsDmuepqfBAG+wTJryONYRBwWY0ke/TpYJE=",
+        "lastModified": 1789488323,
+        "narHash": "sha256-dBtmKygbEaDP8A8w3HiLtDbE4eRC+7aWEmMMrytp6dI=",
         "owner": "pierrot-lc",
         "repo": "nvim-nix",
-        "rev": "d0bf1ca27c7bed2c3b17c16ba13fc3899ce4d6e0",
+        "rev": "f0cdd9bf3b3450e1b9ceb0bde8409f017a7f235e",
         "type": "github"
       },
       "original": {
@@ -384,11 +384,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1782475011,
-        "narHash": "sha256-E3lSd2+7XfjFULAlL5IasTYa0mz1EEwAmc+QuWPi+2k=",
+        "lastModified": 1789504070,
+        "narHash": "sha256-9UTs/6atKymwMna6PRUgRQMGd88GQVHld3SeNJYXMME=",
         "ref": "refs/heads/main",
-        "rev": "14ad147aa2eae4da632fde85a4c8ac673d6577be",
-        "revCount": 44,
+        "rev": "cfa896970402b21083423a4ddb90988eaff5fefb",
+        "revCount": 47,
         "type": "git",
         "url": "ssh://git@github.com/pierrot-lc/dotfiles-private.git"
       },
