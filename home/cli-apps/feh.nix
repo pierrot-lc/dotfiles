@@ -12,7 +12,6 @@ let
     height = screen.height / 2 - window.height / 2;
   };
 
-  toString = builtins.toString;
   geometry = "${toString window.width}x${toString window.height}+${toString delta.width}+${toString delta.height}";
 in {
   programs.feh = {
