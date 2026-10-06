@@ -44,6 +44,8 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
+  hardware.enableAllFirmware = true;
+
   # Enable the X11/Wayland windowing system.
   services.xserver.enable = true;
 
