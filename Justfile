@@ -8,7 +8,7 @@ system-update:
     # nh, there's the alternative of first using `nixos-rebuild` without sudo
     # and then relaunch the command with `sudo`. The first time it will fetch
     # deps with user permissions and the second time it will apply the updates.
-    nh os switch .
+    nh os boot .
 
 channel-update:
     sudo nix-channel --update
