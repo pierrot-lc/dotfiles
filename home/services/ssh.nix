@@ -75,6 +75,12 @@
         identityFile = "~/.ssh/id_ed25519_tiny-tower";
         proxyJump = "bastion";
       };
+      "zen-tower" = {
+        hostname = private.networking.zen-tower.ip;
+        user = "pierrot-lc";
+        identityFile = "~/.ssh/id_ed25519_zen-tower";
+        proxyJump = "home";
+      };
     };
   };
 }

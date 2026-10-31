@@ -16,6 +16,7 @@
 
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -52,6 +53,7 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-stable,
     home-manager,
     ...
   }: let
@@ -124,6 +126,10 @@
           extraSpecialArgs = {
             username = "pierrot-lc";
             private = inputs.private;
+            pkgs-stable = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
           };
 
           modules =

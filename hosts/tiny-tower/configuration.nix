@@ -1,5 +1,6 @@
 {
   pkgs,
+  private,
   lib,
   config,
   ...
@@ -60,7 +61,7 @@
   };
 
   users.users."pierrot-lc".openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBs7sAEMmR9+Ej6rTE4ke1RmcsaUt6Y2rM2iLC48Iq/p pierrot-lc@tiny-tower"
+    private.networking.tiny-tower.pub
   ];
 
   users.users.enatale = {

@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   programs.obs-studio = {
@@ -9,22 +10,25 @@
     plugins = with pkgs.obs-studio-plugins; [wlrobs];
   };
 
-  home.packages = with pkgs; [
-    drawio
-    fractal
-    gradia
-    jabref
-    keymapp
-    mediawriter
-    mission-center
-    planify
-    qbittorrent
-    resources
-    switcheroo
-    ungoogled-chromium
-    vlc
-    zotero
-  ];
+  home.packages =
+    (with pkgs; [
+      drawio
+      fractal
+      gradia
+      keymapp
+      mediawriter
+      mission-center
+      planify
+      qbittorrent
+      resources
+      switcheroo
+      ungoogled-chromium
+      vlc
+    ])
+    ++ (with pkgs-stable; [
+      jabref
+      zotero
+    ]);
 
   imports = [
     ./ghostty.nix

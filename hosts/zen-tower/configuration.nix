@@ -1,5 +1,6 @@
 {
   pkgs,
+  private,
   lib,
   config,
   ...
@@ -12,6 +13,21 @@
   docker.enable = true;
 
   networking.hostName = "zen-tower";
+
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+    settings = {
+      AllowUsers = ["pierrot-lc"];
+      KbdInteractiveAuthentication = false;
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+    };
+  };
+
+  users.users."pierrot-lc".openssh.authorizedKeys.keys = [
+    private.networking.zen-tower.pub
+  ];
 
   # Bootloader.
   boot.loader = {
@@ -63,4 +79,6 @@
   };
 
   nixpkgs.config.cudaSupport = true;
+
+  programs.tmux.enable = true;
 }
