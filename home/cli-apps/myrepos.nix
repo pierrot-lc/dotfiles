@@ -8,6 +8,9 @@
       "${config.xdg.dataHome}/contacts" = {
         checkout = "git clone git@gitea.com:pierrot-lc/contacts.git";
       };
+      "${config.home.homeDirectory}/Papers" = {
+        checkout = "git clone git@github.com:pierrot-lc/papers.git";
+      };
     };
   };
 

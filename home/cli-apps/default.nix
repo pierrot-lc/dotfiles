@@ -61,6 +61,7 @@
     ./khard.nix
     ./myrepos.nix
     ./nvim.nix
+    ./papis.nix
     ./qcal.nix
     ./starship.nix
     ./television
