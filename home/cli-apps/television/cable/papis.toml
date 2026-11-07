@@ -1,0 +1,26 @@
+[metadata]
+name = "papis"
+description = "Select papis papers"
+requirements = ["papis", "jq"]
+
+[source]
+command = "papis list --all --format '{doc[papis_id]}\t{doc[title]}\t{doc[author]}\t{doc[year]}'"
+display = "{split:\t:1} - {split:\t:2} ({split:\t:3})"
+output = "{split:\t:0}"
+
+[preview]
+# Papis's formatting is specified with '{doc[]}' formatting, which clashes with
+# Television's own templating format. Only '${}' are considered as shell
+# variable expansions by Television.
+command = "papis list --format '${doc[abstract]}' {split:\t:0} | cut -c 2-"
+
+[ui.preview_panel]
+word_wrap = true
+
+[actions.view]
+description = "Open selected bookmarks in browser"
+command = "echo '{split:\n:..|map:{split:\t:0}|join: }' | xargs -n 1 papis open"
+separator = "\n"
+
+[keybindings]
+enter = "actions:view"
