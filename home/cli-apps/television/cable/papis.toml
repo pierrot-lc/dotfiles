@@ -5,7 +5,7 @@ requirements = ["papis"]
 
 [source]
 command = "papis list --all --format '{doc[papis_id]}\t{doc[title]}\t{doc[author]}\t{doc[year]}\t{doc[tags]}'"
-display = "{split:\t:4|substring:1..-1|split:, :..|map:{substring:1..-1}|join: |prepend:[|append:]|pad:10} {split:\t:1|substring:0..100|pad:100: :right}        {split:\t:2|split: :0|replace:s/,//g|pad:20: :right} {split:\t:3}"
+display = "{split:\t:4|substring:1..-1|split:, :..|map:{substring:1..-1}|join: |substring:..10|pad:10: :right|prepend:[|append:]} {split:\t:1|substring:..100|pad:100: :right}        {split:\t:2|split: :0|replace:s/,//g|pad:20: :right} {split:\t:3}"
 output = "{split:\t:0}"
 
 [preview]
