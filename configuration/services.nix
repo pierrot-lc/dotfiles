@@ -7,6 +7,8 @@
   services.fwupd.enable = true;
   services.hardware.openrgb.enable = true;
 
+  services.bootvine.enable = true;
+
   services.nzbget = {
     enable = true;
     settings = {MainDir = "/data";};
