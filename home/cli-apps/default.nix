@@ -34,7 +34,6 @@
     ffmpeg
     file
     gdu
-    glances
     gnumake
     gnutar
     imagemagick
